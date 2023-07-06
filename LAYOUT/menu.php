@@ -9,9 +9,10 @@
 <div class="navbar-fixed">
 <nav>  
   <div class="nav-wrapper color-background" >
-    <a href="" class="brand-logo" style="margin-left: 10px;font-size: 1em;">PROYECTOS INEX</a>
+    <a href="index.php" class="brand-logo" style="margin-left: 10px;font-size: 1em;">PROYECTO ENCUESTA</a>
     <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    <ul class="right hide-on-med-and-down">
+    <ul class="right hide-on-med-and-down"> 
+    <li><?php echo $Nonpagina ?></li>
     <li><a class="dropdown-trigger" href="" data-target="dropdown1">
         <i class="material-icons right">arrow_drop_down</i>
         </a> 

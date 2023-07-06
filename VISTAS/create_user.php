@@ -148,19 +148,19 @@
 
 					<div class="row">
 					<div class="input-field col m12 s12 ">
-						<input name="nombre" id="i1" value="<?php echo $nombre ?>" type="text" class="validate" required>
+						<input name="nombre" id="i1" value="" type="text" class="validate" required>
 						<label for="i1">Nombre</label>
 					</div>
 					<div class="input-field col m12 s12">
-						<input name="apellido" id="i2" value="<?php echo $apellido?>" type="text" class="validate" required>
+						<input name="apellido" id="i2" value="" type="text" class="validate" required>
 						<label for="i2">Apellido</label>
 					</div>
 					<div class="input-field col m12 s12">
-						<input name="cedula" id="i9" value="<?php echo $cedula?>" type="number" class="validate"  required>
+						<input name="cedula" id="i9" value="" type="number" class="validate"  required>
 						<label for="i9">Cedula</label>
 					</div>
 					<div class="input-field col m12 s12">
-						<input name="correo" id="i7" value="<?php echo $correo ?>" type="email" class="validate" required>
+						<input name="correo" id="i7" value="" type="email" class="validate" required>
 						<label for="i7">Correo</label>
 					</div>
 

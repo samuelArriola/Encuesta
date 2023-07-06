@@ -13,6 +13,7 @@ $rs_login = mysqli_query($con,$sql_mail);
 		if(password_verify($password, $fila['password_u']))
 			{
 			session_start();
+			$_SESSION["id_user"] = $fila["id_user"]; 
 			$_SESSION["IDEN"]=$fila["iden"];
 			$_SESSION["NOMB"]=$fila["name_u"].' '.$fila["last_name"];
 			$_SESSION["MAIL"]=$fila["mail"];

@@ -7,7 +7,8 @@
 	$_SESSION["MAIL"];
 
 	if(isset($_SESSION["MAIL"])){
-		$Nonpagina = "CASA";
+    $id_casa = $_GET['id_c'];
+
 ?> 
 
 
@@ -16,7 +17,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Inicio</title>
+	<title>Familia</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../CSS/index.css" rel="stylesheet"> 
@@ -30,7 +31,7 @@
 	</style>
 </head>
 <body>
-  <?php include("../LAYOUT/menu.php"); ?>
+  <?php $Nonpagina = "FAMILIAS"; include("../LAYOUT/menu.php"); ?>
   <div class="hide-on-med-and-down" style="margin-top: 65px;"></div>
 
 	<div class="container section">
@@ -43,8 +44,8 @@
 					<div class="col m6">
 						<div class="input-field col m7 offset-m8">
 							<i class="material-icons prefix">search</i> 
-							<input name="buscador" id="buscar_casa" type="text" class="validate" placeholder="Numero, Ref, Dirección" >
-							<label for="buscar_casa">Buscar</label>
+							<input name="buscador" id="cf_buscar_familia" type="text" class="validate" placeholder="Numero, Ref, Dirección" >
+							<label for="cf_buscar_familia">Buscar</label>
 						</div>
 					</div>
 				</form> 
@@ -56,11 +57,11 @@
 						<tr class="card-panel color-background">
 							<th>Id</th>		
 							<th>Referencia</th>
-							<th>Direción</th>		
+							<th>Creado</th>		
 							<th>Opciones</th>
 						</tr>
 					</thead>
-					<tbody id="mostrar_casa">
+					<tbody id="cf_mostrar_familia">
 					</tbody>
 				</table>
 			</div>
@@ -70,37 +71,33 @@
 	</div>
 	
 	<div class="fixed-action-btn" > 
-		<a  href="#modalCrearCasa" class='btn-floating btn-large waves-effect waves-light color-background  tooltipped modal-trigger' data-position='left'  data-tooltip='CREAR CASA'  id='' ><i class='material-icons'>add</i></a>
+		<a  href="#modalCrearFamilias" class='btn-floating btn-large waves-effect waves-light color-background  tooltipped modal-trigger' data-position='left'  data-tooltip='CREAR INDIVIDUO'  id='' ><i class='material-icons'>add</i></a>
 	</div>
 
-	<!-- MODAL CRER CASA -->
-	<div id="modalCrearCasa" class="modal">
+	<!-- MODAL FAMILIAS -->
+	<div id="modalCrearFamilias" class="modal" >
 		<div class="section">
 		<div class="row container ">
 			<div class="col s12 m12  offset-s1">
 				
 				<div class="section card-image center">
-					<i class="color-text large material-icons">add</i> <br>
-					<span class="card-title center">Editar Usuario </span> 
+					<i class="color-text large material-icons">person_add</i> <br>
+					<span class="card-title center">Crear Familias </span> 
 				</div>
 
-				<div class="card-content " id="form" >
+				<div class="card-content "  >
 					
-					<form action="" method="post" >
+					<form action="" method="post" id="cf_form">
 
 						<div class="row">
 							<div class="input-field col m12 s12">
-								<input name="" id="ix_ref"  type="text" class="validate" required>
-								<label for="ix_ref">Referencia</label>
-							</div>
-							<div class="input-field col m12 s12">
-								<input name="" id="ix_direc" type="text" class="validate"  required>
-								<label for="ix_direc">Direción</label>
-							</div>
+								<input name="" id="cf_referencia"  type="text" class="validate" required>
+								<label for="cf_referencia">Referencia</label>
+							</div>												
 						</div>
 						
 						<div class="center section">
-							<button  class=" btn  waves-effect waves-light color-background" type="button" id="ix_crearCasa">Guardar </button>  
+							<button  class=" btn  waves-effect waves-light color-background" type="button" id="cf_guardar">Guardar </button>  
 						</div>    
 					</form>
 				</div>
@@ -110,6 +107,7 @@
 		</div>
 
     </div>
+	<input name="" id="cf_id_casa"  value="<?php echo $id_casa;?>"  type="hidden" class="validate" required>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
