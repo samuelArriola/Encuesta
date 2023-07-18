@@ -6,7 +6,7 @@
 	$_SESSION["NOMB"];
 	$_SESSION["MAIL"];
 
-	if(isset($_SESSION["MAIL"])){
+	if(isset($_SESSION["MAIL"]) && $_SESSION["Tipo_u"] == "Admin"){
 ?> 
 
 
@@ -77,6 +77,31 @@
 							<input name="correo" id="cn_pass" type="password" class="validate caracteresEpesiales" required>
 							<label for="cn_pass">*Contraseña</label>
 						</div>
+						<div  class="input-field col m12  s12 ">
+							<p>
+								<label for="" class="EC_PREGUNTA " style="">Tipo de Usuario *</label> 
+							</p>    <br>
+							<div class="row">
+								<div class="col m6 s12">
+									<p>
+										<label>
+											<input class="with-gap EC_RES" value="Promotor" name="cu_group_tipo_u" type="radio" checked  />
+											<span>Promotor</span>
+										</label>
+									</p>
+								</div>
+								<div class="col m6 s12">
+									<p>
+										<label>
+											<input class="with-gap EC_RES" value="Admin" name="cu_group_tipo_u" type="radio"  />
+											<span>Admin</span>
+										</label>
+									</p>   
+								</div>
+							</div>
+								
+								
+						</div>
 					 </div>
 						
 						<div class="center section">
@@ -119,6 +144,7 @@
 				<th>Apellido</th>		
 				<th>Correo</th>
 				<!-- <th>Roles</th> -->
+				<th>Tipo u</th>
 				<th>Estado</th>
 				<th>Opciones</th>
 			</tr>
@@ -215,7 +241,7 @@
 	</div>
 
 	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<script>document.addEventListener('DOMContentLoaded', function() { M.AutoInit();});</script>
 	<script src="../JS/app.js"></script>

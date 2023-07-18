@@ -17,6 +17,7 @@ $rs_login = mysqli_query($con,$sql_mail);
 			$_SESSION["IDEN"]=$fila["iden"];
 			$_SESSION["NOMB"]=$fila["name_u"].' '.$fila["last_name"];
 			$_SESSION["MAIL"]=$fila["mail"];
+			$_SESSION["Tipo_u"]=$fila["Tipo_u"];
 
 			$resul = array("error" => false,"nomb" => $_SESSION["NOMB"]);
 			}

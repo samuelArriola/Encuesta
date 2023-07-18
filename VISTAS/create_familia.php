@@ -71,7 +71,7 @@
 	</div>
 	
 	<div class="fixed-action-btn" > 
-		<a  href="#modalCrearFamilias" class='btn-floating btn-large waves-effect waves-light color-background  tooltipped modal-trigger' data-position='left'  data-tooltip='CREAR INDIVIDUO'  id='' ><i class='material-icons'>add</i></a>
+		<a  href="#modalCrearFamilias" class='btn-floating btn-large waves-effect waves-light color-background  tooltipped modal-trigger' data-position='left'  data-tooltip='CREAR FAMILIA'  id='' ><i class='material-icons'>add</i></a>
 	</div>
 
 	<!-- MODAL FAMILIAS -->
@@ -110,7 +110,7 @@
 	<input name="" id="cf_id_casa"  value="<?php echo $id_casa;?>"  type="hidden" class="validate" required>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<script>document.addEventListener('DOMContentLoaded', function() { M.AutoInit();});</script>
 	<script src="../JS/app.js"></script>

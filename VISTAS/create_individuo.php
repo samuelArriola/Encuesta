@@ -59,8 +59,8 @@
 					<thead>
 						<tr class="card-panel color-background">
 							<th>Id</th>		
-							<th>Referencia</th>
-							<th>Direción</th>		
+							<th>Nombre</th>
+							<th>N. Documento</th>		
 							<th>Opciones</th>
 						</tr>
 					</thead>
@@ -90,7 +90,7 @@
 
 				<div class="card-content " id="form" >
 					
-					<form action="" method="post" >
+					<form action="" method="post"  id="ci_md_form">
 
 						<div class="row">
 							<div class="input-field col m12 s12">
@@ -166,7 +166,7 @@
     </div>
 	<input name="" id="ci_id_familia"  value="<?php echo $id_familia;?>"  type="hidden" class="validate" required>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<script>document.addEventListener('DOMContentLoaded', function() { M.AutoInit();});</script>
 	<script src="../JS/individuo.js"></script>

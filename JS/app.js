@@ -1,12 +1,13 @@
 console.log('conectado a app.js');
+let PreRes = [];
 //advanced branching
 //skip logic
 $(document).ready(function() {
-    $('select').formSelect();
     $('.tooltipped').tooltip();
-    $('select').formSelect({
-        isMultiple : true,
-    });
+
+    // $('select').material_select({
+    //     isMultiple : true,
+    // });
     $('.modal').modal();
     $('.dropdown-trigger').dropdown();
 
@@ -17,46 +18,30 @@ $(document).ready(function() {
             var y2 = f2.getFullYear();
             var m2 = f2.getMonth();
             var d2 = f2.getDate();
-
-            var instance = M.Datepicker.getInstance($('.ci_fec_naci'));
-            instance.options.maxDate = new Date(y2, m2, d2);
-
-        },
-
+  
+             var instance = M.Datepicker.getInstance($('.ci_fec_naci'));
+             instance.options.maxDate = new Date(y2, m2, d2);  
+  
+         },
+  
     });
-
-    //Coloco el campo otra nacionalidad
-    $("#ci_nacionalidad").change(function() {
-        var opcionSeleccionada = $(this).val();
-        if(opcionSeleccionada == "Otro"){
-            $('#ci_dev_ot_nacio').css("display","")
-        }else{
-            $('#ci_dev_ot_nacio').css("display","none")
-        }
-    });
-
-    //Coloco el campo otro sexo
-    $("#ci_sexo").change(function() {
-        var opcionSeleccionada = $(this).val();
-        if(opcionSeleccionada == "Otro"){
-            $('#ci_dev_ot_sexo').css("display","")
-        }else{
-            $('#ci_dev_ot_sexo').css("display","none")
-            
-        }
-    });
+ 
+  
+     
+   
 });
-
- //GUARDAR USUARIO CON AJAX
- $('#guardar_usuario').click(function(e) {
-    e.preventDefault();
+  
+  //GUARDAR USUARIO CON AJAX
+  $('#guardar_usuario').click(function(e) {
+     e.preventDefault();    
 
     const datos_u = {
             nombre_u: $('#cu_name').val(),
             apellido_u: $('#cu_last_name').val(),
             cedula_u: $('#cn_iden').val(),
             correo_u: $('#cn_mail').val(),
-            pass: $('#cn_pass').val()
+            pass: $('#cn_pass').val(),
+            tipo_u: $('input[name=cu_group_tipo_u]:checked').val()
 
         }
         //  console.log(datos_u.nombre_u,datos_u.apellido_u,datos_u.cedula_u,datos_u.correo_u);
@@ -68,9 +53,11 @@ $(document).ready(function() {
         return M.toast({ html: 'Cedula de usuario vacío, por favor complete el campo', classes: 'rounded' });
     } else if (isEmpty(datos_u.correo_u)) {
         return M.toast({ html: 'Correo de usuario vacío, por favor complete el campo', classes: 'rounded' });
-    } else if (isEmpty(datos_u.pass)) {
+    } else if (isEmpty(datos_u.pass)) {  
         return M.toast({ html: 'Contraseña de usuario vacío, por favor complete el campo', classes: 'rounded' });
-    } else {
+    }else if(isEmpty(datos_u.tipo_u)){
+        return M.toast({ html: 'Tipo de usuario vacío, por favor complete el campo', classes: 'rounded' });
+    }else {
         $.ajax({
             type: "POST",
             url: "../Database/u_create.php",
@@ -288,6 +275,28 @@ function mostrarFamilia(buscar) {
 }
 
 
+//_----------ENCUETA CASA  ---------------------/
+
+ //Limpia y llena el select
+ $("#ec_s1_servicio").change(function() {
+     var opcionSeleccionada = $(this).val();
+     console.log('HAZ DADO CLICK '+ opcionSeleccionada );
+    let res_Select = opcionSeleccionada.indexOf('Ninguno');
+
+    if( res_Select !== -1){
+        $('#ec_s1_servicio').val('');
+        $('#ec_s1_servicio option:selected').empty();
+    }else{
+        console.log('NO ES NINGUNO'); 
+   }
+
+
+});
+
+function changeNinguna(e){
+  console.log(e) 
+}
+
 
 //Valida caracteres especiale 
 let cadena_c = document.querySelectorAll(".caracteresEpesiales");
@@ -298,9 +307,73 @@ for (let i = 0; i < cadena_c.length; i++) {
         let re = /[%&'"*+^$`{}()|[\]\\]/g;
         let resultado = cadena_valor.replace(re, '');
         campo.value= resultado;
-    });
-}
+    });  
+ }
+ 
 
+ //GUARDAR PREGUNTAS CON AJAX
+$('#ec_form').submit(function(e) {
+
+    e.preventDefault();
+    console.log('Haz dado click');
+
+    var parametros = $(this).serialize();
+   console.log(parametros);
+    $.ajax({
+        type: "POST",
+        url: "../Database/ec_guardar.php",
+        data: parametros,
+        success: function(response) {
+            M.toast({ html: response, classes: 'rounded' });
+            $('#ec_form')[0].reset(); //limpia las casjas de texto
+            // $('#modalCrearFamilias').modal('close');
+        }
+    });
+    
+});
+
+ function getRespuesta( ){ 
+  
+    //OBTENGO EL OBJETO DIV
+    let div_ec =[... document.querySelectorAll(".ENCUESTA_CASA")];
+    let respuesta = document.querySelectorAll(".EC_RES");
+    let respuestaRadio = document.querySelectorAll('.EC_RES input[type="radio"]');
+   /*  for (let i = 0; i < respuesta.length; i++) {
+        console.log( respuesta.value );
+       
+    } */
+
+   /*  respuesta.forEach(elemento => {
+        const valor = elemento.value;
+        console.log(valor);
+        // valoresRespuesta.push(valor);
+      });
+    
+      respuestaRadio.forEach(radio => {
+        if (radio.checked) {
+            console.log(radio.value);
+          }
+        // valoresRespuesta.push(valor);
+      }); */
+
+      div_ec.forEach(elemento => {
+                // console.log(elemento);
+
+                //
+                let pregunta  = elemento.querySelector('.EC_PREGUNTA').textContent;
+                let respuesta = elemento.querySelector('.EC_RES').value;
+                // console.log(elemento.children);
+                
+                console.log( elemento.querySelector('.EC_RES').value);
+                let TemPreRes = new Array()
+                TemPreRes['pregunta'] = pregunta;
+                TemPreRes['respuesta'] = respuesta;
+                TemPreRes['T_encuesta'] = 'ENCUESTA CASA';
+                    
+                PreRes.push(TemPreRes);
+        // valoresRespuesta.push(valor);
+      });
+}
 //caracteres vacíos 
 function isEmpty(str) {
     return (!str || 0 === str.length);

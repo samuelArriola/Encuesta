@@ -1,6 +1,33 @@
 console.log('conectado a individuo.js');
 //----------------Individuo ----------------------------//
 
+$(document).ready(function() {
+
+    $('select').formSelect();
+    $('.tooltipped').tooltip();
+    $('select').formSelect({
+        isMultiple : true,
+    });
+    $('.modal').modal();
+    $('.dropdown-trigger').dropdown();
+
+      $('.ci_fec_naci').datepicker({
+        format: 'yyyy/mm/dd',
+        onOpen: function() {
+            var f2 = new Date();
+            var y2 = f2.getFullYear();
+            var m2 = f2.getMonth();
+            var d2 = f2.getDate();
+
+            var instance = M.Datepicker.getInstance($('.ci_fec_naci'));
+            instance.options.maxDate = new Date(y2, m2, d2);
+
+        },
+
+    });
+
+});
+
  //GUARDAR USUARIO CON AJAX
  $('#ci_crearIndividuos').click(function(e) {
     e.preventDefault();
@@ -37,11 +64,33 @@ console.log('conectado a individuo.js');
             data: datos_indi,
             success: function(response) {
                 M.toast({ html: response, classes: 'rounded' });
-                $('#registra_u')[0].reset(); //limpia las casjas de texto
-               
+                mostrarIndividuo();
+                $('#ci_md_form')[0].reset(); //limpia las casjas de texto
+                $('#modalCrearIndividuo').modal('close');
 
             }
         });
+    }
+});
+
+  //Coloco el campo otra nacionalidad
+  $("#ci_nacionalidad").change(function() {
+    var opcionSeleccionada = $(this).val();
+    if(opcionSeleccionada == "Otro"){
+        $('#ci_dev_ot_nacio').css("display","")
+    }else{
+        $('#ci_dev_ot_nacio').css("display","none")
+    }
+});
+
+//Coloco el campo otro sexo
+$("#ci_sexo").change(function() {
+    var opcionSeleccionada = $(this).val();
+    if(opcionSeleccionada == "Otro"){
+        $('#ci_dev_ot_sexo').css("display","")
+    }else{
+        $('#ci_dev_ot_sexo').css("display","none")
+        
     }
 });
 
@@ -89,4 +138,5 @@ for (let i = 0; i < cadena_c.length; i++) {
 function isEmpty(str) {
     return (!str || 0 === str.length);
 }
+
 

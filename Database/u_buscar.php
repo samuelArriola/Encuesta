@@ -16,10 +16,10 @@
    if ($fila ) {
       while ($row_u=mysqli_fetch_array($resul_u)) {
          $id_u = $row_u['iden'];
-         $eliminar ="<li title='Desactivar Usuario' class='material-icons '><a href='#eliminaULogico' type='button'  onclick='recibeIDLogico(".$row_u['iden'].")' class='hoverable red-text modal-trigger'>delete</a></li>";
-         $restaurar =" <li title='Restaurar' class='material-icons '><a href='#restaurarULogico' type='button'  onclick='recibeIDLogicoREST(".$row_u['iden'].")' class='hoverable orange-text modal-trigger'>restore</a></li>";
-         $editar = "<li title='Editar' class='material-icons'><a href='u_editar.php?id_u=".$row_u['iden']."' class='hoverable modal-trigger'>edit</a></li>";  
-         $herencia = "<li title='Resetear Contraseña' class='material-icons'><a href='herencia.php?id_u=".$row_u['iden']."' class='hoverable modal-trigger green-text'>swap_horiz</a></li>";  
+         $eliminar ="<li title='Desactivar Usuario' class='material-icons '><a href='#eliminaULogico' type='button'  onclick='recibeIDLogico(".$row_u['id_user'].")' class='hoverable red-text modal-trigger'>delete</a></li>";
+         $restaurar =" <li title='Restaurar' class='material-icons '><a href='#restaurarULogico' type='button'  onclick='recibeIDLogicoREST(".$row_u['id_user'].")' class='hoverable orange-text modal-trigger'>restore</a></li>";
+         $editar = "<li title='Editar' class='material-icons'><a href='u_editar.php?id_u=".$row_u['id_user']."' class='hoverable modal-trigger'>edit</a></li>";  
+         $herencia = "<li title='Resetear Contraseña' class='material-icons'><a href='herencia.php?id_u=".$row_u['id_user']."' class='hoverable modal-trigger green-text'>swap_horiz</a></li>";  
          
            if($row_u['estado']){
                $restaurar="";
@@ -46,6 +46,7 @@
                    <td> ".$row_u['name_u']." </td>
                    <td> ".$row_u['last_name']." </td>
                    <td> ".$row_u['mail']." </td>
+                   <td> ".$row_u['Tipo_u']." </td>
                    <td> ".$row_u['estado']." </td>
                    <td>
                         ". $editar ."  

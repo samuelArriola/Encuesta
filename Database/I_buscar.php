@@ -15,7 +15,6 @@
    
    if ($fila ) {
       while ($row_u=mysqli_fetch_array($resul_u)) {
-         $individuo = "<li title='Crear Familia' class='material-icons '><a href='create_individuo.php?id_indi=".$row_u['id_indi']."' class='hoverable modal-trigger color-text'>group_add</a></li>";  
          $encuest = "<li title='Llenar encuesta' class='material-icons '><a href='Encuesta_casa.php?id_indi=".$row_u['id_indi']."' class='hoverable modal-trigger brown-text text-lighten-2'>poll</a></li>";  
            $tabla_u.="          
                <tr>
@@ -23,7 +22,6 @@
                    <td> ".$row_u['full_name']." </td>
                    <td> ".$row_u['num_doc']." </td>
                    <td>
-                        ". $individuo ."                                
                         ". $encuest ."                                
                     </td>
                </tr>     
