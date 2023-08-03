@@ -365,17 +365,14 @@ $('#ec_form').submit(function(e) {
                 // console.log(elemento.children);
                 
                 console.log( elemento.querySelector('.EC_RES').value);
-                let TemPreRes = new Array()
-                TemPreRes['pregunta'] = pregunta;
-                TemPreRes['respuesta'] = respuesta;
-                TemPreRes['T_encuesta'] = 'ENCUESTA CASA';
+                let TemPreRes = {
+                   'pregunta' : pregunta,
+                   'respuesta' : respuesta,
+                   'T_encuesta' : 'ENCUESTA CASA',
+                }
                     
                 PreRes.push(TemPreRes);
         // valoresRespuesta.push(valor);
       });
-}
-//caracteres vacíos 
-function isEmpty(str) {
-    return (!str || 0 === str.length);
 }
 

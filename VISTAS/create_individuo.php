@@ -61,7 +61,7 @@
 							<th>Id</th>		
 							<th>Nombre</th>
 							<th>N. Documento</th>		
-							<th>Opciones</th>
+							<th>Encuestas</th>
 						</tr>
 					</thead>
 					<tbody id="mostrar_individuo">
@@ -93,9 +93,21 @@
 					<form action="" method="post"  id="ci_md_form">
 
 						<div class="row">
-							<div class="input-field col m12 s12">
-								<input name="" id="ci_nombre"  type="text" class="validate" required>
-								<label for="ci_nombre">Nombre Completo</label>
+							<div class="input-field col m6 s12">
+								<input name="" id="ci_p_nombre"  type="text" class="validate" required>
+								<label for="ci_p_nombre">Primer nombre</label>
+							</div>
+							<div class="input-field col m6 s12">
+								<input name="" id="ci_s_nombre"  type="text" class="validate" required>
+								<label for="ci_s_nombre">Segundo nombre</label>
+							</div>
+							<div class="input-field col m6 s12">
+								<input name="" id="ci_p_apellido"  type="text" class="validate" required>
+								<label for="ci_p_apellido">Primer Apellido</label>
+							</div>
+							<div class="input-field col m6 s12">
+								<input name="" id="ci_s_apellido"  type="text" class="validate" required>
+								<label for="ci_s_apellido">Segundo Apellido</label>
 							</div>
 							<div class="input-field col m4 s12" >
 								<select id="ci_t_doc">
@@ -113,6 +125,7 @@
 								<option value="3">Salvo Conducto</option>
 								<option value="3">Per Especial Permanencia</option>
 								<option value="3">Permiso por Protección Temporal</option>
+								<option value="3">Visa</option>
 								</select>
 								<label>Tipo de documento</label>
   							</div>

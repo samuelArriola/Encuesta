@@ -16,7 +16,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Inicio</title>
+	<title>Encuesta Casa</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/plugin/virtual-select.min.css" />
@@ -88,78 +88,78 @@
                                 </p>    
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_duermen_mas_de_3" type="checkbox"  />
+                                        <input class="with-gap EC_RES" value="Acueducto" name="group_servicio" type="checkbox"  />
                                         <span>Acueducto</span>
                                     </label>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_duermen_mas_de_3" type="checkbox"  />
+                                        <input class="with-gap EC_RES" value="Alcantarillado" name="group_servicio" type="checkbox"  />
                                         <span>Alcantarillado</span>
                                     </label>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_duermen_mas_de_3" type="checkbox"  />
+                                        <input class="with-gap EC_RES" value="Basuras" name="group_servicio" type="checkbox"  />
                                         <span>Basuras</span>
                                     </label>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_duermen_mas_de_3" type="checkbox"  />
+                                        <input class="with-gap EC_RES" value="Luz" name="group_servicio" type="checkbox"  />
                                         <span>Luz</span>
                                     </label>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_duermen_mas_de_3" type="checkbox"  />
+                                        <input class="with-gap EC_RES" value="Gas" name="group_servicio" type="checkbox"  />
                                         <span>Gas</span>
                                     </label>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_duermen_mas_de_3" type="checkbox"  />
+                                        <input class="with-gap EC_RES" value="Ninguno" name="group_servicio" type="checkbox"  />
                                         <span>Ninguno</span>
                                     </label>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_duermen_mas_de_3" type="checkbox"  />
+                                        <input class="with-gap EC_RES" value="Otro" name="group_servicio" type="checkbox"  />
                                         <span>Otro</span>
                                     </label>
                                 </p> 
   							</div>
                             <div  class="input-field col m12 card-panel  s12 ENCUESTA_CASA">
                                 <p>
-                                    <label for="" class="EC_PREGUNTA " style="">4. ¿Su vivienda tiene alguna de estas situaciones?</label> 
+                                    <label for="" class="EC_PREGUNTA " >4. ¿Su vivienda tiene alguna de estas situaciones?</label> 
                                 </p>    
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_duermen_mas_de_3" type="checkbox"  />
+                                        <input class="with-gap EC_RES" value="Humedad" name="group_situaciones" type="checkbox"  />
                                         <span>Humedad</span>
                                     </label>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_duermen_mas_de_3" type="checkbox"  />
+                                        <input class="with-gap EC_RES" value="Calor excesivo" name="group_situaciones" type="checkbox"  />
                                         <span>Calor excesivo</span>
                                     </label>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_duermen_mas_de_3" type="checkbox"  />
+                                        <input class="with-gap EC_RES" value="Mala ventilación" name="group_situaciones" type="checkbox"  />
                                         <span>Mala ventilación</span>
                                     </label>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_duermen_mas_de_3" type="checkbox"  />
+                                        <input class="with-gap EC_RES" value="Cocina con leña" name="group_situaciones" type="checkbox"  />
                                         <span>Cocina con leña</span>
                                     </label>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_duermen_mas_de_3" type="checkbox"  />
+                                        <input class="with-gap EC_RES" value="Mala iluminación" name="group_situaciones" type="checkbox"  />
                                         <span>Mala iluminación</span>
                                     </label>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_duermen_mas_de_3" type="checkbox"  />
+                                        <input class="with-gap EC_RES" value="Cocinan donde duermen" name="group_situaciones" type="checkbox"  />
                                         <span>Cocinan donde duermen</span>
                                     </label>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_duermen_mas_de_3" type="checkbox"  />
+                                        <input class="with-gap EC_RES" value="Taller o negocio adentro" name="group_situaciones" type="checkbox"  />
                                         <span>Taller o negocio adentro</span>
                                     </label>
                                 </p> 
@@ -170,13 +170,13 @@
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_duermen_mas_de_3" type="radio"  />
+                                        <input class="with-gap EC_RES" value="Si" name="group_duermen_mas_de_3" type="radio"  />
                                         <span>Si</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_duermen_mas_de_3" type="radio"  />
+                                        <input class="with-gap EC_RES" value="No" name="group_duermen_mas_de_3" type="radio"  />
                                         <span>No</span>
                                     </label>
                                 </p>
@@ -188,37 +188,37 @@
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_servicio_sanitario" type="radio"  />
+                                        <input class="with-gap EC_RES"  value="Inodoro conectado a alcantarillado" name="group_servicio_sanitario" type="radio"  />
                                         <span>Inodoro conectado a alcantarillado</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_servicio_sanitario" type="radio"  />
+                                        <input class="with-gap EC_RES" value="Inodoro conectado a pozo séptico" name="group_servicio_sanitario" type="radio"  />
                                         <span>Inodoro conectado a pozo séptico</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_servicio_sanitario" type="radio"  />
+                                        <input class="with-gap EC_RES" value="Inodoro sin conexión" name="group_servicio_sanitario" type="radio"  />
                                         <span>Inodoro sin conexión</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_servicio_sanitario" type="radio"  />
+                                        <input class="with-gap EC_RES" value="Letrina" name="group_servicio_sanitario" type="radio"  />
                                         <span>Letrina</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_servicio_sanitario" type="radio"  />
+                                        <input class="with-gap EC_RES" value="Bajamar" name="group_servicio_sanitario" type="radio"  />
                                         <span>Bajamar</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_servicio_sanitario" type="radio"  />
+                                        <input class="with-gap EC_RES" value="No tiene servicio sanitario" name="group_servicio_sanitario" type="radio"  />
                                         <span>No tiene servicio sanitario</span>
                                     </label>
                                 </p>
@@ -230,37 +230,37 @@
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_tipo_hogar" type="radio"  />
+                                        <input class="with-gap EC_RES" value="Propia, totalmente pagada" name="group_tipo_hogar" type="radio"  />
                                         <span>Propia, totalmente pagada</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_tipo_hogar" type="radio"  />
+                                        <input class="with-gap EC_RES" value="En arriendo o subarriendo" name="group_tipo_hogar" type="radio"  />
                                         <span>En arriendo o subarriendo</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_tipo_hogar" type="radio"  />
+                                        <input class="with-gap EC_RES" value="En usufructo" name="group_tipo_hogar" type="radio"  />
                                         <span>En usufructo</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_tipo_hogar" type="radio"  />
+                                        <input class="with-gap EC_RES" value="Posesión sin título" name="group_tipo_hogar" type="radio"  />
                                         <span>Posesión sin título</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_tipo_hogar" type="radio"  />
+                                        <input class="with-gap EC_RES" value="Propiedad colectiva" name="group_tipo_hogar" type="radio"  />
                                         <span>Propiedad colectiva</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_tipo_hogar" type="radio"  />
+                                        <input class="with-gap EC_RES" value="Otra, ¿cuál?" name="group_tipo_hogar" type="radio"  />
                                         <span> Otra, ¿cuál?</span>
                                     </label>
                                 </p>
@@ -272,19 +272,19 @@
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_ingreso" type="radio"  />
+                                        <input class="with-gap EC_RES" value="Menos de $500.000" name="group_ingreso" type="radio"  />
                                         <span>Menos de $500.000</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_ingreso" type="radio"  />
+                                        <input class="with-gap EC_RES" value="$500.000 - $1.000.000" name="group_ingreso" type="radio"  />
                                         <span>$500.000 - $1.000.000</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="group_ingreso" type="radio"  />
+                                        <input class="with-gap EC_RES" value="Mayores a $1.000.000" name="group_ingreso" type="radio"  />
                                         <span>Mayores a $1.000.000</span>
                                     </label>
                                 </p>
@@ -382,7 +382,7 @@
           
         });
 </script>
-	<script src="../JS/app.js"></script>
+	<script src="../JS/Encuesta_casa.js"></script>
 
   </html>
 
