@@ -1,0 +1,54 @@
+   <div  class="input-field col m12 card-panel  s12 ENCUESTA_VIVIENDA">
+    <p>
+        <span for="" style="color: #9e9e9e;" class="EC_PREGUNTA " >Estrato para tarifa:</span> 
+    </p>    
+    <p>
+        <label>
+            <input class="with-gap EC_RES" name="ev_group_estrato" type="radio"  />
+            <span>Bajo - bajo</span>
+        </label>
+    <p>
+        <label>
+            <input class="with-gap EC_RES" name="ev_group_estrato" type="radio"  />
+            <span>Bajo</span>
+        </label>
+    <p>
+        <label>
+            <input class="with-gap EC_RES" name="ev_group_estrato" type="radio"  />
+            <span>Medio - bajo</span>
+        </label>
+    <p>
+        <label>
+            <input class="with-gap EC_RES" name="ev_group_estrato" type="radio"  />
+            <span>Medio</span>
+        </label>
+    <p>
+        <label>
+            <input class="with-gap EC_RES" name="ev_group_estrato" type="radio"  />
+            <span>Medio - alto</span>
+        </label>
+    <p>
+        <label>
+            <input class="with-gap EC_RES" name="ev_group_estrato" type="radio"  />
+            <span>Alto</span>
+        </label>
+    <p>
+        <label>
+            <input class="with-gap EC_RES" name="ev_group_estrato" type="radio"  />
+            <span>Planta eléctrica</span>
+        </label>
+    </p> 
+    <p>
+        <label>
+            <input class="with-gap EC_RES" name="ev_group_estrato" type="radio"  />
+            <span>No conoce el estrato o no cuenta con recibo de pago.</span>
+        </label>
+    </p> 
+    <p>
+        <label>
+            <input class="with-gap EC_RES" name="ev_group_estrato" type="radio"  />
+            <span>Recibos sin estrato o el servicio es pirata</span>
+        </label>
+    </p> 
+</div>
+

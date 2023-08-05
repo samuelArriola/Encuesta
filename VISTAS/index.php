@@ -7,7 +7,7 @@
 	$_SESSION["MAIL"];
 
 	if(isset($_SESSION["MAIL"])){
-		$Nonpagina = "CASA";
+		$Nonpagina = "VIVIENDA";
 ?> 
 
 
@@ -43,8 +43,8 @@
 					<div class="col m6">
 						<div class="input-field col m7 offset-m8">
 							<i class="material-icons prefix">search</i> 
-							<input name="buscador" id="buscar_casa" type="text" class="validate" placeholder="Numero, Ref, Dirección" >
-							<label for="buscar_casa">Buscar</label>
+							<input name="buscador" id="buscar_vivienda" type="text" class="validate" placeholder="Numero, Ref, Dirección" >
+							<label for="buscar_vivienda">Buscar</label>
 						</div>
 					</div>
 				</form> 
@@ -60,7 +60,7 @@
 							<th>Opciones</th>
 						</tr>
 					</thead>
-					<tbody id="mostrar_casa">
+					<tbody id="mostrar_vivienda">
 					</tbody>
 				</table>
 			</div>
@@ -70,18 +70,18 @@
 	</div>
 	
 	<div class="fixed-action-btn" > 
-		<a  href="#modalCrearCasa" class='btn-floating btn-large waves-effect waves-light color-background  tooltipped modal-trigger' data-position='left'  data-tooltip='CREAR CASA'  id='' ><i class='material-icons'>add</i></a>
+		<a  href="#modalCrearVivienda" class='btn-floating btn-large waves-effect waves-light color-background  tooltipped modal-trigger' data-position='left'  data-tooltip='CREAR VIVIENDA'  id='' ><i class='material-icons'>add</i></a>
 	</div>
 
-	<!-- MODAL CRER CASA -->
-	<div id="modalCrearCasa" class="modal">
+	<!-- MODAL CRER VIVIENDA -->
+	<div id="modalCrearVivienda" class="modal">
 		<div class="section">
 		<div class="row container ">
 			<div class="col s12 m12  offset-s1">
 				
 				<div class="section card-image center">
 					<i class="color-text large material-icons">add</i> <br>
-					<span class="card-title center">Editar Usuario </span> 
+					<span class="card-title center">Crear Vivienda</span> 
 				</div>
 
 				<div class="card-content " id="form" >

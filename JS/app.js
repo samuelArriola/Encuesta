@@ -140,9 +140,9 @@ function recibeIDLogico(id_u) {
 }
 
 
-//--------------  CASA ------------------7
+//--------------  VIVIENDA ------------------7
 
-// Crear casa
+// Crear VIVIENDA
 $('#ix_crearCasa').click(function(e) {
     console.log('haz dado clic');
     e.preventDefault();
@@ -152,18 +152,18 @@ $('#ix_crearCasa').click(function(e) {
         }
     
     if (isEmpty(datos_c.referencia)) {
-        return M.toast({ html: 'Referencia de casa vacío, por favor complete el campo', classes: 'rounded' });
+        return M.toast({ html: 'Referencia de vivienda vacío, por favor complete el campo', classes: 'rounded' });
     } else if (isEmpty(datos_c.direcion)) {
-        return M.toast({ html: 'Direción de casa vacío, por favor complete el campo', classes: 'rounded' });
+        return M.toast({ html: 'Direción de vivienda vacío, por favor complete el campo', classes: 'rounded' });
     } else {
         $.ajax({
             type: "POST",
-            url: "../Database/c_crear.php",
+            url: "../Database/v_crear.php",
             data: datos_c,
             success: function(response_e) {
                 M.toast({ html: response_e, classes: 'rounded' });
-                mostrarCasa()
-                $('#modalCrearCasa').modal('close');
+                mostrarVivienda()
+                $('#modalCrearVivienda').modal('close');
 
             }
         });
@@ -173,31 +173,31 @@ $('#ix_crearCasa').click(function(e) {
 
 
  //BUSCAR CASA
- $('#buscar_casa').keyup(function() {
-    var buscar = $('#buscar_casa').val();
+ $('#buscar_vivienda').keyup(function() {
+    var buscar = $('#buscar_vivienda').val();
     if (buscar != "") {
-        mostrarCasa(buscar);
+        mostrarVivienda(buscar);
     } else {
-        mostrarCasa();
+        mostrarVivienda();
     }
 });
 
-mostrarCasa();
+mostrarVivienda();
 
-//MOSTRAR CASA 
-function mostrarCasa(dat) {
+//Motrar Vivienda 
+function mostrarVivienda(dat) {
     $.ajax({
         type: "POST",
-        url: "../Database/c_buscar.php",
+        url: "../Database/v_buscar.php",
         data: { dato: dat },
         dataType: "html"
     })
     .done(function(respuesta) { //done: si el ajax es verdadero, hazme esto es para recibir ... o susses 
-        $('#mostrar_casa').html(respuesta);
+        $('#mostrar_vivienda').html(respuesta);
     })
 }
 
-//----------------Encuesta Casa ----------------------------//
+//----------------Encuesta Vivienda ----------------------------//
 $('#ec_sig_1').click( (e)=>{
     e.preventDefault();
     console.log('haz dadi clic');
@@ -275,9 +275,9 @@ function mostrarFamilia(buscar) {
 }
 
 
-//_----------ENCUETA CASA  ---------------------/
+//_----------ENCUETA VIVIENDA  ---------------------/
 
- //Limpia y llena el select
+/*  //Limpia y llena el select
  $("#ec_s1_servicio").change(function() {
      var opcionSeleccionada = $(this).val();
      console.log('HAZ DADO CLICK '+ opcionSeleccionada );
@@ -296,7 +296,7 @@ function mostrarFamilia(buscar) {
 function changeNinguna(e){
   console.log(e) 
 }
-
+ */
 
 //Valida caracteres especiale 
 let cadena_c = document.querySelectorAll(".caracteresEpesiales");
@@ -335,7 +335,7 @@ $('#ec_form').submit(function(e) {
  function getRespuesta( ){ 
   
     //OBTENGO EL OBJETO DIV
-    let div_ec =[... document.querySelectorAll(".ENCUESTA_CASA")];
+    let div_ec =[... document.querySelectorAll(".ENCUESTA_VIVIENDA")];
     let respuesta = document.querySelectorAll(".EC_RES");
     let respuestaRadio = document.querySelectorAll('.EC_RES input[type="radio"]');
    /*  for (let i = 0; i < respuesta.length; i++) {
@@ -368,7 +368,7 @@ $('#ec_form').submit(function(e) {
                 let TemPreRes = {
                    'pregunta' : pregunta,
                    'respuesta' : respuesta,
-                   'T_encuesta' : 'ENCUESTA CASA',
+                   'T_encuesta' : 'ENCUESTA VIVIENDA',
                 }
                     
                 PreRes.push(TemPreRes);
@@ -376,3 +376,9 @@ $('#ec_form').submit(function(e) {
       });
 }
 
+
+
+//caracteres vacíos 
+function isEmpty(str) {
+    return (!str || 0 === str.length);
+}

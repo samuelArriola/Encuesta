@@ -71,18 +71,18 @@
                     <form action="" method="post" id="ec_form">
                         <div class="row">
                             <div class="section card-image center card-panel" style=" border-top: #00c853 5px  solid;">
-                                <h3 class="card-title">ENCUESTA CASA </h3> 
+                                <h3 class="card-title">ENCUESTA VIVIENDA </h3> 
                             </div>
-                            <div class="input-field col m12 s12 card-panel ENCUESTA_CASA" >
+                            <div class="input-field col m12 s12 card-panel ENCUESTA_VIVIENDA" >
                                 <input name="nombre" id="ec_dirccion" value="" type="text" class="validate EC_RES" required>
                                 <label for="ec_dirccion" class="EC_PREGUNTA" >1. Dirección: </label>
                             </div>
-                            <div  class="input-field col m12 card-panel  s12 ENCUESTA_CASA">
+                            <div  class="input-field col m12 card-panel  s12 ENCUESTA_VIVIENDA">
                                 <input name="apellido" id="ec_estrato" value="" type="text" class="validate EC_RES" required>
                                 <label for="ec_estrato" class="EC_PREGUNTA" >2. Estrato del Servicio de Energia Electrica</label>
                             </div>
                             <br><br>
-                            <div  class="input-field col m12 card-panel  s12 ENCUESTA_CASA">
+                            <div  class="input-field col m12 card-panel  s12 ENCUESTA_VIVIENDA">
                                 <p>
                                     <label for="" class="EC_PREGUNTA " >3. ¿Con cuáles servicios permanentes cuenta?</label> 
                                 </p>    
@@ -123,7 +123,7 @@
                                     </label>
                                 </p> 
   							</div>
-                            <div  class="input-field col m12 card-panel  s12 ENCUESTA_CASA">
+                            <div  class="input-field col m12 card-panel  s12 ENCUESTA_VIVIENDA">
                                 <p>
                                     <label for="" class="EC_PREGUNTA " >4. ¿Su vivienda tiene alguna de estas situaciones?</label> 
                                 </p>    
@@ -294,23 +294,23 @@
                                     <br>
                                     <span for="i9" class="EC_PREGUNTA"style="color: #9e9e9e;">7. ¿Cuál es el número de integrantes de su nucleo familiar….?</span>
                                 </div>
-                                    <div  class=" input-field col m6 s12 ENCUESTA_CASA">
+                                    <div  class=" input-field col m6 s12 ENCUESTA_VIVIENDA">
                                         <input name="nombre" id="ec_total_intengrante" value="" type="text" class="validate EC_RES" required>
                                         <label for="ec_total_intengrante" class="EC_PREGUNTA">Total</label>
                                     </div>
-                                    <div  class=" input-field col m6 s12 ENCUESTA_CASA">
+                                    <div  class=" input-field col m6 s12 ENCUESTA_VIVIENDA">
                                         <input name="nombre" id="ec_n_adolecentes" value="" type="text" class="validate EC_RES" required>
                                         <label for="ec_n_adolecentes" class="EC_PREGUNTA">Adolescentes</label>
                                     </div>
-                                    <div  class=" input-field col m6 s12 ENCUESTA_CASA">
+                                    <div  class=" input-field col m6 s12 ENCUESTA_VIVIENDA">
                                         <input name="nombre" id="ec_n_adultoMayor" value="" type="text" class="validate EC_RES" required>
                                         <label for="ec_n_adultoMayor" class="EC_PREGUNTA">Adultos Mayores</label>
                                     </div>
-                                    <div  class=" input-field col m6 s12 ENCUESTA_CASA">
+                                    <div  class=" input-field col m6 s12 ENCUESTA_VIVIENDA">
                                         <input name="nombre" id="ec_n_gestante" value="" type="text" class="validate EC_RES" required>
                                         <label for="ec_n_gestante" class="EC_PREGUNTA"> Gestantes</label>
                                     </div>
-                                    <div  class=" input-field col m6 s12 ENCUESTA_CASA">
+                                    <div  class=" input-field col m6 s12 ENCUESTA_VIVIENDA">
                                         <input name="nombre" id="ec_n_discapacidad" value="" type="text" class="validate EC_RES" required>
                                         <label for="ec_n_discapacidad" class="EC_PREGUNTA">Personas con Discapacidad*</label>
                                     </div>
@@ -332,13 +332,13 @@
         </div>
 	</div>
 
-  <!-- ENCUESTA CASA SESSIÓN 1 -->
+  <!-- ENCUESTA VIVIENDA SESSIÓN 1 -->
     <!-- <div class="section" id="ec_en_2" style="display: none;">
         <div class="row container ">
             <div class="col s12 m12  offset-s1">
                 
                 <div class="section card-image center">
-                    <h3 class="card-title">ENCUESTA CASA </h3> 
+                    <h3 class="card-title">ENCUESTA VIVIENDA </h3> 
                 </div>
 
                 <div class="card-content " id="form" >
@@ -382,7 +382,7 @@
           
         });
 </script>
-	<script src="../JS/Encuesta_casa.js"></script>
+	<script src="../JS/Encuesta.js"></script>
 
   </html>
 
