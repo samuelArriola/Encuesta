@@ -144,17 +144,13 @@ function recibeIDLogico(id_u) {
 
 // Crear VIVIENDA
 $('#ix_crearCasa').click(function(e) {
-    console.log('haz dado clic');
     e.preventDefault();
     const datos_c = {
             referencia: $('#ix_ref').val(),
-            direcion: $('#ix_direc').val(),
         }
     
     if (isEmpty(datos_c.referencia)) {
         return M.toast({ html: 'Referencia de vivienda vacío, por favor complete el campo', classes: 'rounded' });
-    } else if (isEmpty(datos_c.direcion)) {
-        return M.toast({ html: 'Direción de vivienda vacío, por favor complete el campo', classes: 'rounded' });
     } else {
         $.ajax({
             type: "POST",
@@ -172,7 +168,7 @@ $('#ix_crearCasa').click(function(e) {
 });
 
 
- //BUSCAR CASA
+ //BUSCAR VIVIENDA
  $('#buscar_vivienda').keyup(function() {
     var buscar = $('#buscar_vivienda').val();
     if (buscar != "") {
@@ -214,25 +210,25 @@ $('#ec_atras_1').click( (e)=>{
 
 
 
-//------------------ FAMILAS ----------------------//
+//------------------ HOGAR ----------------------//
 
-//GUARDAR FAMILIAS CON AJAX
+//GUARDAR HOGARES CON AJAX
 $('#cf_guardar').click(function(e) {
     e.preventDefault();
 
     const datos_fami = {
             referencia: $('#cf_referencia').val(),
-            id_casa: $('#cf_id_casa').val(),
+            id_vivienda: $('#cf_id_casa').val(),
         }
         //  console.log(datos_fami.nombre_u,datos_fami.apellido_u,datos_fami.cedula_u,datos_fami.correo_u);
     if (isEmpty(datos_fami.referencia)) {
         return M.toast({ html: 'Referencia vacío, por favor complete todos los campos',  classes: 'rounded' });
-    } else if (isEmpty(datos_fami.id_casa)) {
+    } else if (isEmpty(datos_fami.id_vivienda)) {
         return M.toast({ html: 'Id de casa vacío, por favor complete el campo', classes: 'rounded' });
     } else {
         $.ajax({
             type: "POST",
-            url: "../Database/f_create.php",
+            url: "../Database/h_create.php",
             data: datos_fami,
             success: function(response) {
                 M.toast({ html: response, classes: 'rounded' });
@@ -244,7 +240,7 @@ $('#cf_guardar').click(function(e) {
     }
 });
 
- //BUSCAR FAMILIA
+ //BUSCAR HOGAR
  $('#cf_buscar_familia').keyup(function() {
     var buscar = $('#cf_buscar_familia').val();
 
@@ -260,12 +256,12 @@ mostrarFamilia();
 
 //MOSTRAR FAMILIA 
 function mostrarFamilia(buscar) {
-    var id_casa = $('#cf_id_casa').val();
-    console.log(buscar, id_casa);
+    var id_vivienda = $('#cf_id_casa').val();
+    console.log(buscar, id_vivienda);
     $.ajax({
         type: "POST",
-        url: "../Database/f_buscar.php",
-        data: { buscar, id_casa },
+        url: "../Database/h_buscar.php",
+        data: { buscar, id_vivienda },
         dataType: "html"
     })
     .done(function(respuesta) { //done: si el ajax es verdadero, hazme esto es para recibir ... o susses 

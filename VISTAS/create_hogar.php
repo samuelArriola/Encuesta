@@ -7,7 +7,7 @@
 	$_SESSION["MAIL"];
 
 	if(isset($_SESSION["MAIL"])){
-    $id_casa = $_GET['id_c'];
+    $id_vivienda = $_GET['id_vivienda'];
 
 ?> 
 
@@ -107,7 +107,7 @@
 		</div>
 
     </div>
-	<input name="" id="cf_id_casa"  value="<?php echo $id_casa;?>"  type="hidden" class="validate" required>
+	<input name="" id="cf_id_casa"  value="<?php echo $id_vivienda;?>"  type="hidden" class="validate" required>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>

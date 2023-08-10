@@ -7,7 +7,7 @@
 	$_SESSION["MAIL"];
 
 	if(isset($_SESSION["MAIL"])){
-		$id_familia = $_GET['id_f'];
+		$id_hogar = $_GET['id_hogar'];
 		$Nonpagina = "INDIVIDUOS";
 ?> 
 
@@ -177,7 +177,7 @@
 		</div>
 
     </div>
-	<input name="" id="ci_id_familia"  value="<?php echo $id_familia;?>"  type="hidden" class="validate" required>
+	<input name="" id="ci_id_familia"  value="<?php echo $id_hogar;?>"  type="hidden" class="validate" required>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

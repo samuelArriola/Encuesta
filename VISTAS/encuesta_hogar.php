@@ -71,7 +71,7 @@
                     <form action="" method="post" id="ec_form">
                         <div class="row">
                             <div class="section card-image center card-panel" style=" border-top: #00c853 5px  solid;">
-                                <h3 class="card-title">ENCUESTA VIVIENDA </h3> 
+                                <h3 class="card-title">ENCUESTA HOGAR </h3> 
                             </div>
                             <div class="input-field col m12 s12 card-panel ENCUESTA_VIVIENDA" >
                                 <input name="nombre" id="ec_dirccion" value="" type="text" class="validate EC_RES" required>
@@ -311,7 +311,7 @@
                                         <label for="ec_n_gestante" class="EC_PREGUNTA"> Gestantes</label>
                                     </div>
                                     <div  class=" input-field col m6 s12 ENCUESTA_VIVIENDA">
-                                        <input name="nombre" id="ec_n_discapacidad" value="" type="text" class="validate EC_RES" required>
+                                        <input name="nombre" id="ec_n_discapacidad" value="" type="number" maxlength="2" class="validate EC_RES" required>
                                         <label for="ec_n_discapacidad" class="EC_PREGUNTA">Personas con Discapacidad*</label>
                                     </div>
                             </div>

@@ -14,9 +14,9 @@
   $resul=mysqli_query($con,$query); 
 
   if(!$resul){
-      echo 'Error: Numero de identificación ya existente, vuelva a intentar';
+      echo 'Error al momento de registrar la encuesta. ';
   }else{
-    echo('Usuario registrado exitosamente');
+    echo('Registrado');
   }
 
   mysqli_close($con);

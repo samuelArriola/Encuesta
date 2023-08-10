@@ -43,7 +43,7 @@
 					<div class="col m6">
 						<div class="input-field col m7 offset-m8">
 							<i class="material-icons prefix">search</i> 
-							<input name="buscador" id="buscar_vivienda" type="text" class="validate" placeholder="Numero, Ref, Dirección" >
+							<input name="buscador" autofocus 	id="buscar_vivienda" type="text" class="validate" placeholder="Numero, Ref, Dirección" >
 							<label for="buscar_vivienda">Buscar</label>
 						</div>
 					</div>
@@ -56,7 +56,6 @@
 						<tr class="card-panel color-background">
 							<th>Id</th>		
 							<th>Referencia</th>
-							<th>Direción</th>		
 							<th>Opciones</th>
 						</tr>
 					</thead>
@@ -92,10 +91,6 @@
 							<div class="input-field col m12 s12">
 								<input name="" id="ix_ref"  type="text" class="validate" required>
 								<label for="ix_ref">Referencia</label>
-							</div>
-							<div class="input-field col m12 s12">
-								<input name="" id="ix_direc" type="text" class="validate"  required>
-								<label for="ix_direc">Direción</label>
 							</div>
 						</div>
 						

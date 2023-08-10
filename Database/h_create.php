@@ -3,9 +3,9 @@
  include('../CONFIG/conexion.php');  
 
  $referencia = mysqli_real_Escape_string($con, $_POST['referencia']);
- $id_casa = mysqli_real_Escape_string($con, $_POST['id_casa']);
+ $id_vivienda = mysqli_real_Escape_string($con, $_POST['id_vivienda']);
 
-  $query_validate = "Select * from familia  WHERE (id_casa = '$id_casa' AND  referencia ='$referencia') ";
+  $query_validate = "Select * from familia  WHERE (id_vivienda = '$id_vivienda' AND  referencia ='$referencia') ";
   $resul_query_validate = mysqli_query($con, $query_validate);
   $fila =mysqli_num_rows($resul_query_validate);
   if(!$resul_query_validate){
@@ -16,8 +16,8 @@
       echo('Familia ya registrada');
     }else{
       
-      $query="INSERT INTO familia(id_casa, referencia)
-      VALUES ('$id_casa','$referencia')";
+      $query="INSERT INTO familia(id_vivienda, referencia)
+      VALUES ('$id_vivienda','$referencia')";
       $resul=mysqli_query($con,$query); 
       
       if(!$resul){

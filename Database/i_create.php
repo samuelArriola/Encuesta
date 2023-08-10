@@ -10,7 +10,7 @@
  $sexo = mysqli_real_Escape_string($con, $_POST['sexo']);
  $otro_sexo = mysqli_real_Escape_string($con, $_POST['otro_sexo']);
  $fec_naci =  $_POST['fec_naci'];
- $id_familia = mysqli_real_Escape_string($con, $_POST['id_familia']);
+ $id_familia = mysqli_real_Escape_string($con, $_POST['id_hogar']);
 
 //  echo $fec_naci;
   $query_validate = "SELECT * FROM individuo WHERE id_familia = '$id_familia' AND  num_doc = ' $num_doc' ";
