@@ -16,11 +16,6 @@ $(document).ready(function() {
   $('#ev_guardar').click(function(e) {
     e.preventDefault();   
   
-    var ev_group_razon_animales = [];
-    $("input[name='ev_group_razon_animales']:checked").each(function() {
-        ev_group_razon_animales.push(($(this).attr("value")));
-    });
-
     var ef_group_problema_sector = [];
     $("input[name='ef_group_problema_sector']:checked").each(function() {
         ef_group_problema_sector.push(($(this).attr("value")));
@@ -33,12 +28,12 @@ $(document).ready(function() {
         E1P3: $('input[name=ev_group_piso]:checked').val(),
 
         E1P4_ACU:  $("#ev_inp_estrato_Acu:checked").val() ? $("#ev_inp_estrato_Acu:checked").val() : "No" ,
-        E1P4_ACU_EST: $("#ev_estrato_Acu").val() ? $("#ev_estrato_Acu:checked").val() : "No Aplica" ,
+        E1P4_ACU_EST: $("#ev_estrato_Acu").val() ? $("#ev_estrato_Acu").val() : "No Aplica" ,
         E1P4_ALC: $("#ev_inp_alca:checked").val() ? $("#ev_inp_alca:checked").val() : "No" ,
         E1P4_BAS:  $("#ev_inp_veces_Bas:checked").val() ? $("#ev_inp_veces_Bas:checked").val() : "No" , 
-        E1P4_BAS_VEC:  $("#ev_veces_Bas").val() ? $("#ev_veces_Bas:checked").val() : "No Aplica"  ,
+        E1P4_BAS_VEC:  $("#ev_veces_Bas").val() ? $("#ev_veces_Bas").val() : "No Aplica"  ,
         E1P4_ENE:  $("#ev_inp_estarto_ene:checked").val() ? $("#ev_inp_estarto_ene:checked").val() : "No" ,
-        E1P4_ENE_EST:  $("#ev_estarto_ene").val() ? $("#ev_estarto_ene:checked").val() : "No Aplica" ,
+        E1P4_ENE_EST:  $("#ev_estarto_ene").val() ? $("#ev_estarto_ene").val() : "No Aplica" ,
         E1P4_GAS:  $("#ev_inp_gas:checked").val() ? $("#ev_inp_gas:checked").val() : "No" ,
         E1P4_INT: $("#ev_inp_int:checked").val() ? $("#ev_inp_int:checked").val() : "No" ,
         E1P4_NIN:  $("#ev_group_servicio_ningu:checked").val() ? $("#ev_group_servicio_ningu:checked").val() : "No" ,
@@ -54,14 +49,25 @@ $(document).ready(function() {
         E1P5_GRI_P: $("#E1P5_GRI_P:checked").val() ? $("#E1P5_GRI_P:checked").val() : "No" ,
 
         E1P6_MON: $("#E1P6_MON:checked").val() ? $("#E1P6_MON:checked").val() : "No" ,
-        E1P6_AVE: $("#E1P6_AVE:checked").val() ? $("#E1P5_GRI_P:checked").val() : "No" ,
+        E1P6_AVE: $("#E1P6_AVE:checked").val() ? $("#E1P6_AVE:checked").val() : "No" ,
         E1P6_GAT: $("#E1P6_GAT:checked").val() ? $("#E1P6_GAT:checked").val() : "No" ,
         E1P6_PER: $("#E1P6_PER:checked").val() ? $("#E1P6_PER:checked").val() : "No" ,
         E1P6_OTR: $("#E1P6_OTR:checked").val() ? $("#E1P6_OTR:checked").val() : "No" ,
         E1P6_NIN: $("#E1P6_NIN:checked").val() ? $("#E1P6_NIN:checked").val() : "No" ,
 
-        E1P7: JSON.stringify(ev_group_razon_animales),
-        E1P8: JSON.stringify(ef_group_problema_sector),
+        E1P7_ADO:  $("#E1P7_ADO:checked").val() ? $("#E1P7_ADO:checked").val() : "No" ,
+        E1P7_NEG:  $("#E1P7_NEG:checked").val() ? $("#E1P7_NEG:checked").val() : "No" ,
+        E1P7_COM:  $("#E1P7_COM:checked").val() ? $("#E1P7_COM:checked").val() : "No" ,
+
+        E1P8_RUI:$("#E1P8_RUI:checked").val() ? $("#E1P8_RUI:checked").val() : "No" ,
+        E1P8_OLO:$("#E1P8_OLO:checked").val() ? $("#E1P8_OLO:checked").val() : "No" ,
+        E1P8_BAS:$("#E1P8_BAS:checked").val() ? $("#E1P8_BAS:checked").val() : "No" ,
+        E1P8_CON_A:$("#E1P8_CON_A:checked").val() ? $("#E1P8_CON_A:checked").val() : "No" ,
+        E1P8_CON_RIO:$("#E1P8_CON_RIO:checked").val() ? $("#E1P8_CON_RIO:checked").val() : "No" ,
+        E1P8_INV:$("#E1P8_INV:checked").val() ? $("#E1P8_INV:checked").val() : "No" ,
+        E1P8_ANI:$("#E1P8_ANI:checked").val() ? $("#E1P8_ANI:checked").val() : "No" ,
+        E1P8_INC:$("#E1P8_INC:checked").val() ? $("#E1P8_INC:checked").val() : "No" ,
+
         E1P9: $('#ev_grupo_persona').val(),
         id_vivienda: $('#id_vivienda').val(),
 

@@ -35,9 +35,20 @@
     $E1P6_GAT = mysqli_real_Escape_string($con, $_POST['E1P6_GAT']);
     $E1P6_PER = mysqli_real_Escape_string($con, $_POST['E1P6_PER']);
 
+    $E1P7_ADO = mysqli_real_Escape_string($con, $_POST['E1P7_ADO']);
+    $E1P7_NEG = mysqli_real_Escape_string($con, $_POST['E1P7_NEG']);
+    $E1P7_COM = mysqli_real_Escape_string($con, $_POST['E1P7_COM']);
 
-    $E1P7 = mysqli_real_Escape_string($con, $_POST['E1P7']);
-    $E1P8 = mysqli_real_Escape_string($con, $_POST['E1P8']);
+
+    $E1P8_RUI = mysqli_real_Escape_string($con, $_POST['E1P8_RUI']);
+    $E1P8_OLO = mysqli_real_Escape_string($con, $_POST['E1P8_OLO']);
+    $E1P8_BAS = mysqli_real_Escape_string($con, $_POST['E1P8_BAS']);
+    $E1P8_CON_A = mysqli_real_Escape_string($con, $_POST['E1P8_CON_A']);
+    $E1P8_CON_RIO = mysqli_real_Escape_string($con, $_POST['E1P8_CON_RIO']);
+    $E1P8_INV = mysqli_real_Escape_string($con, $_POST['E1P8_INV']);
+    $E1P8_ANI = mysqli_real_Escape_string($con, $_POST['E1P8_ANI']);
+    $E1P8_INC = mysqli_real_Escape_string($con, $_POST['E1P8_INC']);
+
     $E1P9 = mysqli_real_Escape_string($con, $_POST['E1P9']);
    
     $query = "UPDATE vivienda SET E1P1='$E1P1',E1P2='$E1P2',E1P3='$E1P3'
@@ -69,7 +80,20 @@
     ,E1P6_OTR='$E1P6_OTR'
     ,E1P6_NIN='$E1P6_NIN'
     
-    ,E1P7='$E1P7',E1P8='$E1P8',E1P9='$E1P9', create_ev_at = now() ,E1Finalizado= 1 WHERE id_vivienda = '$id_vivienda'";
+    ,E1P7_ADO='$E1P7_ADO'
+    ,E1P7_NEG='$E1P7_NEG'
+    ,E1P7_COM='$E1P7_COM'
+    
+    ,E1P8_RUI='$E1P8_RUI'
+    ,E1P8_OLO='$E1P8_OLO'
+    ,E1P8_BAS='$E1P8_BAS'
+    ,E1P8_CON_A='$E1P8_CON_A'
+    ,E1P8_CON_RIO='$E1P8_CON_RIO'
+    ,E1P8_INV='$E1P8_INV'
+    ,E1P8_ANI='$E1P8_ANI'
+    ,E1P8_INC='$E1P8_INC'
+
+    ,E1P9='$E1P9', create_ev_at = now() ,E1Finalizado= 1 WHERE id_vivienda = '$id_vivienda'";
     $resul_query = mysqli_query($con, $query);
      
     if(!$resul_query){

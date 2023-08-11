@@ -1,5 +1,6 @@
 <?php
 
+    include('../CONFIG/conexion.php'); 
 	session_start(); 
 
 	$_SESSION["IDEN"];
@@ -9,6 +10,15 @@
 	if(isset($_SESSION["MAIL"])){
         $Nonpagina = "VIVIENDA";
         $id_vivienda = $_GET['id_vivienda'];
+
+      //Validar que no entre a la encuesta cuando este cerrada 
+        $query="SELECT * FROM vivienda  WHERE id_vivienda = '$id_vivienda'  LIMIT 1" ; //E1Finalizado
+        $resul_u=mysqli_query($con,$query);
+        if ($row = mysqli_fetch_array($resul_u) ) {
+            if ($row["E1Finalizado"] == 1) {
+                header('location: index.php');
+            }
+        }
 
 ?> 
 
@@ -401,19 +411,19 @@
                                 </p>    
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="ev_group_razon_animales" value="De compañía" type="checkbox"  />
+                                        <input class="with-gap EC_RES" id="E1P7_COM" name="ev_group_razon_animales" value="Si" type="checkbox"  />
                                         <span>De compañía</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="ev_group_razon_animales" value="Por negocio" type="checkbox"  />
+                                        <input class="with-gap EC_RES" id="E1P7_NEG" name="ev_group_razon_animales" value="Si" type="checkbox"  />
                                         <span>Por negocio</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="ev_group_razon_animales" value="Por adopción" type="checkbox"  />
+                                        <input class="with-gap EC_RES" id="E1P7_ADO" name="ev_group_razon_animales" value="Si" type="checkbox"  />
                                         <span>Por adopción</span>
                                     </label>
                                 </p> 
@@ -426,49 +436,49 @@
                                 </p>    
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="ef_group_problema_sector" value="Ruidos molestos provenientes del exterior" type="checkbox"  />
+                                        <input class="with-gap EC_RES" name="ef_group_problema_sector" id="E1P8_RUI" value="Si" type="checkbox"  />
                                         <span>Ruidos molestos provenientes del exterior (tráfico de autos, aviones, maquinaria)?</span>
                                     </label>
                                 </p>    
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="ef_group_problema_sector" value="Malos olores procedentes del exterior" type="checkbox"  />
+                                        <input class="with-gap EC_RES" name="ef_group_problema_sector" id="E1P8_OLO" value="Si" type="checkbox"  />
                                         <span>Malos olores procedentes del exterior?</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="ef_group_problema_sector" value="Presencia de basuras en las calles, caminos, senderos y espacios públicos" type="checkbox"  />
+                                        <input class="with-gap EC_RES" name="ef_group_problema_sector" id="E1P8_BAS" value="Si" type="checkbox"  />
                                         <span>Presencia de basuras en las calles, caminos, senderos y espacios públicos?</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="ef_group_problema_sector" value="Contaminación del aire" type="checkbox"  />
+                                        <input class="with-gap EC_RES" name="ef_group_problema_sector" id="E1P8_CON_A" value="Si" type="checkbox"  />
                                         <span>Contaminación del aire?</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="ef_group_problema_sector" value="Contaminación en ríos, canales, lagos y embalses" type="checkbox"  />
+                                        <input class="with-gap EC_RES" name="ef_group_problema_sector" id="E1P8_CON_RIO" value="Si" type="checkbox"  />
                                         <span>Contaminación en ríos, canales, lagos y embalses?</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="ef_group_problema_sector" value="Invasión del espacio público" type="checkbox"  />
+                                        <input class="with-gap EC_RES" name="ef_group_problema_sector" id="E1P8_INV" value="Si" type="checkbox"  />
                                         <span>Invasión del espacio público (calles o andenes)?</span>
                                     </label>
                                 </p>    
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="ef_group_problema_sector" value="Presencia de animales que causan molestias" type="checkbox"  />
+                                        <input class="with-gap EC_RES" name="ef_group_problema_sector" id="E1P8_ANI" value="Si" type="checkbox"  />
                                         <span>Presencia de animales que causan molestias?</span>
                                     </label>
                                 </p> 
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" name="ef_group_problema_sector" value="Presencia de insectos, roedores" type="checkbox"  />
+                                        <input class="with-gap EC_RES" name="ef_group_problema_sector" id="E1P8_INC" value="Si" type="checkbox"  />
                                         <span>Presencia de insectos, roedores, etc.?</span>
                                     </label>
                                 </p> 
