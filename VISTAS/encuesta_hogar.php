@@ -7,7 +7,7 @@
 	$_SESSION["MAIL"];
 
 	if(isset($_SESSION["MAIL"])){
-        $Nonpagina = "CASA";
+        $Nonpagina = "HOGAR";
 ?> 
 
 
@@ -62,7 +62,7 @@
   <!-- ENCUESTA CASA SESSIÓN 1 -->
 	<div class="section" id="ec_en_1" >
         <div class="row container ">
-            <div class="col s12 m12  offset-s1">
+            <div class="col s12 m12">
                 
               
 
@@ -73,117 +73,144 @@
                             <div class="section card-image center card-panel" style=" border-top: #00c853 5px  solid;">
                                 <h3 class="card-title">ENCUESTA HOGAR </h3> 
                             </div>
-                            <div class="input-field col m12 s12 card-panel ENCUESTA_VIVIENDA" >
-                                <input name="nombre" id="ec_dirccion" value="" type="text" class="validate EC_RES" required>
-                                <label for="ec_dirccion" class="EC_PREGUNTA" >1. Dirección: </label>
-                            </div>
-                            <div  class="input-field col m12 card-panel  s12 ENCUESTA_VIVIENDA">
-                                <input name="apellido" id="ec_estrato" value="" type="text" class="validate EC_RES" required>
-                                <label for="ec_estrato" class="EC_PREGUNTA" >2. Estrato del Servicio de Energia Electrica</label>
-                            </div>
-                            <br><br>
-                            <div  class="input-field col m12 card-panel  s12 ENCUESTA_VIVIENDA">
-                                <p>
-                                    <label for="" class="EC_PREGUNTA " >3. ¿Con cuáles servicios permanentes cuenta?</label> 
-                                </p>    
-                                <p>
-                                    <label>
-                                        <input class="with-gap EC_RES" value="Acueducto" name="group_servicio" type="checkbox"  />
-                                        <span>Acueducto</span>
-                                    </label>
-                                <p>
-                                    <label>
-                                        <input class="with-gap EC_RES" value="Alcantarillado" name="group_servicio" type="checkbox"  />
-                                        <span>Alcantarillado</span>
-                                    </label>
-                                <p>
-                                    <label>
-                                        <input class="with-gap EC_RES" value="Basuras" name="group_servicio" type="checkbox"  />
-                                        <span>Basuras</span>
-                                    </label>
-                                <p>
-                                    <label>
-                                        <input class="with-gap EC_RES" value="Luz" name="group_servicio" type="checkbox"  />
-                                        <span>Luz</span>
-                                    </label>
-                                <p>
-                                    <label>
-                                        <input class="with-gap EC_RES" value="Gas" name="group_servicio" type="checkbox"  />
-                                        <span>Gas</span>
-                                    </label>
-                                <p>
-                                    <label>
-                                        <input class="with-gap EC_RES" value="Ninguno" name="group_servicio" type="checkbox"  />
-                                        <span>Ninguno</span>
-                                    </label>
-                                <p>
-                                    <label>
-                                        <input class="with-gap EC_RES" value="Otro" name="group_servicio" type="checkbox"  />
-                                        <span>Otro</span>
-                                    </label>
-                                </p> 
-  							</div>
-                            <div  class="input-field col m12 card-panel  s12 ENCUESTA_VIVIENDA">
-                                <p>
-                                    <label for="" class="EC_PREGUNTA " >4. ¿Su vivienda tiene alguna de estas situaciones?</label> 
-                                </p>    
-                                <p>
-                                    <label>
-                                        <input class="with-gap EC_RES" value="Humedad" name="group_situaciones" type="checkbox"  />
-                                        <span>Humedad</span>
-                                    </label>
-                                <p>
-                                    <label>
-                                        <input class="with-gap EC_RES" value="Calor excesivo" name="group_situaciones" type="checkbox"  />
-                                        <span>Calor excesivo</span>
-                                    </label>
-                                <p>
-                                    <label>
-                                        <input class="with-gap EC_RES" value="Mala ventilación" name="group_situaciones" type="checkbox"  />
-                                        <span>Mala ventilación</span>
-                                    </label>
-                                <p>
-                                    <label>
-                                        <input class="with-gap EC_RES" value="Cocina con leña" name="group_situaciones" type="checkbox"  />
-                                        <span>Cocina con leña</span>
-                                    </label>
-                                <p>
-                                    <label>
-                                        <input class="with-gap EC_RES" value="Mala iluminación" name="group_situaciones" type="checkbox"  />
-                                        <span>Mala iluminación</span>
-                                    </label>
-                                <p>
-                                    <label>
-                                        <input class="with-gap EC_RES" value="Cocinan donde duermen" name="group_situaciones" type="checkbox"  />
-                                        <span>Cocinan donde duermen</span>
-                                    </label>
-                                <p>
-                                    <label>
-                                        <input class="with-gap EC_RES" value="Taller o negocio adentro" name="group_situaciones" type="checkbox"  />
-                                        <span>Taller o negocio adentro</span>
-                                    </label>
-                                </p> 
-  							</div>
                             <div  class="input-field col m12 card-panel  s12 ">
                                 <p>
-                                    <span for="i9" style="color: #9e9e9e;">5. ¿En alguna habitación duermen más de 3 personas?</span>
+                                    <span for="i9" style="color: #9e9e9e;">1. La vivienda ocupada por este hogar es:</span>
+
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" value="Si" name="group_duermen_mas_de_3" type="radio"  />
-                                        <span>Si</span>
+                                        <input class="with-gap EC_RES" value="Propia, totalmente pagada" name="group_tipo_hogar" type="radio"  />
+                                        <span>Propia, totalmente pagada</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" value="No" name="group_duermen_mas_de_3" type="radio"  />
+                                        <input class="with-gap EC_RES" value="Propia, la están pagando" name="group_tipo_hogar" type="radio"  />
+                                        <span>Propia, la están pagando </span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="En arriendo o subarriendo" name="group_tipo_hogar" type="radio"  />
+                                        <span>En arriendo o subarriendo</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="En usufructo" name="group_tipo_hogar" type="radio"  />
+                                        <span>En usufructo</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="Posesión sin título" name="group_tipo_hogar" type="radio"  />
+                                        <span>Posesión sin título</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="Propiedad colectiva" name="group_tipo_hogar" type="radio"  />
+                                        <span>Propiedad colectiva</span>
+                                    </label>
+                                </p>
+                            </div>
+                            <div class="input-field col m12 s12 card-panel ENCUESTA_HOGAR" >
+                              <p style="margin-bottom: 0px; margin-top: 10px">
+                                  <span for="" style="color: #9e9e9e;" class="EC_PREGUNTA" >2. ¿Incluyendo sala y comedor, ¿de cuántos cuartos o piezas dispone este hogar?</span>
+                              </p> 
+                                <input name="nombre" id="eh_n_cuarto" style ="height: 2.5rem ;margin: 0 0 18px 0;" value="" type="number" min="0" max="99" oninput="validarNumero(this)" class="validate EC_RES" required>
+                            </div>
+                            <div class="input-field col m12 s12 card-panel ENCUESTA_HOGAR" >
+                              <p style="margin-bottom: 0px; margin-top: 10px">
+                                  <span for="" style="color: #9e9e9e;" class="EC_PREGUNTA" >3. ¿En cuántos de esos cuartos duermen las personas de este hogar?</span>
+                              </p> 
+                                <input name="nombre" id="eh_n_persona_cuarto" style ="height: 2.5rem ;margin: 0 0 18px 0;" value="" type="number" min="0" max="99" oninput="validarNumero(this)" class="validate EC_RES" required>
+                            </div>
+                            <div  class="input-field col m12 card-panel  s12 ">
+                                <p>
+                                    <span for="i9" style="color: #9e9e9e;">4. ¿Algunos/as de los niños, niñas o adolescentes del hogar entre 0 y 17 años comparten el cuarto con un adulto? </span>
+
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="Si" name="eh_comparte_cuarto" type="radio"  />
+                                        <span>Si</span>
+                                    </label>
+                                    <div class="row" style="display: none;" id="div_eh_conquien_comp_cuarto">
+                                        <div class="input-field col m6 s10 card-panel ENCUESTA_VIVIENDA offset-s1 offset-m1" >
+                                        <p>
+                                            <span for="i9" style="color: #9e9e9e;">¿Con quiénes comparten el cuarto?</span>
+
+                                        </p>
+                                        <p>
+                                            <label>
+                                                <input class="with-gap EC_RES" value="Padre y/o madre del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="radio"  />
+                                                <span>Padre y/o madre del niño/a o adolescente</span>
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <label>
+                                                <input class="with-gap EC_RES" value="Padrastro y/o madrastra del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="radio"  />
+                                                <span>Padrastro y/o madrastra del niño/a o adolescente</span>
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <label>
+                                                <input class="with-gap EC_RES" value="Abuelo y/o abuela del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="radio"  />
+                                                <span>Abuelo y/o abuela del niño/a o adolescente</span>
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <label>
+                                                <input class="with-gap EC_RES" value="Tío y/o tía del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="radio"  />
+                                                <span>Tío y/o tía del niño/a o adolescente</span>
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <label>
+                                                <input class="with-gap EC_RES" value="Hermano y/o hermana del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="radio"  />
+                                                <span>Hermano y/o hermana del niño/a o adolescente</span>
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <label>
+                                                <input class="with-gap EC_RES" value="Primo y/o prima del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="radio"  />
+                                                <span>Primo y/o prima del niño/a o adolescente</span>
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <label>
+                                                <input class="with-gap EC_RES" value="Otro/a pariente del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="radio"  />
+                                                <span>Otro/a pariente del niño/a o adolescente</span>
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <label>
+                                                <input class="with-gap EC_RES" value="Un adulto que no pertenece al hogar" name="eh_conquien_comp_cuarto" type="radio"  />
+                                                <span>Un adulto que no pertenece al hogar</span>
+                                            </label>
+                                        </p>
+
+                                        </div>
+                                    </div>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="No" name="eh_comparte_cuarto" type="radio" />
                                         <span>No</span>
                                     </label>
                                 </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="No hay niños, niñas o adolescentes de esas edades en el hogar" name="eh_comparte_cuarto" type="radio" />
+                                        <span>No hay niños, niñas o adolescentes de esas edades en el hogar</span>
+                                    </label>
+                                </p>
                             </div>
                             <div  class="input-field col m12 card-panel  s12 ">
                                 <p>
-                                    <span for="i9" style="color: #9e9e9e;">6. El servicio sanitario que utiliza el hogar es:</span>
+                                    <span for="i9" style="color: #9e9e9e;">5. El servicio sanitario que utiliza el hogar es:</span>
 
                                 </p>
                                 <p>
@@ -212,8 +239,8 @@
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" value="Bajamar" name="group_servicio_sanitario" type="radio"  />
-                                        <span>Bajamar</span>
+                                        <input class="with-gap EC_RES" value="Inodoro con descarga directa a fuentes de agua (bajamar)" name="group_servicio_sanitario" type="radio"  />
+                                        <span>Inodoro con descarga directa a fuentes de agua (bajamar)</span>
                                     </label>
                                 </p>
                                 <p>
@@ -223,98 +250,282 @@
                                     </label>
                                 </p>
                             </div>
+                            <div  class="input-field col m12 card-panel  s12 ENCUESTA_HOGAR">
+                                <p>
+                                    <span for="" style="color: #9e9e9e;" class="EC_PREGUNTA " >6. El servicio sanitario esta ubicado:</span> 
+                                </p>    
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="Dentro de la vivienda" name="eh_ubi_sanitaria" type="radio"  />
+                                        <span>Dentro de la vivienda</span>
+                                    </label>
+                                </p> 
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="Fuera de la vivienda, pero en el lote o terreno" name="eh_ubi_sanitaria" type="radio"  />
+                                        <span>Fuera de la vivienda, pero en el lote o terreno</span>
+                                    </label>
+                                </p>
+  							</div>
+                            <div class="input-field col m12 s12 card-panel ENCUESTA_HOGAR" >
+                              <p style="margin-bottom: 0px; margin-top: 10px">
+                                  <span for="" style="color: #9e9e9e;" class="EC_PREGUNTA" >7. ¿De cuántos servicios sanitarios o inodoros dispone este hogar?</span>
+                              </p> 
+                                <input name="nombre" id="eh_n_inodoro" style ="height: 2.5rem ;margin: 0 0 18px 0;" value="" type="number" min="0" max="99" oninput="validarNumero(this)" class="validate EC_RES" required>
+                            </div>
+                            <div  class="input-field col m12 card-panel  s12 ENCUESTA_HOGAR">
+                                <p>
+                                    <span for="" style="color: #9e9e9e;" class="EC_PREGUNTA " >8. El servicio sanitario del hogar es:</span> 
+                                </p>    
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="De uso exclusivo de las personas del hogar" name="eh_exclu_sanitaria" type="radio"  />
+                                        <span>De uso exclusivo de las personas del hogar</span>
+                                    </label>
+                                </p> 
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="Compartido con personas de otros hogares" name="eh_exclu_sanitaria" type="radio"  />
+                                        <span>Compartido con personas de otros hogares</span>
+                                    </label>
+                                </p>
+  							</div>
+                              <div  class="input-field col m12 card-panel  s12 ENCUESTA_VIVIENDA">
+                                <p>
+                                    <span for="" style="color: #9e9e9e;" class="EC_PREGUNTA " >9. El hogar cuenta con:</span> 
+                                </p>    
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES unselectall"  id="E1P6_NIN" name="eh_group_lavadero" value="Ninguno" type="checkbox"  />
+                                        <span>Ninguno de los anteriores</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" id="E1P6_PER" name="eh_group_lavadero" value="Si" type="checkbox"  />
+                                        <span>Lavamanos</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" id="E1P6_GAT" name="eh_group_lavadero" value="Si" type="checkbox"  />
+                                        <span>Lavadero</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" id="E1P6_AVE" name="eh_group_lavadero" value="Si" type="checkbox"  />
+                                        <span>Lavaplatos</span>
+                                    </label>
+                                </p>
+                            </div>
                             <div  class="input-field col m12 card-panel  s12 ">
                                 <p>
-                                    <span for="i9" style="color: #9e9e9e;">7. La vivienda ocupada por este hogar es:</span>
+                                    <span for="i9" style="color: #9e9e9e;">10. Cómo eliminan principalmente la basura en este hogar?</span>
 
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" value="Propia, totalmente pagada" name="group_tipo_hogar" type="radio"  />
-                                        <span>Propia, totalmente pagada</span>
+                                        <input class="with-gap EC_RES" value="La recogen los servicios del aseo" name="eh_elimina_basura" type="radio"  />
+                                        <span>La recogen los servicios del aseo</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" value="En arriendo o subarriendo" name="group_tipo_hogar" type="radio"  />
-                                        <span>En arriendo o subarriendo</span>
+                                        <input class="with-gap EC_RES" value="La tiran a un río, quebrada, caño o laguna" name="eh_elimina_basura" type="radio"  />
+                                        <span>La tiran a un río, quebrada, caño o laguna</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" value="En usufructo" name="group_tipo_hogar" type="radio"  />
-                                        <span>En usufructo</span>
+                                        <input class="with-gap EC_RES" value="La tiran a un patio, lote, zanja o baldío" name="eh_elimina_basura" type="radio"  />
+                                        <span>La tiran a un patio, lote, zanja o baldío</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" value="Posesión sin título" name="group_tipo_hogar" type="radio"  />
-                                        <span>Posesión sin título</span>
+                                        <input class="with-gap EC_RES" value="La queman" name="eh_elimina_basura" type="radio"  />
+                                        <span>La queman</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" value="Propiedad colectiva" name="group_tipo_hogar" type="radio"  />
-                                        <span>Propiedad colectiva</span>
+                                        <input class="with-gap EC_RES" value="La entierran" name="eh_elimina_basura" type="radio"  />
+                                        <span>La entierran</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" value="Otra, ¿cuál?" name="group_tipo_hogar" type="radio"  />
-                                        <span> Otra, ¿cuál?</span>
+                                        <input class="with-gap EC_RES" value="La recoge un servicio informal (zorra, carreta, etc.)" name="eh_elimina_basura" type="radio"  />
+                                        <span>La recoge un servicio informal (zorra, carreta, etc.)</span>
                                     </label>
                                 </p>
                             </div>
                             <div  class="input-field col m12 card-panel  s12 ">
                                 <p>
-                                    <span for="i9" style="color: #9e9e9e;">6 ¿Cuánto es el ingreso mensual promedio del núcleo familiar considerando todas las fuentes? </span>
+                                    <span for="i9" style="color: #9e9e9e;">11. El agua para preparar los alimentos, la obtienen principalmente de:</span>
 
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" value="Menos de $500.000" name="group_ingreso" type="radio"  />
-                                        <span>Menos de $500.000</span>
+                                        <input class="with-gap EC_RES" value="Acueducto público" name="eh_obt_agua" type="radio"  />
+                                        <span>Acueducto público</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" value="$500.000 - $1.000.000" name="group_ingreso" type="radio"  />
-                                        <span>$500.000 - $1.000.000</span>
+                                        <input class="with-gap EC_RES" value="Acueducto comunal o veredal" name="eh_obt_agua" type="radio"  />
+                                        <span>Acueducto comunal o veredal</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" value="Mayores a $1.000.000" name="group_ingreso" type="radio"  />
-                                        <span>Mayores a $1.000.000</span>
+                                        <input class="with-gap EC_RES" value="Pozo con bomba" name="eh_obt_agua" type="radio"  />
+                                        <span>Pozo con bomba</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="Pozo sin bomba,aljibe,jagüey o barreno" name="eh_obt_agua" type="radio"  />
+                                        <span>Pozo sin bomba,aljibe,jagüey o barreno</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="Agua lluvia" name="eh_obt_agua" type="radio"  />
+                                        <span>Agua lluvia</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="Rio, quebrada, manantial o nacimiento" name="eh_obt_agua" type="radio"  />
+                                        <span>Rio, quebrada, manantial o nacimiento</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="Pila pública" name="eh_obt_agua" type="radio"  />
+                                        <span>Pila pública</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="Carrotanque" name="eh_obt_agua" type="radio"  />
+                                        <span>Carrotanque</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="Aguatero" name="eh_obt_agua" type="radio"  />
+                                        <span>Aguatero</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="Agua embotellada o en bolsa" name="eh_obt_agua" type="radio"  />
+                                        <span>Agua embotellada o en bolsa</span>
                                     </label>
                                 </p>
                             </div>
-                            <div  class="input-field col m12 card-panel  s12 ">
-                                <div>
-                                    <br>
-                                    <span for="i9" class="EC_PREGUNTA"style="color: #9e9e9e;">7. ¿Cuál es el número de integrantes de su nucleo familiar….?</span>
-                                </div>
-                                    <div  class=" input-field col m6 s12 ENCUESTA_VIVIENDA">
-                                        <input name="nombre" id="ec_total_intengrante" value="" type="text" class="validate EC_RES" required>
-                                        <label for="ec_total_intengrante" class="EC_PREGUNTA">Total</label>
-                                    </div>
-                                    <div  class=" input-field col m6 s12 ENCUESTA_VIVIENDA">
-                                        <input name="nombre" id="ec_n_adolecentes" value="" type="text" class="validate EC_RES" required>
-                                        <label for="ec_n_adolecentes" class="EC_PREGUNTA">Adolescentes</label>
-                                    </div>
-                                    <div  class=" input-field col m6 s12 ENCUESTA_VIVIENDA">
-                                        <input name="nombre" id="ec_n_adultoMayor" value="" type="text" class="validate EC_RES" required>
-                                        <label for="ec_n_adultoMayor" class="EC_PREGUNTA">Adultos Mayores</label>
-                                    </div>
-                                    <div  class=" input-field col m6 s12 ENCUESTA_VIVIENDA">
-                                        <input name="nombre" id="ec_n_gestante" value="" type="text" class="validate EC_RES" required>
-                                        <label for="ec_n_gestante" class="EC_PREGUNTA"> Gestantes</label>
-                                    </div>
-                                    <div  class=" input-field col m6 s12 ENCUESTA_VIVIENDA">
-                                        <input name="nombre" id="ec_n_discapacidad" value="" type="number" maxlength="2" class="validate EC_RES" required>
-                                        <label for="ec_n_discapacidad" class="EC_PREGUNTA">Personas con Discapacidad*</label>
-                                    </div>
-                            </div>
+                            <div  class="input-field col m12 card-panel  s12 ENCUESTA_HOGAR">
+                                <p>
+                                    <span for="" style="color: #9e9e9e;" class="EC_PREGUNTA " >12. ¿El agua llega al hogar las 24 horas del día, durante los siete días de la semana?</span> 
+                                </p>    
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="Si" name="eh_persistencia_agua" type="radio"  />
+                                        <span>Si</span>
+                                    </label>
+                                </p> 
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="No" name="eh_persistencia_agua" type="radio"  />
+                                        <span>No</span>
+                                    </label>
+                                </p>
+  							</div>
+                            <div  class="input-field col m12 card-panel  s12 ENCUESTA_HOGAR">
+                                <p>
+                                    <span for="" style="color: #9e9e9e;" class="EC_PREGUNTA " >13. ¿Considera que el agua disponible es suficiente?</span> 
+                                </p>    
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="Si" name="eh_suficiente_agua" type="radio"  />
+                                        <span>Si</span>
+                                    </label>
+                                </p> 
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="No" name="eh_suficiente_agua" type="radio"  />
+                                        <span>No</span>
+                                    </label>
+                                </p>
+  							</div>
+                            <div  class="input-field col m12 card-panel  s12 ENCUESTA_HOGAR">
+                                <p>
+                                    <span for="" style="color: #9e9e9e;" class="EC_PREGUNTA " >14. ¿Dónde está ubicado el suministro (llave, grifo, pozo, etc.) de agua?</span> 
+                                </p>    
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="Dentro de la vivienda" name="eh_suministro_agua" type="radio"  />
+                                        <span>Dentro de la vivienda</span>
+                                    </label>
+                                </p> 
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="Fuera de la vivienda, pero en el lote" name="eh_suministro_agua" type="radio"  />
+                                        <span>Fuera de la vivienda, pero en el lote</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="Fuera de la vivienda y del lote o terreno" name="eh_suministro_agua" type="radio"  />
+                                        <span>Fuera de la vivienda y del lote o terreno</span>
+                                    </label>
+                                </p>
+  							</div>
+                            <div  class="input-field col m12 card-panel  s12 ENCUESTA_HOGAR">
+                                <p>
+                                    <span for="" style="color: #9e9e9e;" class="EC_PREGUNTA " >15. El agua para beber principalmente:</span> 
+                                </p>    
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="La usan tal como la obtienen" name="eh_purificación_agua" type="radio"  />
+                                        <span>La usan tal como la obtienen</span>
+                                    </label>
+                                </p> 
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="La hierven" name="eh_purificación_agua" type="radio"  />
+                                        <span>La hierven</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="Le echan cloro" name="eh_purificación_agua" type="radio"  />
+                                        <span>Le echan cloro</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="Utilizan filtros" name="eh_purificación_agua" type="radio"  />
+                                        <span>Utilizan filtros</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="La decantan o usan filtros naturales" name="eh_purificación_agua" type="radio"  />
+                                        <span>La decantan o usan filtros naturales</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap EC_RES" value="Compran agua embotellada o en bolsa" name="eh_purificación_agua" type="radio"  />
+                                        <span>Compran agua embotellada o en bolsa</span>
+                                    </label>
+                                </p>
+  							</div>
+                      
                         </div>
                         
                         <!-- BTN QUE ENVIA EL FORMULARIO -->
@@ -332,57 +543,12 @@
         </div>
 	</div>
 
-  <!-- ENCUESTA VIVIENDA SESSIÓN 1 -->
-    <!-- <div class="section" id="ec_en_2" style="display: none;">
-        <div class="row container ">
-            <div class="col s12 m12  offset-s1">
-                
-                <div class="section card-image center">
-                    <h3 class="card-title">ENCUESTA VIVIENDA </h3> 
-                </div>
-
-                <div class="card-content " id="form" >
-                    <div class="row">
-                        <div class="input-field col m12 s12 ">
-                            <input name="nombre" id="i1" value="" type="text" class="validate EC_RES" required>
-                            <label for="i1">Nombre</label>
-                        </div>
-                        <div class="input-field col m12 s12">
-                            <input name="apellido" id="i2" value="" type="text" class="validate EC_RES" required>
-                            <label for="i2">Apellido</label>
-                        </div>
-                        <div class="input-field col m12 s12">
-                            <input name="cedula" id="i9" value="" type="number" class="validate EC_RES"  required>
-                            <label for="i9">Cedula</label>
-                        </div>
-                        <div class="input-field col m12 s12">
-                            <input name="correo" id="i7" value="" type="email" class="validate EC_RES" required>
-                            <label for="i7">Correo</label>
-                        </div> <br>
-                        </div>
-                        <div class="center section">
-                            <button  class=" btn  waves-effect waves-light" type="" id="ec_atras_1">ATRAS </button>  
-                            <button  class=" btn  waves-effect waves-light" type="" id="ec_sig_2">SIGUIENETE </button>  
-                        </div>    
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-	</div> -->
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<script>document.addEventListener('DOMContentLoaded', function() { M.AutoInit();});</script>
-    <script src="../JS/plugin/virtual-select.min.js"></script>
-    <script type="text/javascript" >
-        VirtualSelect.init({ 
-            ele: 'select' ,
-          
-        });
-</script>
-	<script src="../JS/Encuesta.js"></script>
+	<script src="../JS/encuesta_hogar.js"></script>
 
   </html>
 
