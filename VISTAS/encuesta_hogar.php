@@ -8,6 +8,7 @@
 
 	if(isset($_SESSION["MAIL"])){
         $Nonpagina = "HOGAR";
+        $id_hogar = $_GET['id_hogar'];
 ?> 
 
 
@@ -69,6 +70,8 @@
                 <div class="card-content "  >
                    
                     <form action="" method="post" id="ec_form">
+                    <input name="" id="id_hogar"  value="<?php echo $id_hogar;?>"  type="hidden" class="validate" required>
+
                         <div class="row">
                             <div class="section card-image center card-panel" style=" border-top: #00c853 5px  solid;">
                                 <h3 class="card-title">ENCUESTA HOGAR </h3> 
@@ -145,49 +148,49 @@
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" value="Padre y/o madre del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="radio"  />
+                                                <input class="with-gap EC_RES" value="Padre y/o madre del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="checkbox"  />
                                                 <span>Padre y/o madre del niño/a o adolescente</span>
                                             </label>
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" value="Padrastro y/o madrastra del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="radio"  />
+                                                <input class="with-gap EC_RES" value="Padrastro y/o madrastra del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="checkbox"  />
                                                 <span>Padrastro y/o madrastra del niño/a o adolescente</span>
                                             </label>
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" value="Abuelo y/o abuela del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="radio"  />
+                                                <input class="with-gap EC_RES" value="Abuelo y/o abuela del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="checkbox"  />
                                                 <span>Abuelo y/o abuela del niño/a o adolescente</span>
                                             </label>
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" value="Tío y/o tía del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="radio"  />
+                                                <input class="with-gap EC_RES" value="Tío y/o tía del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="checkbox"  />
                                                 <span>Tío y/o tía del niño/a o adolescente</span>
                                             </label>
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" value="Hermano y/o hermana del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="radio"  />
+                                                <input class="with-gap EC_RES" value="Hermano y/o hermana del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="checkbox"  />
                                                 <span>Hermano y/o hermana del niño/a o adolescente</span>
                                             </label>
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" value="Primo y/o prima del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="radio"  />
+                                                <input class="with-gap EC_RES" value="Primo y/o prima del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="checkbox"  />
                                                 <span>Primo y/o prima del niño/a o adolescente</span>
                                             </label>
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" value="Otro/a pariente del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="radio"  />
+                                                <input class="with-gap EC_RES" value="Otro/a pariente del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="checkbox"  />
                                                 <span>Otro/a pariente del niño/a o adolescente</span>
                                             </label>
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" value="Un adulto que no pertenece al hogar" name="eh_conquien_comp_cuarto" type="radio"  />
+                                                <input class="with-gap EC_RES" value="Un adulto que no pertenece al hogar" name="eh_conquien_comp_cuarto" type="checkbox"  />
                                                 <span>Un adulto que no pertenece al hogar</span>
                                             </label>
                                         </p>
@@ -250,7 +253,7 @@
                                     </label>
                                 </p>
                             </div>
-                            <div  class="input-field col m12 card-panel  s12 ENCUESTA_HOGAR">
+                            <div  class="input-field col m12 card-panel  s12 ENCUESTA_HOGAR" id="div_eh_ubi_sanitaria">
                                 <p>
                                     <span for="" style="color: #9e9e9e;" class="EC_PREGUNTA " >6. El servicio sanitario esta ubicado:</span> 
                                 </p>    
@@ -267,13 +270,13 @@
                                     </label>
                                 </p>
   							</div>
-                            <div class="input-field col m12 s12 card-panel ENCUESTA_HOGAR" >
+                            <div class="input-field col m12 s12 card-panel ENCUESTA_HOGAR" id="div_eh_n_inodoro">
                               <p style="margin-bottom: 0px; margin-top: 10px">
                                   <span for="" style="color: #9e9e9e;" class="EC_PREGUNTA" >7. ¿De cuántos servicios sanitarios o inodoros dispone este hogar?</span>
                               </p> 
                                 <input name="nombre" id="eh_n_inodoro" style ="height: 2.5rem ;margin: 0 0 18px 0;" value="" type="number" min="0" max="99" oninput="validarNumero(this)" class="validate EC_RES" required>
                             </div>
-                            <div  class="input-field col m12 card-panel  s12 ENCUESTA_HOGAR">
+                            <div  class="input-field col m12 card-panel  s12 ENCUESTA_HOGAR" id="div_eh_exclu_sanitaria">
                                 <p>
                                     <span for="" style="color: #9e9e9e;" class="EC_PREGUNTA " >8. El servicio sanitario del hogar es:</span> 
                                 </p>    
@@ -290,31 +293,31 @@
                                     </label>
                                 </p>
   							</div>
-                              <div  class="input-field col m12 card-panel  s12 ENCUESTA_VIVIENDA">
+                              <div  class="input-field col m12 card-panel  s12 ENCUESTA_VIVIENDA" id="div_eh_group_lavadero">
                                 <p>
                                     <span for="" style="color: #9e9e9e;" class="EC_PREGUNTA " >9. El hogar cuenta con:</span> 
                                 </p>    
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES unselectall"  id="E1P6_NIN" name="eh_group_lavadero" value="Ninguno" type="checkbox"  />
+                                        <input class="with-gap EC_RES unselectall"  id="E2P9_NIN" name="eh_group_lavadero" value="Ninguno" type="checkbox"  />
                                         <span>Ninguno de los anteriores</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" id="E1P6_PER" name="eh_group_lavadero" value="Si" type="checkbox"  />
+                                        <input class="with-gap EC_RES" id="E2P9_LMANO" name="eh_group_lavadero" value="Si" type="checkbox"  />
                                         <span>Lavamanos</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" id="E1P6_GAT" name="eh_group_lavadero" value="Si" type="checkbox"  />
+                                        <input class="with-gap EC_RES" id="E2P9_LDEO" name="eh_group_lavadero" value="Si" type="checkbox"  />
                                         <span>Lavadero</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input class="with-gap EC_RES" id="E1P6_AVE" name="eh_group_lavadero" value="Si" type="checkbox"  />
+                                        <input class="with-gap EC_RES" id="E2P9_LPLTO" name="eh_group_lavadero" value="Si" type="checkbox"  />
                                         <span>Lavaplatos</span>
                                     </label>
                                 </p>
@@ -530,7 +533,7 @@
                         
                         <!-- BTN QUE ENVIA EL FORMULARIO -->
                         <div class="center section">
-                            <button  class=" btn  waves-effect waves-light color-background" type="submit" id="ec_guardar">GUARDAR </button>  
+                            <button  class=" btn  waves-effect waves-light color-background" type="submit" id="eh_guardar">GUARDAR </button>  
                         </div>    
                     </form>
 

@@ -103,6 +103,7 @@ $("input[name='ev_group_animales']").click(function() {
     var opcionSeleccionada = $(this).attr('value');
     if(opcionSeleccionada === "Ninguno"){
         $('#ev_group_razon_animales').css("display","none")
+        $("input[name='ev_group_razon_animales']").prop('checked', false);
     }else{
         $('#ev_group_razon_animales').css("display","")
     }
