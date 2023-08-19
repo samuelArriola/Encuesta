@@ -18,7 +18,12 @@
       while ($row_u=mysqli_fetch_array($resul_u)) {
          $individuo = "<li title='Crear Individuo' class='material-icons '><a href='create_individuo.php?id_hogar=".$row_u['id_familia']."' class='hoverable modal-trigger color-text'>group_add</a></li>";  
          $encuest = "<li title='Llenar encuesta Hogar' class='material-icons '><a href='encuesta_hogar.php?id_hogar=".$row_u['id_familia']."' class='hoverable modal-trigger brown-text text-lighten-2'>poll</a></li>";  
-           $tabla_u.="          
+         if ($row_u['E2Finalizado'] == 1) {
+            $individuo = "<li title='Crear Individuo' class='material-icons '><a href='create_individuo.php?id_hogar=".$row_u['id_familia']."' class='hoverable modal-trigger color-text'>group_add</a></li>";  
+            $encuest = "<li title='Llenar encuesta Hogar' style='pointer-events:none; color:#999999; opacity:0.9;' class='material-icons '><a href='' class='hoverable modal-trigger brown-text text-lighten-2'>poll</a></li>";  
+        }
+         
+         $tabla_u.="          
                <tr>
                    <td> ".$row_u['id_familia']." </td>
                    <td> ".$row_u['referencia']." </td>

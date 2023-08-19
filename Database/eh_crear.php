@@ -72,9 +72,9 @@
     $resul_query = mysqli_query($con, $query);
      
     if(!$resul_query){
-        echo 'Error: Numero de identificación ya existente, vuelva a intentar';
+        echo 'Error: Contacte a su equipo tecnico';
     }else{
-      echo('Encuesta registrado exitosamente');
+      echo('Encuesta hogar registrado exitosamente');
     }
 
     mysqli_close($con);

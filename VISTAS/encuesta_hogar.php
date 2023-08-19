@@ -1,5 +1,6 @@
 <?php
 
+    include('../CONFIG/conexion.php'); 
 	session_start(); 
 
 	$_SESSION["IDEN"];
@@ -9,6 +10,15 @@
 	if(isset($_SESSION["MAIL"])){
         $Nonpagina = "HOGAR";
         $id_hogar = $_GET['id_hogar'];
+
+        $query="SELECT * FROM hogar  WHERE id_familia  = '$id_hogar'  LIMIT 1" ; //E1Finalizado
+        $resul_u=mysqli_query($con,$query);
+        if ($row = mysqli_fetch_array($resul_u) ) {
+            if ($row["E2Finalizado"] == 1) {
+                header('location: index.php');
+            }
+        }
+
 ?> 
 
 
@@ -69,7 +79,7 @@
 
                 <div class="card-content "  >
                    
-                    <form action="" method="post" id="ec_form">
+                    <form action="" method="post" id="eh_form">
                     <input name="" id="id_hogar"  value="<?php echo $id_hogar;?>"  type="hidden" class="validate" required>
 
                         <div class="row">
@@ -148,49 +158,49 @@
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" value="Padre y/o madre del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="checkbox"  />
+                                                <input class="with-gap EC_RES" value="Si" id="E2P4_PDRE" name="eh_conquien_comp_cuarto" type="checkbox"  />
                                                 <span>Padre y/o madre del niño/a o adolescente</span>
                                             </label>
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" value="Padrastro y/o madrastra del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="checkbox"  />
+                                                <input class="with-gap EC_RES" value="Si" id="E2P4_PTRO" name="eh_conquien_comp_cuarto" type="checkbox"  />
                                                 <span>Padrastro y/o madrastra del niño/a o adolescente</span>
                                             </label>
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" value="Abuelo y/o abuela del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="checkbox"  />
+                                                <input class="with-gap EC_RES" value="Si" id="E2P4_ABU" name="eh_conquien_comp_cuarto" type="checkbox"  />
                                                 <span>Abuelo y/o abuela del niño/a o adolescente</span>
                                             </label>
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" value="Tío y/o tía del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="checkbox"  />
+                                                <input class="with-gap EC_RES" value="Si" id="E2P4_TIO" name="eh_conquien_comp_cuarto" type="checkbox"  />
                                                 <span>Tío y/o tía del niño/a o adolescente</span>
                                             </label>
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" value="Hermano y/o hermana del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="checkbox"  />
+                                                <input class="with-gap EC_RES" value="Si" id="E2P4_HER" name="eh_conquien_comp_cuarto" type="checkbox"  />
                                                 <span>Hermano y/o hermana del niño/a o adolescente</span>
                                             </label>
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" value="Primo y/o prima del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="checkbox"  />
+                                                <input class="with-gap EC_RES" value="Si" id="E2P4_PRI" name="eh_conquien_comp_cuarto" type="checkbox"  />
                                                 <span>Primo y/o prima del niño/a o adolescente</span>
                                             </label>
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" value="Otro/a pariente del niño/a o adolescente" name="eh_conquien_comp_cuarto" type="checkbox"  />
+                                                <input class="with-gap EC_RES" value="Si" id="E2P4_OTR" name="eh_conquien_comp_cuarto" type="checkbox"  />
                                                 <span>Otro/a pariente del niño/a o adolescente</span>
                                             </label>
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" value="Un adulto que no pertenece al hogar" name="eh_conquien_comp_cuarto" type="checkbox"  />
+                                                <input class="with-gap EC_RES" value="Si" id="E2P4_NO_P_HOG" name="eh_conquien_comp_cuarto" type="checkbox"  />
                                                 <span>Un adulto que no pertenece al hogar</span>
                                             </label>
                                         </p>

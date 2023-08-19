@@ -1,11 +1,11 @@
-console.log('conectado a encuesta Hogar Js');
+console.log('conectado a encuesta Hogar Js aa');
+
+
 
  //GUARDAR ENCUESTA HOGAR CON AJAX
  $('#eh_guardar').click(function(e) {
     e.preventDefault();   
   
-   
-
    
    const datos_v = {
         E2P1: $('input[name=group_tipo_hogar]:checked').val(),
@@ -40,9 +40,8 @@ console.log('conectado a encuesta Hogar Js');
         E2P15: $('input[name=eh_purificación_agua]:checked').val() ? $('input[name=eh_purificación_agua]:checked').val() : 'No Aplica',
         id_hogar: $('#id_hogar').val()
 
-       }
+    }
        //  console.log(datos_v.nombre_u,datos_v.apellido_u,datos_v.cedula_u,datos_v.correo_u);
-       console.log(datos_v);
    if (isEmpty(datos_v.E2P1)) {
        return M.toast({ html: 'Pregunta #1 vacía, por favor complete todos los campos',  classes: 'rounded' });
    } else if (isEmpty(datos_v.E2P2)) {
@@ -59,10 +58,10 @@ console.log('conectado a encuesta Hogar Js');
            url: "../Database/eh_crear.php",
            data: datos_v,
            success: function(response) {
+               console.log('aqui finaliza todo!!');
+               $('#eh_form')[0].reset(); //limpia las casjas de texto
+               window.history.go(-1);
                M.toast({ html: response, classes: 'rounded' });
-              // $('#ev_form')[0].reset(); //limpia las casjas de texto
-            //    window.location.href = 'index.php';
-
            }
        });
    }
