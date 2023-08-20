@@ -29,7 +29,7 @@
 		background-color: #b9f6ca;
 		}
 	.bigModal{
-		width: 80% !important ; min-height: 94% !important; top: 3% !important;
+		width: 85% !important ; min-height: 94% !important; top: 3% !important;
 	}	
 	</style>
 </head>
@@ -71,7 +71,7 @@
 		</div>	
 	</div>
 
-	
+	</div>
 	
 	<div class="fixed-action-btn" > 
 		<a  href="#modalCrearIndividuo" class='btn-floating btn-large waves-effect waves-light color-background  tooltipped modal-trigger' data-position='left'  data-tooltip='CREAR INDIVIDUO'  id='' ><i class='material-icons'>add</i></a>
@@ -94,20 +94,20 @@
 
 						<div class="row">
 							<div class="input-field col m6 s12">
-								<input name="" id="ci_nombre1"  type="text" class="validate" required>
-								<label for="ci_nombre1">Primer nombre</label>
+								<input name="" id="ci_p_nombre"  type="text" class="validate" required>
+								<label for="ci_p_nombre">Primer nombre</label>
 							</div>
 							<div class="input-field col m6 s12">
-								<input name="" id="ci_nombre2"  type="text" class="validate" required>
-								<label for="ci_nombre2">Segundo nombre</label>
+								<input name="" id="ci_s_nombre"  type="text" class="validate" required>
+								<label for="ci_s_nombre">Segundo nombre</label>
 							</div>
 							<div class="input-field col m6 s12">
-								<input name="" id="ci_apellido1"  type="text" class="validate" required>
-								<label for="ci_apellido1">Primer Apellido</label>
+								<input name="" id="ci_p_apellido"  type="text" class="validate" required>
+								<label for="ci_p_apellido">Primer Apellido</label>
 							</div>
 							<div class="input-field col m6 s12">
-								<input name="" id="ci_apellido2"  type="text" class="validate" required>
-								<label for="ci_apellido2">Segundo Apellido</label>
+								<input name="" id="ci_s_apellido"  type="text" class="validate" required>
+								<label for="ci_s_apellido">Segundo Apellido</label>
 							</div>
 							<div class="input-field col m4 s12" >
 								<select id="ci_t_doc">
@@ -133,44 +133,36 @@
 								<input name="" id="ci_num_doc" type="text" class="validate caracteresEpesiales"  required>
 								<label for="ci_num_doc">Número de identificación, sin comas ni puntos.</label>
 							</div>
-							
-							  <div class="input-field col m12 s12" >
-								<select id="ci_p_jefe_hogar">
-									<option value="" selected>Seleccionar...</option>
-									<option value="Jefe (a) del hogar">Jefe (a) del hogar</option>
-									<option value="Pareja, esposo/a, cónyuge, compañero/a">Pareja, esposo/a, cónyuge, compañero/a</option>
-									<option value="Hijo/a Hijastro/a">Hijo/a Hijastro/a</option>
-									<option value="Nieto/a">Nieto/a</option>
-									<option value="Padre, madre, Padrastro, madrastra">Padre, madre, Padrastro, madrastra</option>
-									<option value="Suegro o suegra">Suegro o suegra</option>
-									<option value="Hermano/a, hermanastro/a">Hermano/a, hermanastro/a</option>
-									<option value="Otro/a pariente del/a jefe/a">Otro/a pariente del/a jefe/a</option>
-									<option value="Pensionista">Pensionista</option>
-								</select>
-								<label>¿Cuál es su parentesco con el jefe o la jefa de este hogar?</label>
-  							</div>
 							<div class="input-field col m6 s12">
-							  <input type="date" class="ci_fec_naci validate " id="ci_fec_naci" required >
-								<label for="ci_fec_naci">Fecha de Nacimiento</label>
-							</div>
+								<select id="ci_nacionalidad">
+								<option value="" disabled selected>Seleccionar...</option>
+								<option value="COL">Colombiana</option>
+								<option value="VEN">Venezolana</option>
+								<option value="Otro">Otro</option>
+								</select>
+								<label>Nacionalidad *</label>
+  							</div>
 							<div class="input-field col m6 s12">
 								<select id="ci_sexo">
 								<option value="" disabled selected>Seleccionar...</option>
 								<option value="M">Masculino</option>
 								<option value="F">Femenino</option>
-								<!-- <option value="Otro">Otro</option> -->
+								<option value="Otro">Otro</option>
 								</select>
-								<label>¿Cuál fue su sexo al nacer?</label>
+								<label>Sexo: *</label>
   							</div>
-							<!-- <div id="ci_dev_ot_nacio" class="input-field col m6 s12" style="display: none;">
+							<div id="ci_dev_ot_nacio" class="input-field col m6 s12" style="display: none;">
 								<input name="" id="ci_ot_nacio" type="text" class="validate caracteresEpesiales"  required>
 								<label for="ci_ot_nacio">Otra Nacionalidad</label>
 							</div>
 							<div id="ci_dev_ot_sexo" class="input-field col m6 s12"  style="display: none;">
 								<input name="" id="ci_ot_sexo" type="text" class="validate caracteresEpesiales"  required>
 								<label for="ci_ot_sexo">Otro Sexo</label>
-							</div> -->
-							
+							</div>
+							</div>
+							  <input type="text" class="ci_fec_naci validate " id="ci_fec_naci" required >
+								<label for="ci_fec_naci">Fecha de Nacimiento</label>
+							</div>
 
 						</div>
 						

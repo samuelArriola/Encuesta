@@ -4,11 +4,11 @@
     // BUSCAR PERSONA
     $tabla_u= "";
     $id_hogar = $_POST['id_hogar'] ? mysqli_real_Escape_string( $con, $_POST['id_hogar']) :''   ;
-    $query="SELECT * FROM individuo WHERE  id_familia = '$id_hogar' ORDER BY created_at DESC LIMIT 20" ;
+    $query="SELECT id_indi, CONCAT(nombre1, ' ' ,nombre2, ' ',apellido1, ' ', apellido2) AS full_name ,num_doc FROM individuo WHERE  id_familia = '$id_hogar' ORDER BY created_at DESC LIMIT 20" ;
 
     if (isset($_POST['buscar'])) {
      $buscar_i = mysqli_real_Escape_string ($con,$_POST['buscar']);
-     $query="SELECT * FROM individuo WHERE id_familia = '$id_hogar' and (num_doc LIKE '%$buscar_i%' OR full_name  LIKE '%$buscar_i%' OR nacionalidad  LIKE '%$buscar_i%') ORDER BY created_at DESC LIMIT 20"; 
+     $query="SELECT id_indi, CONCAT(nombre1, ' ' ,nombre2, ' ',apellido1, ' ', apellido2) AS full_name ,num_doc FROM individuo WHERE id_familia = '$id_hogar' and (num_doc LIKE '%$buscar_i%' OR full_name  LIKE '%$buscar_i%' OR nacionalidad  LIKE '%$buscar_i%') ORDER BY created_at DESC LIMIT 20"; 
     }    
    $resul_u=mysqli_query($con,$query);
    $fila =mysqli_num_rows($resul_u); //cuenta los resultados 

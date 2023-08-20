@@ -78,7 +78,7 @@
 	<div id="modalCrearFamilias" class="modal" >
 		<div class="section">
 		<div class="row container ">
-			<div class="col s12 m12  offset-s1">
+			<div class="col s12 m12  ">
 				
 				<div class="section card-image center">
 					<i class="color-text large material-icons">person_add</i> <br>

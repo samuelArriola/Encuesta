@@ -10,9 +10,10 @@ $(document).ready(function() {
     });
     $('.modal').modal();
     $('.dropdown-trigger').dropdown();
+    $('.collapsible').collapsible();
 
-      $('.ci_fec_naci').datepicker({
-        format: 'yyyy/mm/dd',
+      $('.ci_fec_naci2').datepicker({
+        format: 'mm/dd/yyyy',
         onOpen: function() {
             var f2 = new Date();
             var y2 = f2.getFullYear();
@@ -33,31 +34,39 @@ $(document).ready(function() {
     e.preventDefault();
 
     const datos_indi = {
-            full_name: $('#ci_p_nombre').val(),
+            nombre1: $('#ci_nombre1').val(),
+            nombre2: $('#ci_nombre2').val(),
+            apellido1: $('#ci_apellido1').val(),
+            apellido2: $('#ci_apellido2').val(),
             tip_doc: $('#ci_t_doc').val(),
             num_doc: $('#ci_num_doc').val(),
-            nacionalidad: $('#ci_nacionalidad').val(),
-            otra_naci: $('#ci_ot_nacio').val(),
-            sexo: $('#ci_sexo').val(),
-            otro_sexo: $('#ci_ot_sexo').val(),
+            pert_jefe: $('#ci_p_jefe_hogar').val(),
+            // nacionalidad: $('#ci_nacionalidad').val(),
+            // otra_naci: $('#ci_ot_nacio').val(),
             fec_naci: $('#ci_fec_naci').val(),
+            sexo: $('#ci_sexo').val(),
+            // otro_sexo: $('#ci_ot_sexo').val(),
             id_hogar: $('#ci_id_familia').val()
 
         }
         console.log(datos_indi);
         //  console.log(datos_indi.nombre_u,datos_indi.apellido_u,datos_indi.cedula_u,datos_indi.correo_u);
-    if (isEmpty(datos_indi.full_name)) {
-        return M.toast({ html: 'Nombre de usuario vacío, por favor complete todos los campos',  classes: 'rounded' });
+    if (isEmpty(datos_indi.nombre1)) {
+        return M.toast({ html: 'Primer nombre de individuo vacío, por favor complete todos los campos',  classes: 'rounded' });
+    } else if (isEmpty(datos_indi.apellido1)) {
+        return M.toast({ html: 'Primer apellido vacío, por favor complete el campo', classes: 'rounded' });
+    } else if (isEmpty(datos_indi.apellido2)) {
+        return M.toast({ html: 'Segundo apellido vacío, por favor complete el campo', classes: 'rounded' });
     } else if (isEmpty(datos_indi.tip_doc)) {
         return M.toast({ html: 'Tipo de documento vacío, por favor complete el campo', classes: 'rounded' });
     } else if (isEmpty(datos_indi.num_doc)) {
         return M.toast({ html: 'Numero de documento vacío, por favor complete el campo', classes: 'rounded' });
-    } else if (isEmpty(datos_indi.nacionalidad)) {
-        return M.toast({ html: 'Nacionalidad de usuario vacío, por favor complete el campo', classes: 'rounded' });
+    } else if (isEmpty(datos_indi.pert_jefe)) {
+        return M.toast({ html: 'Parentesco con el jefe o la jefa vacío, por favor complete el campo', classes: 'rounded' });
     } else if (isEmpty(datos_indi.sexo)) {
-        return M.toast({ html: 'Sexo de usuario vacío, por favor complete el campo', classes: 'rounded' });
+        return M.toast({ html: 'Sexo de individuo vacío, por favor complete el campo', classes: 'rounded' });
     } else if (isEmpty(datos_indi.fec_naci)) {
-        return M.toast({ html: 'Fecha de nacimiento de usuario vacío, por favor complete el campo', classes: 'rounded' });
+        return M.toast({ html: 'Fecha de nacimiento de individuo vacío, por favor complete el campo', classes: 'rounded' });
     } else {
         $.ajax({
             type: "POST",

@@ -2,14 +2,19 @@
 <?php 
  include('../CONFIG/conexion.php');  
 
- $full_name = mysqli_real_Escape_string($con, $_POST['full_name']);
+ $nombre1 = mysqli_real_Escape_string($con, $_POST['nombre1']);
+ $nombre2 = mysqli_real_Escape_string($con, $_POST['nombre2']);
+ $apellido1 = mysqli_real_Escape_string($con, $_POST['apellido1']);
+ $apellido2 = mysqli_real_Escape_string($con, $_POST['apellido2']);
+ 
  $tip_doc = mysqli_real_Escape_string($con, $_POST['tip_doc']);
  $num_doc = mysqli_real_Escape_string($con, $_POST['num_doc']);
- $nacionalidad = mysqli_real_Escape_string($con, $_POST['nacionalidad']);
- $otra_naci = mysqli_real_Escape_string($con, $_POST['otra_naci']);
- $sexo = mysqli_real_Escape_string($con, $_POST['sexo']);
- $otro_sexo = mysqli_real_Escape_string($con, $_POST['otro_sexo']);
+//  $nacionalidad = mysqli_real_Escape_string($con, $_POST['nacionalidad']);
+//  $otra_naci = mysqli_real_Escape_string($con, $_POST['otra_naci']);
+ $pert_jefe = mysqli_real_Escape_string($con, $_POST['pert_jefe']);
  $fec_naci =  $_POST['fec_naci'];
+ $sexo = mysqli_real_Escape_string($con, $_POST['sexo']);
+//  $otro_sexo = mysqli_real_Escape_string($con, $_POST['otro_sexo']);
  $id_familia = mysqli_real_Escape_string($con, $_POST['id_hogar']);
 
 //  echo $fec_naci;
@@ -24,8 +29,8 @@
       echo('Individuo ya registrada');
     }else{
       
-      $query="INSERT INTO individuo( id_familia, full_name, tip_doc, num_doc, nacionalidad, sexo, otra_nac, otro_sex, fec_naci)
-      VALUES ('$id_familia','$full_name','$tip_doc','$num_doc','$nacionalidad','$sexo','$otra_naci','$otro_sexo','$fec_naci')";
+      $query="INSERT INTO individuo( id_familia, nombre1, nombre2, apellido1, apellido2, tip_doc, num_doc, pert_jefe, fec_naci,  sexo)
+      VALUES ('$id_familia','$nombre1', '$nombre2','$apellido1','$apellido1', '$tip_doc','$num_doc', '$pert_jefe' ,'$fec_naci', '$sexo')";
       $resul=mysqli_query($con,$query); 
       
       if(!$resul){
