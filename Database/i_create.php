@@ -9,12 +9,6 @@
  
  $tip_doc = mysqli_real_Escape_string($con, $_POST['tip_doc']);
  $num_doc = mysqli_real_Escape_string($con, $_POST['num_doc']);
-//  $nacionalidad = mysqli_real_Escape_string($con, $_POST['nacionalidad']);
-//  $otra_naci = mysqli_real_Escape_string($con, $_POST['otra_naci']);
- $pert_jefe = mysqli_real_Escape_string($con, $_POST['pert_jefe']);
- $fec_naci =  $_POST['fec_naci'];
- $sexo = mysqli_real_Escape_string($con, $_POST['sexo']);
-//  $otro_sexo = mysqli_real_Escape_string($con, $_POST['otro_sexo']);
  $id_familia = mysqli_real_Escape_string($con, $_POST['id_hogar']);
 
 //  echo $fec_naci;
@@ -29,14 +23,14 @@
       echo('Individuo ya registrada');
     }else{
       
-      $query="INSERT INTO individuo( id_familia, nombre1, nombre2, apellido1, apellido2, tip_doc, num_doc, pert_jefe, fec_naci,  sexo)
-      VALUES ('$id_familia','$nombre1', '$nombre2','$apellido1','$apellido1', '$tip_doc','$num_doc', '$pert_jefe' ,'$fec_naci', '$sexo')";
+      $query="INSERT INTO individuo( id_familia, nombre1, nombre2, apellido1, apellido2, tip_doc, num_doc )
+      VALUES ('$id_familia','$nombre1', '$nombre2','$apellido1','$apellido1', '$tip_doc','$num_doc')";
       $resul=mysqli_query($con,$query); 
       
       if(!$resul){
         echo 'Error al insetra datos : Comuniquese con su ingeniero de sistemas';
       }else{
-        echo('Usuario registrado exitosamente');
+        echo('Individuo Creado Exitosamente');
       }
 
     }

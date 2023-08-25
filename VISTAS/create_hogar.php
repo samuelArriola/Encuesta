@@ -17,7 +17,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Familia</title>
+	<title>HOGAR</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../CSS/index.css" rel="stylesheet"> 
@@ -31,7 +31,7 @@
 	</style>
 </head>
 <body>
-  <?php $Nonpagina = "FAMILIAS"; include("../LAYOUT/menu.php"); ?>
+  <?php $Nonpagina = "HOGAR"; include("../LAYOUT/menu.php"); ?>
   <div class="hide-on-med-and-down" style="margin-top: 65px;"></div>
 
 	<div class="container section">
@@ -71,7 +71,7 @@
 	</div>
 	
 	<div class="fixed-action-btn" > 
-		<a  href="#modalCrearFamilias" class='btn-floating btn-large waves-effect waves-light color-background  tooltipped modal-trigger' data-position='left'  data-tooltip='CREAR FAMILIA'  id='' ><i class='material-icons'>add</i></a>
+		<a  href="#modalCrearFamilias" class='btn-floating btn-large waves-effect waves-light color-background  tooltipped modal-trigger' data-position='left'  data-tooltip='CREAR HOGAR'  id='' ><i class='material-icons'>add</i></a>
 	</div>
 
 	<!-- MODAL FAMILIAS -->
@@ -82,7 +82,7 @@
 				
 				<div class="section card-image center">
 					<i class="color-text large material-icons">person_add</i> <br>
-					<span class="card-title center">Crear Familias </span> 
+					<span class="card-title center">Crear Hogar </span> 
 				</div>
 
 				<div class="card-content "  >

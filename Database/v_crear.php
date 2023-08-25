@@ -11,7 +11,7 @@
   if(!$resul){
       echo 'Error: Numero de identificación ya existente, vuelva a intentar';
   }else{
-    echo('Usuario registrado exitosamente');
+    echo('Vivienda Creada Exitosamente');
   }
 
   mysqli_close($con);

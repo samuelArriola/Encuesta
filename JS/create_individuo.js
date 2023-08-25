@@ -1,4 +1,4 @@
-console.log('conectado a individuo.js');
+console.log('conectado a create_individuo.js');
 //----------------Individuo ----------------------------//
 
 $(document).ready(function() {
@@ -40,12 +40,6 @@ $(document).ready(function() {
             apellido2: $('#ci_apellido2').val(),
             tip_doc: $('#ci_t_doc').val(),
             num_doc: $('#ci_num_doc').val(),
-            pert_jefe: $('#ci_p_jefe_hogar').val(),
-            // nacionalidad: $('#ci_nacionalidad').val(),
-            // otra_naci: $('#ci_ot_nacio').val(),
-            fec_naci: $('#ci_fec_naci').val(),
-            sexo: $('#ci_sexo').val(),
-            // otro_sexo: $('#ci_ot_sexo').val(),
             id_hogar: $('#ci_id_familia').val()
 
         }
@@ -61,12 +55,6 @@ $(document).ready(function() {
         return M.toast({ html: 'Tipo de documento vacío, por favor complete el campo', classes: 'rounded' });
     } else if (isEmpty(datos_indi.num_doc)) {
         return M.toast({ html: 'Numero de documento vacío, por favor complete el campo', classes: 'rounded' });
-    } else if (isEmpty(datos_indi.pert_jefe)) {
-        return M.toast({ html: 'Parentesco con el jefe o la jefa vacío, por favor complete el campo', classes: 'rounded' });
-    } else if (isEmpty(datos_indi.sexo)) {
-        return M.toast({ html: 'Sexo de individuo vacío, por favor complete el campo', classes: 'rounded' });
-    } else if (isEmpty(datos_indi.fec_naci)) {
-        return M.toast({ html: 'Fecha de nacimiento de individuo vacío, por favor complete el campo', classes: 'rounded' });
     } else {
         $.ajax({
             type: "POST",

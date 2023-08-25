@@ -89,8 +89,8 @@ $(document).ready(function() {
            data: datos_v,
            success: function(response) {
                M.toast({ html: response, classes: 'rounded' });
-              // $('#ev_form')[0].reset(); //limpia las casjas de texto
-            //    window.location.href = 'index.php';
+               $('#ev_form')[0].reset(); //limpia las casjas de texto
+               window.location.href = 'index.php';
 
            }
        });
@@ -154,9 +154,9 @@ $("#ev_group_servicio_ningu").on("change", function() {
 
 let quitar_alt = ()=>{
     $('#ev_div_estrato_Acu').css("display","none");
-    $('#ev_estarto_ene').val("");
+    $("#ev_estarto_ene")[0].reset()
     $('#ev_veces_Bas').val("");
-    $('#ev_estrato_Acu').val("")
+    $("#ev_estrato_Acu")[0].reset();
     $('#ev_div_veces_Bas').css("display","none");
     $('#ev_div_estarto_ene').css("display","none");
 }

@@ -15,7 +15,7 @@
    
    if ($fila ) {
       while ($row_u=mysqli_fetch_array($resul_u)) {
-         $encuest = "<li title='Llenar encuesta Individuo' class='material-icons '><a href='encuesta_individuo.php?id_indi=".$row_u['id_indi']."' class='hoverable modal-trigger brown-text text-lighten-2'>portrait</a></li>";  
+         $encuest = "<li title='Llenar encuesta Individuo' class='material-icons '><a href='encuesta_individuo.php?id_indi=".$row_u['id_indi']."' class='hoverable modal-trigger brown-text text-lighten-2'>poll</a></li>";  
          $encuest_integracion  = "<li title='Llenar encuesta Intrgración' class='material-icons '><a href='encuesta_integracion.php?id_indi=".$row_u['id_indi']."&nun_doc=".$row_u['num_doc']." ' class='hoverable modal-trigger brown-text text-lighten-2'>poll</a></li>";  
          $encuest_salud  = "<li title='Llenar encuesta Salud' class='material-icons '><a href='encuesta_salud.php?id_indi=".$row_u['id_indi']."&nun_doc=".$row_u['num_doc']." ' class='hoverable modal-trigger brown-text text-lighten-2'>volunteer_activism</a></li>";  
          $encuest_educacion  = "<li title='Llenar encuesta Educación' class='material-icons '><a href='encuesta_salud.php?id_indi=".$row_u['id_indi']."&nun_doc=".$row_u['num_doc']." ' class='hoverable modal-trigger brown-text text-lighten-2'>school</a></li>";  
@@ -27,10 +27,7 @@
                    <td> ".$row_u['num_doc']." </td>
                    <td>
                         ". $encuest ."                                
-                        ". $encuest_educacion ."                                
-                        ". $encuest_salud ."                                
-                        ". $encuest_integracion ."                                
-                        ". $encuest_ingreso ."                                
+                                                   
                     </td>
                </tr>     
        ";

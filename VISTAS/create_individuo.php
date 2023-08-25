@@ -112,20 +112,20 @@
 							<div class="input-field col m4 s12" >
 								<select id="ci_t_doc">
 								<option value="" selected>Seleccionar...</option>
-								<option value="1">Cedula de Ciudadanía</option>
-								<option value="2">Tarjeta de Identidad</option>
-								<option value="3">Cedula de Extranjería</option>
-								<option value="3">Pasaporte</option>
-								<option value="3">Registro Civil</option>
-								<option value="3">No. Único de Id. Personal</option>
-								<option value="3">Adulto sin identificación</option>
-								<option value="3">Menor sin Identificación</option>
-								<option value="3">Carnet diplomático</option>
-								<option value="3">Certificado Nacido Vivo</option>
-								<option value="3">Salvo Conducto</option>
-								<option value="3">Per Especial Permanencia</option>
-								<option value="3">Permiso por Protección Temporal</option>
-								<option value="3">Visa</option>
+								<option value="CC">Cedula de Ciudadanía</option>
+								<option value="TI">Tarjeta de Identidad</option>
+								<option value="CE">Cedula de Extranjería</option>
+								<option value="PT">Pasaporte</option>
+								<option value="RC">Registro Civil</option>
+								<option value="NU">No. Único de Id. Personal</option>
+								<option value="AI">Adulto sin identificación</option>
+								<option value="MI">Menor sin Identificación</option>
+								<option value="CD">Carnet diplomático</option>
+								<option value="NV">Certificado Nacido Vivo</option>
+								<option value="SC">Salvo Conducto</option>
+								<option value="PE">Per Especial Permanencia</option>
+								<option value="PT">Permiso por Protección Temporal</option>
+								<option value="VS">Visa</option>
 								</select>
 								<label>Tipo de documento</label>
   							</div>
@@ -133,45 +133,6 @@
 								<input name="" id="ci_num_doc" type="text" class="validate caracteresEpesiales"  required>
 								<label for="ci_num_doc">Número de identificación, sin comas ni puntos.</label>
 							</div>
-							
-							  <div class="input-field col m12 s12" >
-								<select id="ci_p_jefe_hogar">
-									<option value="" selected>Seleccionar...</option>
-									<option value="Jefe (a) del hogar">Jefe (a) del hogar</option>
-									<option value="Pareja, esposo/a, cónyuge, compañero/a">Pareja, esposo/a, cónyuge, compañero/a</option>
-									<option value="Hijo/a Hijastro/a">Hijo/a Hijastro/a</option>
-									<option value="Nieto/a">Nieto/a</option>
-									<option value="Padre, madre, Padrastro, madrastra">Padre, madre, Padrastro, madrastra</option>
-									<option value="Suegro o suegra">Suegro o suegra</option>
-									<option value="Hermano/a, hermanastro/a">Hermano/a, hermanastro/a</option>
-									<option value="Otro/a pariente del/a jefe/a">Otro/a pariente del/a jefe/a</option>
-									<option value="Pensionista">Pensionista</option>
-								</select>
-								<label>¿Cuál es su parentesco con el jefe o la jefa de este hogar?</label>
-  							</div>
-							<div class="input-field col m6 s12">
-							  <input type="date" class="ci_fec_naci validate " id="ci_fec_naci" required >
-								<label for="ci_fec_naci">Fecha de Nacimiento</label>
-							</div>
-							<div class="input-field col m6 s12">
-								<select id="ci_sexo">
-								<option value="" disabled selected>Seleccionar...</option>
-								<option value="M">Masculino</option>
-								<option value="F">Femenino</option>
-								<!-- <option value="Otro">Otro</option> -->
-								</select>
-								<label>¿Cuál fue su sexo al nacer?</label>
-  							</div>
-							<!-- <div id="ci_dev_ot_nacio" class="input-field col m6 s12" style="display: none;">
-								<input name="" id="ci_ot_nacio" type="text" class="validate caracteresEpesiales"  required>
-								<label for="ci_ot_nacio">Otra Nacionalidad</label>
-							</div>
-							<div id="ci_dev_ot_sexo" class="input-field col m6 s12"  style="display: none;">
-								<input name="" id="ci_ot_sexo" type="text" class="validate caracteresEpesiales"  required>
-								<label for="ci_ot_sexo">Otro Sexo</label>
-							</div> -->
-							
-
 						</div>
 						
 						<div class="center section">
@@ -190,7 +151,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<script>document.addEventListener('DOMContentLoaded', function() { M.AutoInit();});</script>
-	<script src="../JS/individuo.js"></script>
+	<script src="../JS/create_individuo.js"></script>
 
   </html>
 

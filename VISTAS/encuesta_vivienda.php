@@ -244,11 +244,22 @@
                                         <span>Acueducto</span>
                                     </label>
                                     <div class="row" style="display:none" id="ev_div_estrato_Acu">
-                                        <div class="input-field col m6 s10 card-panel ENCUESTA_VIVIENDA offset-s1 offset-m1" >
-                                            <p style="margin-bottom: 0px; margin-top: 10px">
-                                                <span for="" style="color: #9e9e9e;" class="EC_PREGUNTA" >Estrato para tarifa</span>
-                                            </p> 
-                                            <input name="nombre" id="ev_estrato_Acu" style ="height: 2.5rem ;margin: 0 0 18px 0;" value="Si" type="number" min="0" max="99" oninput="validarNumero(this)" class="validate EC_RES" required>
+                                        <div class="input-field col m6 s10 offset-m1 offset-s1 card-panel" >
+                                            <p>
+                                                <span style="color: #9e9e9e;" >Estrato para tarifa:</span>
+                                            </p>
+                                            <p style="position: relative; top: -14px;">
+                                                <select id="ev_estrato_Acu" >
+                                                    <option value="" selected>Seleccionar...</option>
+                                                    <option value="0">0</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                </select>
+                                            </p>
                                         </div>
                                     </div>
                                 </p>
@@ -278,11 +289,22 @@
                                         <span>Energía eléctrica</span>
                                     </label>
                                     <div class="row" style="display:none" id="ev_div_estarto_ene" >
-                                        <div class="input-field col m6 s10 card-panel ENCUESTA_VIVIENDA offset-s1 offset-m1" >
-                                            <p style="margin-bottom: 0px; margin-top: 10px">
-                                                <span for="" style="color: #9e9e9e;" class="EC_PREGUNTA" >Estrato para tarifa</span>
-                                            </p> 
-                                            <input name="nombre" id="ev_estarto_ene" style ="height: 2.5rem ;margin: 0 0 18px 0;" value="" type="number" min="0" max="99" oninput="validarNumero(this)" class="validate EC_RES" required>
+                                        <div class="input-field col m6 s10 offset-m1 offset-s1 card-panel" >
+                                            <p>
+                                                <span style="color: #9e9e9e;" >Estrato para tarifa:</span>
+                                            </p>
+                                            <p style="position: relative; top: -14px;">
+                                                <select id="ev_estarto_ene" >
+                                                    <option value="" selected>Seleccionar...</option>
+                                                    <option value="0">0</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                </select>
+                                            </p>
                                         </div>
                                     </div>
                                 </p>

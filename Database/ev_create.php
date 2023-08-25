@@ -99,7 +99,7 @@
     if(!$resul_query){
         echo 'Error: Numero de identificación ya existente, vuelva a intentar';
     }else{
-      echo('Encuesta registrado exitosamente');
+      echo('Encuesta registrada exitosamente');
     }
 
     mysqli_close($con);
