@@ -5,6 +5,8 @@
 	$_SESSION["MAIL"];
 	if(isset($_SESSION["MAIL"])){
         $Nonpagina = "INDIVIDUO";
+        $id_indi = $_GET['id_indi'];
+
 ?> 
 <!DOCTYPE html>
 <html lang="es">
@@ -51,9 +53,11 @@
             <div class="col s12 m12  offset-s1">
                 
                 <div class="card-content"  >
-                    <form action="" method="post" id="ec_form">
+                    <form action="" method="post" id="ei_form">
+                    <input name="" id="id_indi"  value="<?php echo $id_indi;?>"  type="hidden" class="validate" required>
+
                         <ul class="collapsible">
-                            <li>
+                            <li   id="ei_general" class="active" >
                                 <div class="section card-image  card-panel collapsible-header" style=" border-top: #00c853 5px  solid;">
                                     <h3 class="card-title "> CARACTERÍSTICAS GENERALES </h3> 
                                 </div>
@@ -241,35 +245,35 @@
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" name="e_group_sisben" type="radio"  />
+                                                <input class="with-gap EC_RES" value="Si" name="eig_group_sisben" type="radio"  />
                                                 <span>Sí</span>
                                             </label>
-                                            <div class="row">
+                                            <div class="row" style="display: none;" id="div_eig_group_sisben_nivel">
                                                 <div  class=" input-field col m6 s10 card-panel   offset-s1 offset-m1 ">
                                                     <p>
                                                         <span for="" style="color: #9e9e9e;">¿En que nivel se encuentra categorizado?</span>
                                                     </p>
                                                     <p>
                                                         <label>
-                                                            <input class="with-gap EC_RES" name="ei_group_sisben_nivel" type="radio"  />
+                                                            <input class="with-gap EC_RES" value="A" name="eig_group_sisben_nivel" type="radio"  />
                                                             <span>A</span>
                                                         </label>
                                                     </p>
                                                     <p>
                                                         <label>
-                                                            <input class="with-gap EC_RES" name="ei_group_sisben_nivel" type="radio"  />
+                                                            <input class="with-gap EC_RES" value="B" name="eig_group_sisben_nivel" type="radio"  />
                                                             <span>B</span>
                                                         </label>
                                                     </p>
                                                     <p>
                                                         <label>
-                                                            <input class="with-gap EC_RES" name="ei_group_sisben_nivel" type="radio"  />
+                                                            <input class="with-gap EC_RES" value="C" name="eig_group_sisben_nivel" type="radio"  />
                                                             <span>C</span>
                                                         </label>
                                                     </p>
                                                     <p>
                                                         <label>
-                                                            <input class="with-gap EC_RES" name="ei_group_sisben_nivel" type="radio"  />
+                                                            <input class="with-gap EC_RES" value="D" name="eig_group_sisben_nivel" type="radio"  />
                                                             <span>D</span>
                                                         </label>
                                                     </p>
@@ -278,13 +282,13 @@
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" name="e_group_sisben" type="radio"  />
+                                                <input class="with-gap EC_RES" value="No" name="eig_group_sisben" type="radio"  />
                                                 <span>No</span>
                                             </label>
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" name="e_group_sisben" type="radio"  />
+                                                <input class="with-gap EC_RES" value="No sabe" name="eig_group_sisben" type="radio"  />
                                                 <span>No sabe, no informa</span>
                                             </label>
                                         </p>
@@ -295,43 +299,43 @@
                                         </p>    
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
+                                                <input class="with-gap EC_RES"  value="Mujer en riesgo" name="eig_group_afectacion" type="radio"  />
                                                 <span>Mujer en riesgo</span>
                                             </label>
                                         </p> 
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
+                                                <input class="with-gap EC_RES"  value="Niño/a en riesgo" name="eig_group_afectacion" type="radio"  />
                                                 <span>Niño/a en riesgo</span>
                                             </label>
                                         </p> 
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
+                                                <input class="with-gap EC_RES"  value="Persona con condición de salud relevante" name="eig_group_afectacion" type="radio"  />
                                                 <span>Persona con condición de salud relevante</span>
                                             </label>
                                         </p> 
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
+                                                <input class="with-gap EC_RES"  value="Personas con necesidades especificas de protección legal y/o física" name="eig_group_afectacion" type="radio"  />
                                                 <span>Personas con necesidades especificas de protección legal y/o física</span>
                                             </label>
                                         </p> 
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
+                                                <input class="with-gap EC_RES"  value="Persona sola cabeza de familia (padre o madre)" name="eig_group_afectacion" type="radio"  />
                                                 <span>Persona sola cabeza de familia (padre o madre)</span>
                                             </label>
                                         </p> 
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
+                                                <input class="with-gap EC_RES"  value="Persona victima de violencia basada en género" name="eig_group_afectacion" type="radio"  />
                                                 <span>Persona victima de violencia basada en género</span>
                                             </label>
                                         </p> 
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
+                                                <input class="with-gap EC_RES"  value="Ninguno" name="eig_group_afectacion" type="radio"  />
                                                 <span>Ninguno</span>
                                             </label>
                                         </p> 
@@ -342,99 +346,245 @@
                                         </p>   
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" name="ei_group_conflicto_i" type="radio"  />
+                                                <input class="with-gap EC_RES" value="Si" name="ei_group_conflicto_i" type="radio"  />
                                                 <span>Sí</span>
                                             </label>
-                                            <div class="row">
+                                            <div class="row" id="div_eig_p10_1" style="display: none;">
                                                 <div  class=" input-field col m6 s10 card-panel   offset-s1 offset-m1 ">
                                                     <p>
                                                         <span for="" style="color: #9e9e9e;">Que tipo de situación Sufrió:</span>
                                                     </p>
-                                                    <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Amenza a la vida, integridad y seguridad personal</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Daño en bienes muebles e inmuebles (Terrorismo)</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Delitos contra la integridad y libertad sexual</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Desaparición Forzada</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Desplazamiento Forzado</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Despojo de Tierras</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Homicidio en persona protegida</span>
-                                            </label>
-                                        </p> 
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Lesiones personales (Permanentes o transitorias)</span>
-                                            </label>
-                                        </p> 
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Reclutamiento forzado de niños, niñas y adolescentes</span>
-                                            </label>
-                                        </p> 
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Secuestro</span>
-                                            </label>
-                                        </p> 
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Tortura o tratos crueles, inhumanos o degradantes</span>
-                                            </label>
-                                        </p> 
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Victima de minas antipersonales (MAP). Municiones sin explosionar (MUSE) y artefactos explosivos improvisados (AEI)</span>
-                                            </label>
-                                        </p> 
+                                                   <ul style="position: relative; left: 3%">
+                                                        <li>
+                                                            <p>
+                                                                <span style="color: #9e9e9e;">Amenza a la vida, integridad y seguridad personal</span>
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="with-gap EC_RES" value="Si" name="eig_p10_1" type="radio"  />
+                                                                        <span>Si</span>
+                                                                    </label>
+                                                                </p>
+                                                            
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="with-gap EC_RES" value="No" name="eig_p10_1" type="radio"  />
+                                                                        <span>No</span>
+                                                                    </label>
+                                                                </p>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <span style="color: #9e9e9e;">Daño en bienes muebles e inmuebles (Terrorismo)</span>
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="with-gap EC_RES" value="Si" name="eig_p10_2" type="radio"  />
+                                                                        <span>Si</span>
+                                                                    </label>
+                                                                </p>
+                                                            
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="with-gap EC_RES" value="No" name="eig_p10_2" type="radio"  />
+                                                                        <span>No</span>
+                                                                    </label>
+                                                                </p>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <span style="color: #9e9e9e;">Delitos contra la integridad y libertad sexual</span>
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="with-gap EC_RES" value="Si" name="eig_p10_3" type="radio"  />
+                                                                        <span>Si</span>
+                                                                    </label>
+                                                                </p>
+                                                            
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="with-gap EC_RES" value="No" name="eig_p10_3" type="radio"  />
+                                                                        <span>No</span>
+                                                                    </label>
+                                                                </p>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <span style="color: #9e9e9e;">Desaparición Forzada</span>
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="with-gap EC_RES" value="Si" name="eig_p10_4" type="radio"  />
+                                                                        <span>Si</span>
+                                                                    </label>
+                                                                </p>
+                                                            
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="with-gap EC_RES" value="No" name="eig_p10_4" type="radio"  />
+                                                                        <span>No</span>
+                                                                    </label>
+                                                                </p>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <span style="color: #9e9e9e;">Desplazamiento Forzado</span>
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="with-gap EC_RES" value="Si" name="eig_p10_5" type="radio"  />
+                                                                        <span>Si</span>
+                                                                    </label>
+                                                                </p>
+                                                            
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="with-gap EC_RES" value="No" name="eig_p10_5" type="radio"  />
+                                                                        <span>No</span>
+                                                                    </label>
+                                                                </p>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <span style="color: #9e9e9e;">Despojo de Tierras</span>
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="with-gap EC_RES" value="Si" name="eig_p10_6" type="radio"  />
+                                                                        <span>Si</span>
+                                                                    </label>
+                                                                </p>
+                                                            
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="with-gap EC_RES" value="No" name="eig_p10_6" type="radio"  />
+                                                                        <span>No</span>
+                                                                    </label>
+                                                                </p>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <span style="color: #9e9e9e;">Homicidio en persona protegida</span>
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="with-gap EC_RES" value="Si" name="eig_p10_7" type="radio"  />
+                                                                        <span>Si</span>
+                                                                    </label>
+                                                                </p>
+                                                            
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="with-gap EC_RES" value="No" name="eig_p10_7" type="radio"  />
+                                                                        <span>No</span>
+                                                                    </label>
+                                                                </p>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <span style="color: #9e9e9e;">Lesiones personales (Permanentes o transitorias)</span>
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="with-gap EC_RES" value="Si" name="eig_p10_8" type="radio"  />
+                                                                        <span>Si</span>
+                                                                    </label>
+                                                                </p>
+                                                            
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="with-gap EC_RES" value="No" name="eig_p10_8" type="radio"  />
+                                                                        <span>No</span>
+                                                                    </label>
+                                                                </p>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <span style="color: #9e9e9e;">Reclutamiento forzado de niños, niñas y adolescentes</span>
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="with-gap EC_RES" value="Si" name="eig_p10_9" type="radio"  />
+                                                                        <span>Si</span>
+                                                                    </label>
+                                                                </p>
+                                                            
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="with-gap EC_RES" value="No" name="eig_p10_9" type="radio"  />
+                                                                        <span>No</span>
+                                                                    </label>
+                                                                </p>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <span style="color: #9e9e9e;">Secuestro</span>
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="with-gap EC_RES" value="Si" name="eig_p10_10" type="radio"  />
+                                                                        <span>Si</span>
+                                                                    </label>
+                                                                </p>
+                                                            
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="with-gap EC_RES" value="No" name="eig_p10_10" type="radio"  />
+                                                                        <span>No</span>
+                                                                    </label>
+                                                                </p>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <span style="color: #9e9e9e;">Tortura o tratos crueles, inhumanos o degradantes</span>
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="with-gap EC_RES" value="Si" name="eig_p10_11" type="radio"  />
+                                                                        <span>Si</span>
+                                                                    </label>
+                                                                </p>
+                                                            
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="with-gap EC_RES" value="No" name="eig_p10_11" type="radio"  />
+                                                                        <span>No</span>
+                                                                    </label>
+                                                                </p>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <span style="color: #9e9e9e;">Victima de minas antipersonales (MAP). Municiones sin explosionar (MUSE) y artefactos explosivos improvisados (AEI)</span>
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="with-gap EC_RES" value="Si" name="eig_p10_12" type="radio"  />
+                                                                        <span>Si</span>
+                                                                    </label>
+                                                                </p>
+                                                            
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="with-gap EC_RES" value="No" name="eig_p10_12" type="radio"  />
+                                                                        <span>No</span>
+                                                                    </label>
+                                                                </p>
+                                                            </p>
+                                                        </li>
+                                                   </ul>
                                                    
                                                 </div>
                                             </div>    
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" name="ei_group_conflicto_i" type="radio"  />
+                                                <input class="with-gap EC_RES" value="No" name="ei_group_conflicto_i" type="radio"  />
                                                 <span>No</span>
                                             </label>
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" name="ei_group_conflicto_i" type="radio"  />
+                                                <input class="with-gap EC_RES" value="No sabe" name="ei_group_conflicto_i" type="radio"  />
                                                 <span>No sabe, no informa</span>
                                             </label>
                                         </p>
@@ -443,13 +593,17 @@
                                         <p>
                                             <span style="color: #9e9e9e;" for="" class=" " >11. En general, qué tan satisfecho(a) se siente ...</span> 
                                         </p>    
+                                        <p>
+                                            <span style="color: #9e9e9e;" for="" class=" " >Estas preguntan tratan sobre la satisfacción que usted siente, en unaescala de 1 a 10, donde 1 significa que se siente “totalmenteinsatisfecho/a” y 10 significa que se siente “totalmente satisfecho/a”..</span> 
+                                        </p>    
+
                                         <ul style="position: relative; left: 3%">
                                             <li>
                                                 <p>
                                                     <span style="color: #9e9e9e;"> con su vida actualmente?</span>
                                                 </p>
                                                     <p style="position: relative; top: -14px;">
-                                                        <select id="" >
+                                                        <select id="E3P11_VID" >
                                                             <option value="" selected>Seleccionar...</option>
                                                             <option value="0">0</option>
                                                             <option value="1">1</option>
@@ -472,7 +626,7 @@
                                                     </span style="color: #9e9e9e;">
                                                 </p>
                                                 <p style="position: relative; top: -14px;">
-                                                    <select id="" >
+                                                    <select id="E3P11_ING" >
                                                         <option value="" selected>Seleccionar...</option>
                                                         <option value="0">0</option>
                                                         <option value="1">1</option>
@@ -495,7 +649,7 @@
                                                     </span style="color: #9e9e9e;">
                                                 </p>
                                                 <p style="position: relative; top: -14px;">
-                                                    <select id="" >
+                                                    <select id="E3P11_SAL" >
                                                         <option value="" selected>Seleccionar...</option>
                                                         <option value="0">0</option>
                                                         <option value="1">1</option>
@@ -518,7 +672,7 @@
                                                     </span style="color: #9e9e9e;">
                                                 </p>
                                                 <p style="position: relative; top: -14px;">
-                                                    <select id="" >
+                                                    <select id="E3P11_SEG" >
                                                         <option value="" selected>Seleccionar...</option>
                                                         <option value="0">0</option>
                                                         <option value="1">1</option>
@@ -541,7 +695,7 @@
                                                     </span style="color: #9e9e9e;">
                                                 </p>
                                                 <p style="position: relative; top: -14px;">
-                                                    <select id="" >
+                                                    <select id="E3P11_TRA" >
                                                         <option value="" selected>Seleccionar...</option>
                                                         <option value="0">0</option>
                                                         <option value="1">1</option>
@@ -564,7 +718,7 @@
                                                     </span style="color: #9e9e9e;">
                                                 </p> 
                                                 <p style="position: relative; top: -14px;">
-                                                    <select id="" >
+                                                    <select id="E3P11_TIE" >
                                                         <option value="" selected>Seleccionar...</option>
                                                         <option value="0">0</option>
                                                         <option value="1">1</option>
@@ -586,11 +740,16 @@
                                         <p style="margin-bottom: 0px; margin-top: 10px">
                                             <span for="" style="color: #9e9e9e;" class="EC_PREGUNTA" >12. Número de celular </span>
                                         </p> 
-                                            <input name="nombre" id="" style ="height: 2.5rem ;margin: 0 0 18px 0;" value="" type="number" oninput="validarNumero(this, 10)"  class=" EC_RES" required>
+                                            <input  id="E3P12" style ="height: 2.5rem ;margin: 0 0 18px 0;" value="" type="number" oninput="validarNumero(this, 10)"  class=" EC_RES" required>
                                     </div>                  
-                                </div>                            
+                                </div>        
+                                
+                                  <!-- BTN QUE ENVIA EL FORMULARIO -->
+                                  <div class="center section">
+                                    <button  class=" btn  waves-effect waves-light color-background" type="submit" id="ei_guardar">GUARDAR </button>  
+                                </div> 
                             </li> 
-                            <li >
+                            <li id="ei_salud">
                                 <div class="section card-image  card-panel collapsible-header" style=" border-top: #00c853 5px  solid;">
                                     <h3 class="card-title "> SALUD </h3> 
                                 </div>
@@ -1487,7 +1646,7 @@
                                     </div>                           
                                 </div>
                             </li>
-                            <li>
+                            <li id="ei_educación">
                                 <div class="section card-image  card-panel collapsible-header" style=" border-top: #00c853 5px  solid;">
                                     <h3 class="card-title ">EDUCACIÓN </h3> 
                                 </div>
@@ -1916,7 +2075,7 @@
                                     </div>                  
                                 </div>
                             </li>
-                            <li>
+                            <li id="ei_trabajo">
                                 <div class="section card-image  card-panel collapsible-header" style=" border-top: #00c853 5px  solid;">
                                     <h3 class="card-title ">FUERZA DE TRABAJO </h3> 
                                 </div>
@@ -2082,7 +2241,8 @@
                                                 <span>No</span>
                                             </label>
                                         </p>
-                                    </div>   <div  class="input-field col m12 card-panel  s12 ">
+                                    </div>   
+                                    <div  class="input-field col m12 card-panel  s12 ">
                                         <p>
                                             <span for="i9" style="color: #9e9e9e;">7. En las ÚLTIMAS 4 SEMANAS ¿… hizo alguna diligencia para conseguir un trabajo o instalar un negocio?</span>
                                         </p>
@@ -2607,530 +2767,676 @@
                                     </div>     
                                 </div>
                             </li>
-                            <li  class="active">
+                            <li id="ei_migrante" >
                                 <div class="section card-image  card-panel collapsible-header" style=" border-top: #00c853 5px  solid;">
                                     <h3 class="card-title ">INTEGRACIÓN DE MIGRANTES  </h3> 
                                 </div>
                                 <div class="row collapsible-body">
                                     <div  class="input-field col m12 card-panel  s12 ">
                                         <p>
-                                            <span for="i9" style="color: #9e9e9e;">¿Usted siente atracción sexual o romántica por?</span>
+                                            <span style="color: #9e9e9e;" for="ci_fec_naci">1. ¿Desde cuando se encuentra usted viviendo en Barranquilla?</span>
                                         </p>
                                         <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" value="Hombres" name="ed_pref_sexo" type="radio"  />
-                                                <span>Hombres</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" value="Mujeres" name="ed_pref_sexo" type="radio"  />
-                                                <span>Mujeres</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" value="Ambos sexos" name="ed_pref_sexo" type="radio"  />
-                                                <span>Ambos sexos</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" value="Otro" name="ed_pref_sexo" type="radio"  />
-                                                <span>Otro</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" value="Prefiere no responder" name="ed_pref_sexo" type="radio"  />
-                                                <span>Prefiere no responder</span>
-                                            </label>
+                                            <input type="date" class="  " id="ci_fec_naci" required >
                                         </p>
                                     </div>
                                     <div  class="input-field col m12 card-panel  s12 ">
-                                        <p>
-                                            <span for="" style="color: #9e9e9e;">¿Usted se reconoce como?</span>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" value="Hombres" name="ed_reco_sexo" type="radio"  />
-                                                <span>Hombres</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" value="Mujeres" name="ed_reco_sexo" type="radio"  />
-                                                <span>Mujeres</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" value="Persona no binaria" name="ed_reco_sexo" type="radio"  />
-                                                <span>Persona no binaria</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" value="Otro" name="ed_reco_sexo" type="radio"  />
-                                                <span>Otro</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" value="Prefiere no responder" name="ed_reco_sexo" type="radio"  />
-                                                <span>Prefiere no responder</span>
-                                            </label>
-                                        </p>
+                                    <p>
+                                        <span for="i9" style="color: #9e9e9e;">2. ¿Qué tan conectado te sientes con Barranquilla?</span>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Nunca"  name="eit_sentir_bquilla" type="radio"  />
+                                            <span>Nunca</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Pocas veces"  name="eit_sentir_bquilla" type="radio"  />
+                                            <span>Pocas veces</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Algunas veces"  name="eit_sentir_bquilla" type="radio"  />
+                                            <span>Algunas veces</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Usualmente"  name="eit_sentir_bquilla" type="radio"  />
+                                            <span>Usualmente</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Siempre"  name="eit_sentir_bquilla" type="radio"  />
+                                            <span>Siempre</span>
+                                        </label>
+                                    </p>
                                     </div>
-                                    <div  class="input-field col m12 card-panel  s12 ">
-                                        <p>
-                                            <span for="i9" style="color: #9e9e9e;">¿Cuál es su Nacionalidad?</span>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="eg_nacionalidad" value="COL" type="radio"  />
-                                                <span>Colombiana</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="eg_nacionalidad" value="VEN" type="radio"  />
-                                                <span>Venezolana</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="eg_nacionalidad" value="Otro" type="radio"  />
-                                                <span>Otro</span>
-                                            </label>
-                                        </p>
-                                    </div>
-                                    <div  class="input-field col m12 card-panel  s12 ">
-                                        <p>
-                                            <span for="i9" style="color: #9e9e9e;">¿Se encuetra Incluido en el SISBEN?</span>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="e_group_sisben" type="radio"  />
-                                                <span>Sí</span>
-                                            </label>
-                                            <div class="row">
-                                                <div  class=" input-field col m6 s10 card-panel  s12 offset-s1 offset-m1 ">
-                                                    <p>
-                                                        <span for="" style="color: #9e9e9e;">¿En que nivel se encuentra categorizado?</span>
-                                                    </p>
-                                                    <p>
-                                                        <label>
-                                                            <input class="with-gap EC_RES" name="ei_group_sisben_nivel" type="radio"  />
-                                                            <span>A</span>
-                                                        </label>
-                                                    </p>
-                                                    <p>
-                                                        <label>
-                                                            <input class="with-gap EC_RES" name="ei_group_sisben_nivel" type="radio"  />
-                                                            <span>B</span>
-                                                        </label>
-                                                    </p>
-                                                    <p>
-                                                        <label>
-                                                            <input class="with-gap EC_RES" name="ei_group_sisben_nivel" type="radio"  />
-                                                            <span>C</span>
-                                                        </label>
-                                                    </p>
-                                                    <p>
-                                                        <label>
-                                                            <input class="with-gap EC_RES" name="ei_group_sisben_nivel" type="radio"  />
-                                                            <span>D</span>
-                                                        </label>
-                                                    </p>
-                                                </div>
-                                            </div>    
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="e_group_sisben" type="radio"  />
-                                                <span>No</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="e_group_sisben" type="radio"  />
-                                                <span>No sabe, no informa</span>
-                                            </label>
-                                        </p>
-                                    </div>                                 
-                                    <div  class="input-field col m12 card-panel  s12 ENCUESTA_CASA">
-                                        <p>
-                                            <span style="color: #9e9e9e;" for="" class=" " >¿Tiene alguno de estos perfiles de protección internacional?</span> 
-                                        </p>    
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Mujer en riesgo</span>
-                                            </label>
-                                        </p> 
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Niño/a en riesgo</span>
-                                            </label>
-                                        </p> 
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Persona con condición de salud relevante</span>
-                                            </label>
-                                        </p> 
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Personas con necesidades especificas de protección legal y/o física</span>
-                                            </label>
-                                        </p> 
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Persona sola cabeza de familia (padre o madre)</span>
-                                            </label>
-                                        </p> 
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Persona victima de violencia basada en género</span>
-                                            </label>
-                                        </p> 
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Ninguno</span>
-                                            </label>
-                                        </p> 
-                                    </div>
-                                    <div  class="input-field col m12 card-panel  s12 ENCUESTA_CASA">
-                                        <p>
-                                            <span for="" class=" " >¿Es usted Victima de Conflicto Interno?</span> 
-                                        </p>   
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_conflicto_i" type="radio"  />
-                                                <span>Sí</span>
-                                            </label>
-                                            <div class="row">
-                                                <div  class=" input-field col m6 s10 card-panel  s12 offset-s1 offset-m1 ">
-                                                    <p>
-                                                        <span for="" style="color: #9e9e9e;">Que tipo de situación Sufrió:</span>
-                                                    </p>
-                                                    <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Amenza a la vida, integridad y seguridad personal</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Daño en bienes muebles e inmuebles (Terrorismo)</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Delitos contra la integridad y libertad sexual</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Desaparición Forzada</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Desplazamiento Forzado</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Despojo de Tierras</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Homicidio en persona protegida</span>
-                                            </label>
-                                        </p> 
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Lesiones personales (Permanentes o transitorias)</span>
-                                            </label>
-                                        </p> 
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Reclutamiento forzado de niños, niñas y adolescentes</span>
-                                            </label>
-                                        </p> 
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Secuestro</span>
-                                            </label>
-                                        </p> 
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Tortura o tratos crueles, inhumanos o degradantes</span>
-                                            </label>
-                                        </p> 
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_afectacion" type="checkbox"  />
-                                                <span>Victima de minas antipersonales (MAP). Municiones sin explosionar (MUSE) y artefactos explosivos improvisados (AEI)</span>
-                                            </label>
-                                        </p> 
-                                                   
-                                                </div>
-                                            </div>    
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_conflicto_i" type="radio"  />
-                                                <span>No</span>
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_conflicto_i" type="radio"  />
-                                                <span>No sabe, no informa</span>
-                                            </label>
-                                        </p>
-                                    </div>
-                                    <div  class="input-field col m12 card-panel  s12 ENCUESTA_CASA">
-                                        <p>
-                                            <span for="" class=" " >En general, qué tan satisfecho(a) se siente ... con su vida actualmente?:</span> 
-                                        </p>    
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satisf_vida" type="radio"  />
-                                                <span>Bajo - bajo</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satisf_vida" type="radio"  />
-                                                <span>Bajo</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satisf_vida" type="radio"  />
-                                                <span>Medio - bajo</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satisf_vida" type="radio"  />
-                                                <span>Medio</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satisf_vida" type="radio"  />
-                                                <span>Medio - alto</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satisf_vida" type="radio"  />
-                                                <span>Alto</span>
-                                            </label>
-                                        </p> 
-                                    </div>                              
-                                    <div  class="input-field col m12 card-panel  s12 ENCUESTA_CASA">
-                                        <p>
-                                            <span for="" class=" " >En general, qué tan satisfecho(a) se siente ... con su ingreso actualmente?</span> 
-                                        </p>    
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="eI_group_satif_ingre" type="radio"  />
-                                                <span>Bajo - bajo</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="eI_group_satif_ingre" type="radio"  />
-                                                <span>Bajo</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="eI_group_satif_ingre" type="radio"  />
-                                                <span>Medio - bajo</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="eI_group_satif_ingre" type="radio"  />
-                                                <span>Medio</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="eI_group_satif_ingre" type="radio"  />
-                                                <span>Medio - alto</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="eI_group_satif_ingre" type="radio"  />
-                                                <span>Alto</span>
-                                            </label>
-                                        </p> 
-                                    </div>                              
-                                    <div  class="input-field col m12 card-panel  s12 ENCUESTA_CASA">
-                                        <p>
-                                            <span for="" class=" " >En general, qué tan satisfecho(a) se siente ... con su salud actualmente?</span> 
-                                        </p>    
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satif_ingre" type="radio"  />
-                                                <span>Bajo - bajo</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satif_ingre" type="radio"  />
-                                                <span>Bajo</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satif_ingre" type="radio"  />
-                                                <span>Medio - bajo</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satif_ingre" type="radio"  />
-                                                <span>Medio</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satif_ingre" type="radio"  />
-                                                <span>Medio - alto</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satif_ingre" type="radio"  />
-                                                <span>Alto</span>
-                                            </label>
-                                        </p> 
-                                    </div>                              
-                                    <div  class="input-field col m12 card-panel  s12 ENCUESTA_CASA">
-                                        <p>
-                                            <span for="" class=" " >En general, qué tan satisfecho(a) se siente ... con su nivel de seguridad actualmente?</span> 
-                                        </p>    
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satif_seguridad" type="radio"  />
-                                                <span>Bajo - bajo</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satif_seguridad" type="radio"  />
-                                                <span>Bajo</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satif_seguridad" type="radio"  />
-                                                <span>Medio - bajo</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satif_seguridad" type="radio"  />
-                                                <span>Medio</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satif_seguridad" type="radio"  />
-                                                <span>Medio - alto</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satif_seguridad" type="radio"  />
-                                                <span>Alto</span>
-                                            </label>
-                                        </p> 
-                                    </div>                              
-                                    <div  class="input-field col m12 card-panel  s12 ENCUESTA_CASA">
-                                        <p>
-                                            <span for="" class=" " >En En general, qué tan satisfecho(a) se siente ... con su trabajo/actividad actualmente?</span> 
-                                        </p>    
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satif_trabajo" type="radio"  />
-                                                <span>Bajo - bajo</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satif_trabajo" type="radio"  />
-                                                <span>Bajo</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satif_trabajo" type="radio"  />
-                                                <span>Medio - bajo</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satif_trabajo" type="radio"  />
-                                                <span>Medio</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satif_trabajo" type="radio"  />
-                                                <span>Medio - alto</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satif_trabajo" type="radio"  />
-                                                <span>Alto</span>
-                                            </label>
-                                        </p> 
-                                    </div>                              
-                                    <div  class="input-field col m12 card-panel  s12 ENCUESTA_CASA">
-                                        <p>
-                                            <span for="" class=" " >En general, ¿qué tan satisfecho/a se siente _____ con su tiempo libre?</span> 
-                                        </p>    
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satif_timepo" type="radio"  />
-                                                <span>Bajo - bajo</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satif_timepo" type="radio"  />
-                                                <span>Bajo</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satif_timepo" type="radio"  />
-                                                <span>Medio - bajo</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satif_timepo" type="radio"  />
-                                                <span>Medio</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satif_timepo" type="radio"  />
-                                                <span>Medio - alto</span>
-                                            </label>
-                                        <p>
-                                            <label>
-                                                <input class="with-gap EC_RES" name="ei_group_satif_timepo" type="radio"  />
-                                                <span>Alto</span>
-                                            </label>
-                                        </p> 
-                                    </div>  
-                                    
-                                    <!-- BTN QUE ENVIA EL FORMULARIO -->
-                                    <div class="center section">
-                                        <button  class=" btn  waves-effect waves-light color-background" type="submit" id="ec_guardar">GUARDAR </button>  
-                                    </div>  
+                                <div  class="input-field col m12 card-panel  s12 ">
+                                    <p>
+                                        <span for="" style="color: #9e9e9e;">3. ¿Con que frecuencia te sientes diferente a tus vecinos Barranquilleros?</span>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="No siento conexión alguna" name="ei_group_dif_vecinos" type="radio"  />
+                                            <span>No siento conexión alguna</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Me siento poco conectado" name="ei_group_dif_vecinos" type="radio"  />
+                                            <span>Me siento poco conectado</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Me siento moderadamente conectado" name="ei_group_dif_vecinos" type="radio"  />
+                                            <span>Me siento moderadamente conectado</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Me siento bien conectado " name="ei_group_dif_vecinos" type="radio"  />
+                                            <span>Me siento bien conectado </span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Me siento extremadamente conectado" name="ei_group_dif_vecinos" type="radio"  />
+                                            <span>Me siento extremadamente conectado</span>
+                                        </label>
+                                    </p>
                                 </div>
+                                <div  class="input-field col m12 card-panel  s12 ENCUESTA_CASA">
+                                    <p>
+                                        <span style="color: #9e9e9e;" for="" class=" " >4. Pensando en el futuro ¿Dónde te gustaría vivir el resto de tu vida?</span> 
+                                    </p>   
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Definitivamente me mudaría a otro territorio"  name="ei_group_fut_bquilla" type="radio"  />
+                                            <span>Definitivamente me mudaría a otro territorio</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Probablemente me mudaría a otro territorio"  name="ei_group_fut_bquilla" type="radio"  />
+                                            <span>Probablemente me mudaría a otro territorio</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Es incierto si quedarme en Barranquilla o moverme a otro territorio"  name="ei_group_fut_bquilla" type="radio"  />
+                                            <span>Es incierto si quedarme en Barranquilla o moverme a otro territorio</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="otro territorio"  name="ei_group_fut_bquilla" type="radio"  />
+                                            <span>otro territorio</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Probablemente me quedaría en Barranquilla"  name="ei_group_fut_bquilla" type="radio"  />
+                                            <span>Probablemente me quedaría en Barranquilla</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Definitivamente me gustaría quedarme en Barranquilla"  name="ei_group_fut_bquilla" type="radio"  />
+                                            <span>Definitivamente me gustaría quedarme en Barranquilla </span>
+                                        </label>
+                                    </p>
+                                </div>
+                                <div  class="input-field col m12 card-panel  s12 ENCUESTA_CASA">
+                                    <p>
+                                        <span style="color: #9e9e9e;" for="" class=" " >5. ¿Qué tan seguido te sientes aislado por la sociedad Barranquillera?</span> 
+                                    </p>   
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Siempre" name="eit_group_aislado_bquilla" type="radio"  />
+                                            <span>Siempre</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Usualmente" name="eit_group_aislado_bquilla" type="radio"  />
+                                            <span>Usualmente</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Algunas veces" name="eit_group_aislado_bquilla" type="radio"  />
+                                            <span>Algunas veces</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Pocas veces" name="eit_group_aislado_bquilla" type="radio"  />
+                                            <span>Pocas veces</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Nunca" name="eit_group_aislado_bquilla" type="radio"  />
+                                            <span>Nunca</span>
+                                        </label>
+                                    </p>
+                                </div>
+                                
+                                <div  class="input-field col m12 card-panel  s12 ENCUESTA_CASA">
+                                    <p>
+                                        <span style="color: #9e9e9e;" for="" class=" " >6. ¿Qué tanto comprende la problemática política que enfrenta Barranquilla?</span> 
+                                    </p>  
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Muy poco" name="eit_group_politica_bquilla" type="radio"  />
+                                            <span>Muy poco</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Poco" name="eit_group_politica_bquilla" type="radio"  />
+                                            <span>Poco</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Moderado" name="eit_group_politica_bquilla" type="radio"  />
+                                            <span>Moderado</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Bien" name="eit_group_politica_bquilla" type="radio"  />
+                                            <span>Bien</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Muy bien" name="eit_group_politica_bquilla" type="radio"  />
+                                            <span>Muy bien</span>
+                                        </label>
+                                    </p>
+                                </div>
+                                <div  class="input-field col m12 card-panel  s12 ENCUESTA_CASA">
+                                    <p>
+                                        <span style="color: #9e9e9e;" for="" class=" " >7. En los últimos 12 meses ¿Con qué frecuencia has discutido problemas o situaciones políticas de Barranquilla con otras personas?</span> 
+                                    </p>   
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Nunca" name="eit_group_fut_bquilla" type="radio"  />
+                                            <span>Nunca</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Una vez al año" name="eit_group_fut_bquilla" type="radio"  />
+                                            <span>Una vez al año</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Una vez al mes" name="eit_group_fut_bquilla" type="radio"  />
+                                            <span>Una vez al mes</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Una vez a la semana" name="eit_group_fut_bquilla" type="radio"  />
+                                            <span>Una vez a la semana</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Casi todos los días" name="eit_group_fut_bquilla" type="radio"  />
+                                            <span>Casi todos los días</span>
+                                        </label>
+                                    </p>
+                                </div>
+                                <div  class="input-field col m12 card-panel  s12 ENCUESTA_CASA">
+                                    <p>
+                                        <span style="color: #9e9e9e;" for="" class=" " >8. Existen diferentes maneras de mejorar el estado de un territorio o ayudar a prevenir para que se vayan mal las cosas. Durante los últimos 12 meses ¿Ha usted realizado alguna de las siguientes? Responda SI (1) o NO (0)</span> 
+                                    </p>   
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                <span style="color: #9e9e9e;">Tratar de convencer a alguien de cambiar su opinión política</span>
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap EC_RES" value="Si" name="ei_8_1" type="radio"  />
+                                                        <span>Si</span>
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap EC_RES" value="No" name="ei_8_1" type="radio"  />
+                                                        <span>No</span>
+                                                    </label>
+                                                </p>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <span style="color: #9e9e9e;">Tratar de influenciar a otros en como votar</span>
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap EC_RES" value="Si" name="ei_8_2" type="radio"  />
+                                                        <span>Si</span>
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap EC_RES" value="No" name="ei_8_2" type="radio"  />
+                                                        <span>No</span>
+                                                    </label>
+                                                </p>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <span style="color: #9e9e9e;">Realizar declaraciones políticas en público o en línea sobre el territorio</span>
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap EC_RES" value="Si" name="ei_8_3" type="radio"  />
+                                                        <span>Si</span>
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap EC_RES" value="No" name="ei_8_3" type="radio"  />
+                                                        <span>No</span>
+                                                    </label>
+                                                </p>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <span style="color: #9e9e9e;">Comprometerse en discusiones políticas sobre el territorio</span>
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap EC_RES" value="Si" name="ei_8_4" type="radio"  />
+                                                        <span>Si</span>
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap EC_RES" value="No" name="ei_8_4" type="radio"  />
+                                                        <span>No</span>
+                                                    </label>
+                                                </p>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <span style="color: #9e9e9e;">Contactar al algún dirigente o representante político</span>
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap EC_RES" value="Si" name="ei_8_5" type="radio"  />
+                                                        <span>Si</span>
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap EC_RES" value="No" name="ei_8_5" type="radio"  />
+                                                        <span>No</span>
+                                                    </label>
+                                                </p>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <span style="color: #9e9e9e;">Trabajar en algún partido político o grupo de acción</span>
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap EC_RES" value="Si" name="ei_8_6" type="radio"  />
+                                                        <span>Si</span>
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap EC_RES" value="No" name="ei_8_6" type="radio"  />
+                                                        <span>No</span>
+                                                    </label>
+                                                </p>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <span style="color: #9e9e9e;">Portar alguna insignia, emblema, imagen o producto de algún partido político</span>
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap EC_RES" value="Si" name="ei_8_7" type="radio"  />
+                                                        <span>Si</span>
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap EC_RES" value="No" name="ei_8_7" type="radio"  />
+                                                        <span>No</span>
+                                                    </label>
+                                                </p>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <span style="color: #9e9e9e;">Firmar una petición o solicitud</span>
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap EC_RES" value="Si" name="ei_8_8" type="radio"  />
+                                                        <span>Si</span>
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap EC_RES" value="No" name="ei_8_8" type="radio"  />
+                                                        <span>No</span>
+                                                    </label>
+                                                </p>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <span style="color: #9e9e9e;">Ser parte de una manifestación pública</span>
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap EC_RES" value="Si" name="ei_8_9" type="radio"  />
+                                                        <span>Si</span>
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap EC_RES" value="No" name="ei_8_9" type="radio"  />
+                                                        <span>No</span>
+                                                    </label>
+                                                </p>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <span style="color: #9e9e9e;">Boicotear sobre algunos productos</span>
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap EC_RES" value="Si" name="ei_8_10" type="radio"  />
+                                                        <span>Si</span>
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap EC_RES" value="No" name="ei_8_10" type="radio"  />
+                                                        <span>No</span>
+                                                    </label>
+                                                </p>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <span style="color: #9e9e9e;">Recoger firmas para peticiones o solicitudes</span>
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap EC_RES" value="Si" name="ei_8_11" type="radio"  />
+                                                        <span>Si</span>
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label>
+                                                        <input class="with-gap EC_RES" value="No" name="ei_8_11" type="radio"  />
+                                                        <span>No</span>
+                                                    </label>
+                                                </p>
+                                            </p>
+                                        </li>
+                                    </ul>                                  
+                                </div>
+                                <div  class="input-field col m12 card-panel  s12 ENCUESTA_CASA">
+                                    <p>
+                                        <span style="color: #9e9e9e;" for="" class=" " >9. En los último 12 meses ¿Qué tan seguido has cenado con algún Barranquillero que no es parte de tu familia?</span> 
+                                    </p>   
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Nunca" name="eit_group_09" type="radio"  />
+                                            <span>Nunca</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Una vez al año" name="eit_group_09" type="radio"  />
+                                            <span>Una vez al año</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Una vez al mes" name="eit_group_09" type="radio"  />
+                                            <span>Una vez al mes</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Una vez a la semana" name="eit_group_09" type="radio"  />
+                                            <span>Una vez a la semana</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Casi todos los días" name="eit_group_09" type="radio"  />
+                                            <span>Casi todos los días</span>
+                                        </label>
+                                    </p>
+                                </div>
+                                <div  class="input-field col m12 card-panel  s12 ENCUESTA_CASA">
+                                    <p>
+                                        <span style="color: #9e9e9e;" for="" class=" " >10. Piense en los Barranquilleros que conoce ¿Con cuántos ha tenido una conversación en persona, por teléfono o mensajes?</span style="color: #9e9e9e;"> 
+                                    </p>    
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="0" name="eit_group_conversa_bquilla" type="radio"  />
+                                            <span>0</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="1 a 2" name="eit_group_conversa_bquilla" type="radio"  />
+                                            <span>1 a 2 </span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="3 a 6" name="eit_group_conversa_bquilla" type="radio"  />
+                                            <span>3 a 6 </span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="7 a 14" name="eit_group_conversa_bquilla" type="radio"  />
+                                            <span>7 a 14</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="15 o mas" name="ei_group_afectacion" type="radio"  />
+                                            <span>15 o más</span>
+                                        </label>
+                                    </p>
+                                </div>
+                                <div  class="input-field col m12 card-panel  s12 ENCUESTA_CASA">
+                                    <p>
+                                        <span style="color: #9e9e9e;" for="" class=" " >11. Muchas personas suelen ayudar a los otros a través de favores tales como un chance, cuidar a los niños, prestar algún de dinero, entre otros. En los últimos 12 meses ¿Con que frecuencia ha ayudado a alguien Barranquillero con favores?</span> 
+                                    </p>   
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Nunca" name="eit_group_ayuda_bquilla" type="radio"  />
+                                            <span>Nunca</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Una vez al año" name="eit_group_ayuda_bquilla" type="radio"  />
+                                            <span>Una vez al año</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Una vez al mes" name="eit_group_ayuda_bquilla" type="radio"  />
+                                            <span>Una vez al mes</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Una vez a la semana" name="eit_group_ayuda_bquilla" type="radio"  />
+                                            <span>Una vez a la semana</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Casi todos los días" name="eit_group_ayuda_bquilla" type="radio"  />
+                                            <span>Casi todos los días</span>
+                                        </label>
+                                    </p>
+                                </div>
+                                <div  class="input-field col m12 card-panel  s12 ENCUESTA_CASA">
+                                    <p>
+                                        <span  style="color: #9e9e9e;" for="" class=" " >12. ¿Cómo evaluaría la dificultad para acceder o ver a un doctor?</span  style="color: #9e9e9e;"> 
+                                    </p>    
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Muy difícil" name="eit_group_ir_doc_bquilla" type="radio"  />
+                                            <span>Muy difícil</span>
+                                        </label>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Difícil" name="eit_group_ir_doc_bquilla" type="radio"  />
+                                            <span>Difícil</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Moderada" name="eit_group_ir_doc_bquilla" type="radio"  />
+                                            <span>Moderada</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Fácil" name="eit_group_ir_doc_bquilla" type="radio"  />
+                                            <span>Fácil</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Muy fácil" name="eit_group_ir_doc_bquilla" type="radio"  />
+                                            <span>Muy fácil</span>
+                                        </label>
+                                    </p>
+                                </div>      
+                                <div  class="input-field col m12 card-panel  s12 ENCUESTA_CASA">
+                                    <p>
+                                        <span  style="color: #9e9e9e;" for="" class=" " >13. ¿Cómo evaluaría  la dificultad para buscar un trabajo?</span  style="color: #9e9e9e;"> 
+                                    </p>    
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Muy difícil" name="eif_group_buscar_trab" type="radio"  />
+                                            <span>Muy difícil</span>
+                                        </label>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Difícil" name="eif_group_buscar_trab" type="radio"  />
+                                            <span>Difícil</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Moderada" name="eif_group_buscar_trab" type="radio"  />
+                                            <span>Moderada</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Fácil" name="eif_group_buscar_trab" type="radio"  />
+                                            <span>Fácil</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Muy fácil" name="eif_group_buscar_trab" type="radio"  />
+                                            <span>Muy fácil</span>
+                                        </label>
+                                    </p>
+                                </div>      
+                                <div  class="input-field col m12 card-panel  s12 ENCUESTA_CASA">
+                                    <p>
+                                        <span  style="color: #9e9e9e;" for="" class=" " >14. ¿Cómo evaluaría  la dificultad para obtener ayuda con problemas legales?</span  style="color: #9e9e9e;"> 
+                                    </p>    
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Muy difícil" name="eif_group_ayuda_legal" type="radio"  />
+                                            <span>Muy difícil</span>
+                                        </label>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Difícil" name="eif_group_ayuda_legal" type="radio"  />
+                                            <span>Difícil</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Moderada" name="eif_group_ayuda_legal" type="radio"  />
+                                            <span>Moderada</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Fácil" name="eif_group_ayuda_legal" type="radio"  />
+                                            <span>Fácil</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Muy fácil" name="eif_group_ayuda_legal" type="radio"  />
+                                            <span>Muy fácil</span>
+                                        </label>
+                                    </p>
+                                </div>   
+                                <div  class="input-field col m12 card-panel  s12 ENCUESTA_CASA">
+                                    <p>
+                                        <span style="color: #9e9e9e;" for="" class=" " >15. En Barranquilla ¿Cómo accedería a servicio médico por un dolor crónico de espalda?</span style="color: #9e9e9e;"> 
+                                    </p>    
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="No sabe" name="eif_group_acede_medico" type="radio"  />
+                                            <span>No sabe</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Preguntar a un conocido" name="eif_group_acede_medico" type="radio"  />
+                                            <span>Preguntar a un conocido</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Visitar un médico general" name="eif_group_acede_medico" type="radio"  />
+                                            <span>Visitar un médico general</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Dirigiéndose a atención por urgencia" name="eif_group_acede_medico" type="radio"  />
+                                            <span>Dirigiéndose a atención por urgencia</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap EC_RES" value="Llamando a una ambulancia" name="eif_group_acede_medico" type="radio"  />
+                                            <span>Llamando a una ambulancia</span>
+                                        </label>
+                                    </p>                               
+                                </div>         
+                                <!-- BTN QUE ENVIA EL FORMULARIO -->
+                               <!--  <div class="center section">
+                                    <button  class=" btn  waves-effect waves-light color-background" type="submit" id="ec_guardar">GUARDAR </button>  
+                                </div>   -->
                             </li>
                         </ul>
                     </form>

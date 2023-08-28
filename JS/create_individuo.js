@@ -55,6 +55,8 @@ $(document).ready(function() {
         return M.toast({ html: 'Tipo de documento vacío, por favor complete el campo', classes: 'rounded' });
     } else if (isEmpty(datos_indi.num_doc)) {
         return M.toast({ html: 'Numero de documento vacío, por favor complete el campo', classes: 'rounded' });
+    } else if (isEmpty(datos_indi.id_hogar)) {
+        return M.toast({ html: 'Id de hogar no encontrado, por favor complete el campo', classes: 'rounded' });
     } else {
         $.ajax({
             type: "POST",

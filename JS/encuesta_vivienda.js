@@ -82,6 +82,8 @@ $(document).ready(function() {
        return M.toast({ html: 'Cedula de usuario vacío, por favor complete el campo', classes: 'rounded' });
    }else if(isEmpty(datos_v.E1P9)){
        return M.toast({ html: 'Tipo de usuario vacío, por favor complete el campo', classes: 'rounded' });
+   }else if(isEmpty(datos_v.id_vivienda)){
+       return M.toast({ html: 'ID vivienda no encontrado, por favor complete el campo', classes: 'rounded' });
    }else {
        $.ajax({
            type: "POST",

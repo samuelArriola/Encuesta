@@ -24,11 +24,7 @@ $(document).ready(function() {
   
          },
   
-    });
- 
-  
-     
-   
+    });   
 });
   
   //GUARDAR USUARIO CON AJAX

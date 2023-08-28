@@ -52,6 +52,8 @@ console.log('conectado a encuesta Hogar Js aa');
        return M.toast({ html: 'Pregunta #4 vacía, por favor complete el campo', classes: 'rounded' });
    }else if(isEmpty(datos_v.E2P5)){
         return M.toast({ html: 'Pregunta #5 vacía, por favor complete el campo', classes: 'rounded' });
+   }else if(isEmpty(datos_v.id_hogar)){
+        return M.toast({ html: 'ID hogar no encontrado, por favor complete el campo', classes: 'rounded' });
    }else {
        $.ajax({
            type: "POST",
