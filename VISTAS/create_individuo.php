@@ -78,7 +78,7 @@
 	</div>
 
 	<!-- MODAL INDIVIDUOS -->
-	<div id="modalCrearIndividuo" class="modal bigModal"  style="">
+	<div id="modalCrearIndividuo" class="modal bigModal">
 		<div class="section">
 		<div class="row container ">
 			<div class="col s12 m12  ">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-08-2023 a las 06:01:21
+-- Tiempo de generación: 01-09-2023 a las 06:36:30
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -71,7 +71,16 @@ CREATE TABLE `hogar` (
 INSERT INTO `hogar` (`id_familia`, `id_vivienda`, `referencia`, `activa`, `Creado_por`, `create_at`, `E2P1`, `E2P2`, `E2P3`, `E2P4`, `E2P4_PDRE`, `E2P4_PTRO`, `E2P4_ABU`, `E2P4_TIO`, `E2P4_HER`, `E2P4_PRI`, `E2P4_OTR`, `E2P4_NO_P_HOG`, `E2P5`, `E2P6`, `E2P7`, `E2P8`, `E2P9_NIN`, `E2P9_LMANO`, `E2P9_LDEO`, `E2P9_LPLTO`, `E2P10`, `E2P11`, `E2P12`, `E2P13`, `E2P14`, `E2P15`, `create_ev_at`, `E2Finalizado`) VALUES
 (19, 20, 'ARRIETA', 0, 0, '2023-08-07 16:57:03', '', '', '', '', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', '', '', '', '', NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, 0),
 (20, 20, 'arriera corzo', 0, 0, '2023-08-07 17:23:52', '', '', '', '', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', '', '', '', '', NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(21, 23, 'Duarte', 0, 0, '2023-08-17 01:02:33', 'Propia, totalmente pagada', '3', '4', 'Si', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'Inodoro sin conexión', 'No Aplica', 'No Aplica', 'No Aplica', 'No', 'No', 'No', 'No', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', '2023-08-18 03:30:44', 1);
+(21, 23, 'Duarte', 0, 0, '2023-08-17 01:02:33', 'Propia, totalmente pagada', '3', '4', 'Si', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'Inodoro sin conexión', 'No Aplica', 'No Aplica', 'No Aplica', 'No', 'No', 'No', 'No', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', '2023-08-18 03:30:44', 0),
+(22, 25, 'Espitia', 0, 0, '2023-08-19 02:19:34', 'Propia, la están pagando', '1', '1', 'Si', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'Inodoro conectado a pozo séptico', 'No Aplica', 'No Aplica', 'No Aplica', 'No', 'No', 'No', 'No', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', '2023-08-19 03:10:09', 1),
+(23, 25, 'wemdy', 0, 0, '2023-08-19 03:00:16', 'Propia, totalmente pagada', '2', '23', 'Si', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'Inodoro conectado a alcantarillado', 'No Aplica', 'No Aplica', 'No Aplica', 'No', 'No', 'No', 'No', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', '2023-08-19 03:20:33', 1),
+(24, 26, 'Villegas Rios ', 0, 0, '2023-08-23 01:54:16', 'En usufructo', '34', '34', 'No hay niños, niñas o adolescentes de esas edades en el hogar', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No tiene servicio sanitario', 'No Aplica', 'No Aplica', 'No Aplica', 'No', 'No', 'No', 'No', 'La recogen los servicios del aseo', 'Agua lluvia', 'No', 'No', 'Fuera de la vivienda y del lote o terreno', 'La hierven', '2023-08-23 01:57:01', 1),
+(25, 26, 'Arriola Espitia', 0, 0, '2023-08-24 02:37:37', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No', 'No', 'No', 'No', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', NULL, 0),
+(26, 27, 'Prueba 1 1', 0, 0, '2023-08-28 23:38:20', 'En usufructo', '2', '2', 'Si', 'No', 'No', 'Si', 'Si', 'Si', 'No', 'No', 'No', 'Inodoro conectado a alcantarillado', 'Dentro de la vivienda', '23', 'Compartido con personas de otros hogares', 'No', 'No', 'No', 'Si', 'La recogen los servicios del aseo', 'Pozo con bomba', 'No', 'Si', 'Fuera de la vivienda y del lote o terreno', 'Le echan cloro', '2023-08-28 23:41:30', 1),
+(27, 27, 'erwer', 0, 0, '2023-08-29 14:24:54', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No', 'No', 'No', 'No', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', NULL, 0),
+(28, 28, 'Arrieta', 0, 0, '2023-08-29 18:07:05', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No', 'No', 'No', 'No', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', NULL, 0),
+(29, 29, 'REF001', 0, 0, '2023-08-29 20:22:41', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No', 'No', 'No', 'No', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', NULL, 0),
+(30, 29, 'REF002', 0, 0, '2023-08-29 20:25:19', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No', 'No', 'No', 'No', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', 'No Aplica', NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -82,24 +91,167 @@ INSERT INTO `hogar` (`id_familia`, `id_vivienda`, `referencia`, `activa`, `Cread
 CREATE TABLE `individuo` (
   `id_indi` int(11) NOT NULL,
   `id_familia` int(11) NOT NULL,
-  `full_name` varchar(150) NOT NULL,
+  `nombre1` varchar(50) NOT NULL,
+  `nombre2` varchar(50) NOT NULL,
+  `apellido1` varchar(50) NOT NULL,
+  `apellido2` varchar(50) NOT NULL,
   `tip_doc` varchar(50) NOT NULL,
   `num_doc` varchar(20) NOT NULL,
-  `nacionalidad` varchar(60) NOT NULL,
-  `sexo` varchar(50) NOT NULL,
-  `otra_nac` varchar(50) DEFAULT NULL,
-  `otro_sex` varchar(50) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `E3P4` varchar(50) NOT NULL,
   `fec_naci` date NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `E3P6` varchar(20) NOT NULL,
+  `E3P6_1` varchar(30) NOT NULL,
+  `E3P6_2` varchar(30) NOT NULL,
+  `E3P7` varchar(20) NOT NULL,
+  `E3P8` varchar(10) NOT NULL,
+  `E3P8_PUN` varchar(10) NOT NULL DEFAULT 'No Aplica',
+  `E3P9` varchar(80) NOT NULL,
+  `E3P10` varchar(100) NOT NULL,
+  `E3P10_1` varchar(10) NOT NULL,
+  `E3P10_2` varchar(10) NOT NULL,
+  `E3P10_3` varchar(10) NOT NULL,
+  `E3P10_4` varchar(10) NOT NULL,
+  `E3P10_5` varchar(10) NOT NULL,
+  `E3P10_6` varchar(10) NOT NULL,
+  `E3P10_7` varchar(10) NOT NULL,
+  `E3P10_8` varchar(10) NOT NULL,
+  `E3P10_9` varchar(70) NOT NULL,
+  `E3P10_10` varchar(10) NOT NULL,
+  `E3P10_11` varchar(10) NOT NULL,
+  `E3P10_12` varchar(10) NOT NULL,
+  `E3P11_VID` varchar(10) NOT NULL,
+  `E3P11_ING` varchar(10) NOT NULL,
+  `E3P11_SAL` varchar(10) NOT NULL,
+  `E3P11_SEG` varchar(10) NOT NULL,
+  `E3P11_TRA` varchar(10) NOT NULL,
+  `E3P11_TIE` varchar(10) NOT NULL,
+  `E3P12` varchar(15) NOT NULL,
+  `E3SP1` varchar(15) NOT NULL,
+  `E3SP2` varchar(30) NOT NULL,
+  `E3SP3` varchar(30) NOT NULL,
+  `E3SP4` varchar(50) NOT NULL,
+  `E3SP5` varchar(50) NOT NULL,
+  `E3SP6` varchar(30) NOT NULL,
+  `E3SP7` varchar(15) NOT NULL,
+  `E3SP8` varchar(15) NOT NULL,
+  `E3SP9_1` varchar(15) NOT NULL,
+  `E3SP9_2` varchar(15) NOT NULL,
+  `E3SP9_3` varchar(15) NOT NULL,
+  `E3SP10_1` varchar(15) NOT NULL,
+  `E3SP10_2` varchar(15) NOT NULL,
+  `E3SP11` varchar(15) NOT NULL,
+  `E3SP12` varchar(140) NOT NULL,
+  `E3SP13` varchar(15) NOT NULL,
+  `E3SP13_1` varchar(15) NOT NULL,
+  `E3SP14` varchar(15) NOT NULL,
+  `E3SP15_FIS` varchar(15) NOT NULL,
+  `E3SP15_AUD` varchar(15) NOT NULL,
+  `E3SP15_VIS` varchar(15) NOT NULL,
+  `E3SP15_COG` varchar(15) NOT NULL,
+  `E3SP15_PSI` varchar(15) NOT NULL,
+  `E3SP15_MUL` varchar(15) NOT NULL,
+  `E3SP15_SOR` varchar(15) NOT NULL,
+  `E3SP16_1` varchar(15) NOT NULL,
+  `E3SP16_2` varchar(15) NOT NULL,
+  `E3SP16_3` varchar(15) NOT NULL,
+  `E3SP16_4` varchar(15) NOT NULL,
+  `E3SP16_5` varchar(15) NOT NULL,
+  `E3SP16_6` varchar(15) NOT NULL,
+  `E3SP16_7` varchar(15) NOT NULL,
+  `E3SP16_8` varchar(15) NOT NULL,
+  `E3SP17` varchar(15) NOT NULL,
+  `E3SP17_1` int(15) NOT NULL,
+  `E3SP17_2` varchar(15) NOT NULL,
+  `Obs1` text NOT NULL,
+  `E3SP18` varchar(15) NOT NULL,
+  `E3SP18_1` varchar(15) NOT NULL,
+  `E3SP19` varchar(15) NOT NULL,
+  `E3SP20` varchar(15) NOT NULL,
+  `eie_p1` varchar(15) NOT NULL,
+  `eie_p2` varchar(15) NOT NULL,
+  `eie_p2_1` varchar(70) NOT NULL,
+  `eie_p3` varchar(100) NOT NULL,
+  `eie_p4` varchar(70) NOT NULL,
+  `eie_p5` varchar(70) NOT NULL,
+  `eie_p6` varchar(15) NOT NULL,
+  `eie_p7` varchar(100) NOT NULL,
+  `EIT_P1` varchar(50) NOT NULL,
+  `EIT_P2` varchar(15) NOT NULL,
+  `EIT_P3` varchar(15) NOT NULL,
+  `EIT_P4` varchar(15) NOT NULL,
+  `EIT_P5` varchar(40) NOT NULL,
+  `EIT_P6` varchar(15) NOT NULL,
+  `EIT_P7` varchar(15) NOT NULL,
+  `EIT_P8_1` varchar(15) NOT NULL,
+  `EIT_P8_2` varchar(16) NOT NULL,
+  `EIT_P8_3` varchar(15) NOT NULL,
+  `EIT_P8_4` varchar(15) NOT NULL,
+  `EIT_P8_5` varchar(15) NOT NULL,
+  `EIT_P8_6` varchar(15) NOT NULL,
+  `EIT_P8_7` varchar(15) NOT NULL,
+  `EIT_P9_1` varchar(15) NOT NULL,
+  `EIT_P9_2` varchar(15) NOT NULL,
+  `EIT_P10` varchar(15) NOT NULL,
+  `EIT_P11` varchar(15) NOT NULL,
+  `EIT_P12` varchar(15) NOT NULL,
+  `EIT_P13` varchar(15) NOT NULL,
+  `EIT_P14` varchar(15) NOT NULL,
+  `EIT_P15` varchar(30) NOT NULL,
+  `EIT_P16` varchar(15) NOT NULL,
+  `EIT_P17` varchar(15) NOT NULL,
+  `EIT_P17_1` varchar(15) NOT NULL,
+  `EIT_P18` varchar(15) NOT NULL,
+  `EIT_P18_1` varchar(15) NOT NULL,
+  `EIT_P19` varchar(15) NOT NULL,
+  `EIT_P19_1` varchar(15) NOT NULL,
+  `EIT_P20` varchar(15) NOT NULL,
+  `EIT_P20_1` varchar(15) NOT NULL,
+  `EIT_P21` varchar(15) NOT NULL,
+  `EIT_P21_1` varchar(15) NOT NULL,
+  `EIT_PObs` text NOT NULL,
+  `EIM_P1` varchar(30) NOT NULL,
+  `EIM_P2` varchar(20) NOT NULL,
+  `EIM_P3` varchar(20) NOT NULL,
+  `EIM_P4` varchar(40) NOT NULL,
+  `EIM_P5` varchar(30) NOT NULL,
+  `EIM_P6` varchar(30) NOT NULL,
+  `EIM_P7` varchar(30) NOT NULL,
+  `EIM_P8_1` varchar(30) NOT NULL,
+  `EIM_P8_2` varchar(20) NOT NULL,
+  `EIM_P8_3` varchar(20) NOT NULL,
+  `EIM_P8_4` varchar(20) NOT NULL,
+  `EIM_P8_5` varchar(20) NOT NULL,
+  `EIM_P8_6` varchar(20) NOT NULL,
+  `EIM_P8_7` varchar(20) NOT NULL,
+  `EIM_P8_8` varchar(20) NOT NULL,
+  `EIM_P8_9` varchar(20) NOT NULL,
+  `EIM_P8_10` varchar(20) NOT NULL,
+  `EIM_P8_11` varchar(20) NOT NULL,
+  `EIM_P9` varchar(30) NOT NULL,
+  `EIM_P10` varchar(30) NOT NULL,
+  `EIM_P11` varchar(30) NOT NULL,
+  `EIM_P12` varchar(30) NOT NULL,
+  `EIM_P13` varchar(30) NOT NULL,
+  `EIM_P14` varchar(30) NOT NULL,
+  `EIM_P15` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `individuo`
 --
 
-INSERT INTO `individuo` (`id_indi`, `id_familia`, `full_name`, `tip_doc`, `num_doc`, `nacionalidad`, `sexo`, `otra_nac`, `otro_sex`, `fec_naci`, `created_at`) VALUES
-(14, 19, 'samuel', 'cedula', '2327398', 'colombia', 'masculino', NULL, NULL, '2023-08-09', '2023-08-07 17:16:40'),
-(15, 20, 'CAMILO', '1', '8765432', 'COL', 'M', '', '', '2023-08-02', '2023-08-07 17:24:34');
+INSERT INTO `individuo` (`id_indi`, `id_familia`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `tip_doc`, `num_doc`, `created_at`, `E3P4`, `fec_naci`, `E3P6`, `E3P6_1`, `E3P6_2`, `E3P7`, `E3P8`, `E3P8_PUN`, `E3P9`, `E3P10`, `E3P10_1`, `E3P10_2`, `E3P10_3`, `E3P10_4`, `E3P10_5`, `E3P10_6`, `E3P10_7`, `E3P10_8`, `E3P10_9`, `E3P10_10`, `E3P10_11`, `E3P10_12`, `E3P11_VID`, `E3P11_ING`, `E3P11_SAL`, `E3P11_SEG`, `E3P11_TRA`, `E3P11_TIE`, `E3P12`, `E3SP1`, `E3SP2`, `E3SP3`, `E3SP4`, `E3SP5`, `E3SP6`, `E3SP7`, `E3SP8`, `E3SP9_1`, `E3SP9_2`, `E3SP9_3`, `E3SP10_1`, `E3SP10_2`, `E3SP11`, `E3SP12`, `E3SP13`, `E3SP13_1`, `E3SP14`, `E3SP15_FIS`, `E3SP15_AUD`, `E3SP15_VIS`, `E3SP15_COG`, `E3SP15_PSI`, `E3SP15_MUL`, `E3SP15_SOR`, `E3SP16_1`, `E3SP16_2`, `E3SP16_3`, `E3SP16_4`, `E3SP16_5`, `E3SP16_6`, `E3SP16_7`, `E3SP16_8`, `E3SP17`, `E3SP17_1`, `E3SP17_2`, `Obs1`, `E3SP18`, `E3SP18_1`, `E3SP19`, `E3SP20`, `eie_p1`, `eie_p2`, `eie_p2_1`, `eie_p3`, `eie_p4`, `eie_p5`, `eie_p6`, `eie_p7`, `EIT_P1`, `EIT_P2`, `EIT_P3`, `EIT_P4`, `EIT_P5`, `EIT_P6`, `EIT_P7`, `EIT_P8_1`, `EIT_P8_2`, `EIT_P8_3`, `EIT_P8_4`, `EIT_P8_5`, `EIT_P8_6`, `EIT_P8_7`, `EIT_P9_1`, `EIT_P9_2`, `EIT_P10`, `EIT_P11`, `EIT_P12`, `EIT_P13`, `EIT_P14`, `EIT_P15`, `EIT_P16`, `EIT_P17`, `EIT_P17_1`, `EIT_P18`, `EIT_P18_1`, `EIT_P19`, `EIT_P19_1`, `EIT_P20`, `EIT_P20_1`, `EIT_P21`, `EIT_P21_1`, `EIT_PObs`, `EIM_P1`, `EIM_P2`, `EIM_P3`, `EIM_P4`, `EIM_P5`, `EIM_P6`, `EIM_P7`, `EIM_P8_1`, `EIM_P8_2`, `EIM_P8_3`, `EIM_P8_4`, `EIM_P8_5`, `EIM_P8_6`, `EIM_P8_7`, `EIM_P8_8`, `EIM_P8_9`, `EIM_P8_10`, `EIM_P8_11`, `EIM_P9`, `EIM_P10`, `EIM_P11`, `EIM_P12`, `EIM_P13`, `EIM_P14`, `EIM_P15`) VALUES
+(14, 19, '', '', '', '', 'cedula', '2327398', '2023-08-07 17:16:40', '', '2023-08-09', 'masculino', '', '', '', '', 'No Aplica', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(15, 20, '', '', '', '', '1', '8765432', '2023-08-07 17:24:34', '', '2023-08-02', 'M', '', '', '', '', 'No Aplica', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(16, 21, '', '', '', '', '3', '010910110', '2023-08-19 03:25:47', '', '2023-08-14', 'M', '', '', '', '', 'No Aplica', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(17, 22, 'samuel', 'enrrique', 'marales', 'marales', '2', '10021881817', '2023-08-20 15:56:21', '', '2006-08-25', 'F', '', '', '', '', 'No Aplica', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(18, 24, 'Samuel', 'luis', 'arriola', 'arriola', '3', '10022263789', '2023-08-23 02:00:05', '', '2019-02-12', 'M', '', '', '', '', 'No Aplica', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(19, 24, 'sa', 'mu', 'el', 'el', 'NU', 'wee3e32', '2023-08-24 03:10:09', '', '0000-00-00', '', '', '', '', '', 'No Aplica', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(20, 24, 'OISMER', 'KUIS', 'SEHUANES', 'SEHUANES', 'CC', '1020293903', '2023-08-26 19:17:03', 'Jefe (a) del hogar', '1917-02-20', 'M', 'Mujeres', 'Hombres', 'COL', 'Si', 'A', 'Mujer en riesgo', 'Si', 'Si', 'Si', 'Si', 'Si', 'Si', 'Si', 'Si', 'Si', 'Si', 'Si', 'Si', 'Si', '10', '5', '1', '1', '0', '0', '202028383', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(21, 26, 'Samuel', 'Enrrique', 'Maorales', 'Maorales', 'TI', '10093738339', '2023-08-28 23:42:52', '', '0000-00-00', '', '', '', '', '', 'No Aplica', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(22, 28, 'Luis', 'Arrieta', 'Fleres ', 'Fleres ', 'RC', '201837493', '2023-08-29 18:07:34', 'No aplica', '0000-00-00', 'M', 'Mujeres', 'Persona no binaria', 'VEN', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 0, 'No aplica', '', 'No aplica', 'No aplica', 'No aplica', '', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', '', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', '                                            ', 'No aplica', 'Nunca', 'No siento conexión a', 'Definitivamente me mudaría a otro territ', 'Siempre', 'Muy poco', 'Nunca', 'Si', 'Si', 'No aplica', 'Si', 'Si', 'Si', 'Si', 'Si', 'Si', 'Si', 'Si', 'Nunca', '0', 'Nunca', 'Difícil', 'Muy difícil', 'Muy difícil', 'No sabe'),
+(23, 29, 'Luisa', 'Andrea', 'Parras', 'Parras', 'CC', '1027363923', '2023-08-29 20:33:12', 'Otro/a pariente del/a jefe/a', '2023-08-24', 'M', 'Mujeres', 'Hombres', 'COL', 'No', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No aplica', 'No', 'No aplica', 'Contributivo (eps)?', 'paga una parte y otra la empresa o patrón', 'Con otro tipo de seguro o cubrimiento', 'Bueno', 'Si', 'Si', 'No', 'No aplica', 'Si', 'Si', 'No aplica', 'Si', 'Acudió a Ia entidad de seguridad social en salud de la cual es afiliado(a)', 'Si', 'Si', 'Si', 'No', 'No', 'No', 'Si', 'No', 'No', 'Si', '1', '0', '4', '2', '0', '2', '3', '1', 'Si', 5, '53', '', 'Si', 'Si', 'No', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -194,7 +346,11 @@ INSERT INTO `vivienda` (`id_vivienda`, `referencia`, `Creado_por`, `created_at`,
 (22, 'Prueba 1', 4, '2023-08-08 22:39:24', 'Apartamento', 'Material prefabricado', 'Madera pulida y lacada, parqué', 'No', 'No', 'No Aplica', 'No', 'No Aplica', 'No', 'No Aplica', 'No', 'No', 'No', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '[\"Ruidos molestos provenientes del exterior\",\"Malos olores procedentes del exterior\"]', '', '', '', '', '', '', '', '', '2', '2023-08-08 22:44:09', 1),
 (23, 'prueba 2', 4, '2023-08-08 22:47:39', 'Casa', 'Material prefabricado', 'Cemento, gravilla', 'No', 'No', 'No Aplica', 'No', 'No Aplica', 'No', 'No Aplica', 'No', 'No', 'No', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '[\"Invasión del espacio público\"]', '', '', '', '', '', '', '', '', '12323', '2023-08-09 00:55:09', 0),
 (24, 'casa 1', 4, '2023-08-09 00:57:10', 'Otro', 'Sin paredes', 'Tierra, arena', 'No', 'No', 'No Aplica', 'No', 'No Aplica', 'No', 'No Aplica', 'No', 'No', 'Ningu', 'Si', 'Si', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'Si', 'No', 'No', 'No', 'No', 'No', 'Si', 'Si', 'No', '[\"Presencia de insectos, roedores\"]', '', '', '', '', '', '', '', '', '22', '2023-08-11 02:02:36', 1),
-(25, '123', 4, '2023-08-09 01:06:22', 'Apartamento', 'Bahareque revocado', 'Madera burda, tabla, tablón, otro vegetal', 'No', 'No', 'No Aplica', 'Si', '10', 'Si', '11', 'Si', 'No', 'No', 'Si', 'No', 'No', 'No', 'No', 'No', 'Si', 'No', 'No', 'No', 'No', 'No', 'Si', 'Si', 'No', 'No', 'No', 'Si', '[\"Presencia de basuras en las calles, caminos, senderos y espacios públicos\"]', 'No', 'Si', 'No', 'No', 'No', 'No', 'No', 'No', '12', '2023-08-11 03:32:19', 0);
+(25, '123', 4, '2023-08-09 01:06:22', 'Casa', 'Bloque, ladrillo, piedra, madera pulida', 'Alfombra o tapete de pared a pared', 'Si', 'Si', '1', 'No', 'No Aplica', 'Si', '3', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'Si', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'Ningu', 'No', 'No', 'No', '[\"Presencia de basuras en las calles, caminos, senderos y espacios públicos\"]', 'No', 'Si', 'No', 'No', 'No', 'No', 'No', 'No', '23', '2023-08-24 02:13:28', 1),
+(26, 'Villega', 4, '2023-08-23 01:50:38', 'Casa', 'Bloque, ladrillo, piedra, madera pulida', 'Alfombra o tapete de pared a pared', 'No', 'No', 'No Aplica', 'No', 'No Aplica', 'No', 'No Aplica', 'Si', 'No', 'No', 'Si', 'Si', 'Si', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'Ningu', 'No', 'No', 'No', '', 'No', 'No', 'No', 'No', 'Si', 'Si', 'No', 'No', '33', '2023-08-23 01:52:41', 1),
+(27, 'Prueba 1', 4, '2023-08-28 23:32:35', 'Apartamento', 'Tapia pisada, adobe', 'Alfombra o tapete de pared a pared', 'Si', 'Si', '4', 'Si', '02', 'Si', '2', 'No', 'No', 'No', 'No', 'Si', 'Si', 'Si', 'No', 'No', 'No', 'No', 'No', 'Si', 'Si', 'Si', 'No', 'No', 'No', 'No', 'Si', 'No', '', 'Si', 'Si', 'Si', 'No', 'No', 'No', 'No', 'No', '3', '2023-08-28 23:34:49', 1),
+(28, 'efwer', 4, '2023-08-29 14:23:48', '', '', '', 'No', 'No', 'No Aplica', 'No', 'No Aplica', 'No', 'No Aplica', 'No', 'No', 'No', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, 0),
+(29, 'Ref #01', 4, '2023-08-29 19:59:25', 'Casa', 'Bloque, ladrillo, piedra, madera pulida', 'Alfombra o tapete de pared a pared', 'Si', 'Si', '0', 'Si', 'No Aplica', 'No', 'No Aplica', 'No', 'No', 'No', 'No', 'No', 'Si', 'Si', 'Si', 'Si', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'Ningu', 'No', 'No', 'No', '', 'No', 'No', 'Si', 'Si', 'Si', 'No', 'No', 'No', '22', '2023-08-29 20:02:43', 1);
 
 --
 -- Índices para tablas volcadas
@@ -235,13 +391,13 @@ ALTER TABLE `vivienda`
 -- AUTO_INCREMENT de la tabla `hogar`
 --
 ALTER TABLE `hogar`
-  MODIFY `id_familia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_familia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de la tabla `individuo`
 --
 ALTER TABLE `individuo`
-  MODIFY `id_indi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_indi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT de la tabla `user`
@@ -253,7 +409,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `vivienda`
 --
 ALTER TABLE `vivienda`
-  MODIFY `id_vivienda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id_vivienda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- Restricciones para tablas volcadas
