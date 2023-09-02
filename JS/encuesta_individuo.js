@@ -81,25 +81,23 @@ $('#ei_guardar').click( (e)=>{
     E3SP16_4:  $('#eis_p16_4').val() ? $('#eis_p16_4').val() : 'No aplica',
     E3SP16_5:  $('#eis_p16_5').val() ? $('#eis_p16_5').val() : 'No aplica',
     E3SP16_6:  $('#eis_p16_6').val() ? $('#eis_p16_6').val() : 'No aplica',
+    E3SP16_8:  $('#eis_p16_8').val() ? $('#eis_p16_8').val() : 'No aplica',
     E3SP16_7:  $('#eis_p16_7').val() ? $('#eis_p16_7').val() : 'No aplica',
     E3SP16_8:  $('#eis_p16_8').val() ? $('#eis_p16_8').val() : 'No aplica',
     
-    Obs1: $('#eis_pObs1').val() ? $('#eis_pObs1').val() : 'No aplica',
-    
-    E3SP16_8:  $('#eis_p16_8').val() ? $('#eis_p16_8').val() : 'No aplica',
+    E3SP_OBS1: $('#E3SP_OBS1').val() ? $('#E3SP_OBS1').val() : 'No aplica',
     
     E3SP17:  $('input[name=eis_p17]:checked').val() ? $('input[name=eis_p17]:checked').val() : 'No aplica',
     E3SP17_1:   $('#_eis_p17_1').val() ? $('#_eis_p17_1').val() : 'No aplica',
     E3SP17_2:   $('#_eis_p17_2').val() ? $('#_eis_p17_2').val() : 'No aplica',
-    Obs1: $('#eis_pObs1').val() ? $('#eis_pObs1').val() : 'No aplica',
-    
+
     E3SP18:  $('input[name=eis_p18]:checked').val() ? $('input[name=eis_p18]:checked').val() : 'No aplica',
     E3SP18_1:  $('input[name=eis_p18_1]:checked').val() ? $('input[name=eis_p18_1]:checked').val() : 'No aplica',
     
     E3SP19:  $('input[name=eis_p19]:checked').val() ? $('input[name=eis_p19]:checked').val() : 'No aplica',
     E3SP20:  $('input[name=eis_p20]:checked').val() ? $('input[name=eis_p20]:checked').val() : 'No aplica',
     
-    Obs2: $('#eis_pOb2').val() ? $('#eis_pOb2').val() : 'No aplica',
+    E3SP_OBS2: $('#E3SP_OBS2').val() ? $('#E3SP_OBS2').val() : 'No aplica',
     
     eie_p1: $('input[name=eie_p1]:checked').val() ? $('input[name=eie_p1]:checked').val() : 'No aplica' ,
     eie_p2: $('input[name=eie_p2]:checked').val() ? $('input[name=eie_p2]:checked').val() : 'No aplica' ,
@@ -186,7 +184,7 @@ $('#ei_guardar').click( (e)=>{
 
   console.log(data);
 
- /*  if (isEmpty(data.E3P4)) {
+  if (isEmpty(data.E3P4)) {
       return M.toast({ html: 'Pregunta 4 Vacía, por favor complete todos los campos',  classes: 'rounded' });
   } else if (isEmpty(data.fec_naci)) {
       return M.toast({ html: 'Fecha de nacimiento vacío, por favor complete el campo', classes: 'rounded' });
@@ -213,22 +211,6 @@ $('#ei_guardar').click( (e)=>{
           }
       });
   }
- */
-
-
-  $.ajax({
-    type: "POST",
-    url: "../Database/ei_create.php",
-    data: data,
-    success: function(response) {
-        M.toast({ html: response, classes: 'rounded' });
-        console.log(response);
-        /* $('#ei_form')[0].reset(); //limpia las casjas de texto
-        window.history.go(-1); */
-
-    }
-});
-
 
 })
 //------------------------- ENCUESTA GENERAL -----------------------------------------------//

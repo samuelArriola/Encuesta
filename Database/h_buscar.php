@@ -5,11 +5,11 @@
     // BUSCAR PERSONA
     $tabla_u= "";
     $id_vivienda = $_POST['id_vivienda'] ? $_POST['id_vivienda'] :''   ;
-    $query="SELECT * FROM hogar WHERE  id_vivienda = '$id_vivienda' LIMIT 20" ;
+    $query="SELECT * FROM hogar WHERE  id_vivienda = '$id_vivienda' ORDER BY create_at DESC LIMIT 20" ;
 
     if (isset($_POST['buscar'])) {
      $buscar_u = mysqli_real_Escape_string ($con,$_POST['buscar']);
-     $query="SELECT * FROM hogar WHERE id_vivienda = '$id_vivienda' and (id_familia LIKE '%$buscar_u%' OR referencia  LIKE '%$buscar_u%') LIMIT 20"; 
+     $query="SELECT * FROM hogar WHERE id_vivienda = '$id_vivienda' and (id_familia LIKE '%$buscar_u%' OR referencia  LIKE '%$buscar_u%') ORDER BY create_at DESC   LIMIT 20"; 
     }    
    $resul_u=mysqli_query($con,$query);
    $fila =mysqli_num_rows($resul_u); //cuenta los resultados 

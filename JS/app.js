@@ -155,6 +155,7 @@ $('#ix_crearCasa').click(function(e) {
             success: function(response_e) {
                 M.toast({ html: response_e, classes: 'rounded' });
                 mostrarVivienda()
+                $('#ix_ref').val("")
                 $('#modalCrearVivienda').modal('close');
 
             }
@@ -304,7 +305,7 @@ for (let i = 0; i < cadena_c.length; i++) {
  
 
  //GUARDAR PREGUNTAS CON AJAX
-$('#ec_form').submit(function(e) {
+/* $('#ec_form').submit(function(e) {
 
     e.preventDefault();
     console.log('Haz dado click');
@@ -323,6 +324,7 @@ $('#ec_form').submit(function(e) {
     });
     
 });
+ */
 
  function getRespuesta( ){ 
   

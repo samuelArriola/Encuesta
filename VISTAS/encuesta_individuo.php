@@ -1,4 +1,5 @@
 <?php
+    include('../CONFIG/conexion.php'); 
 	session_start(); 
 	$_SESSION["IDEN"];
 	$_SESSION["NOMB"];
@@ -7,6 +8,15 @@
         $Nonpagina = "INDIVIDUO";
         $id_indi = $_GET['id_indi'];
 
+          //Validar que no entre a la encuesta cuando este cerrada 
+          $query="SELECT * FROM individuo  WHERE id_indi = '$id_indi'  LIMIT 1" ; //E1Finalizado
+          $resul_u=mysqli_query($con,$query);
+          if ($row = mysqli_fetch_array($resul_u) ) {
+              if ($row["E3Finalizado"] == 1) {
+                  header('location: index.php');
+              }
+          }
+
 ?> 
 <!DOCTYPE html>
 <html lang="es">
@@ -14,7 +24,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Encuesta Individuo</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../PUBLIC/materialize/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/plugin/virtual-select.min.css" />
     <link href="../CSS/index.css" rel="stylesheet"> 
@@ -57,7 +67,7 @@
                     <input name="" id="id_indi"  value="<?php echo $id_indi;?>"  type="hidden" class="validate" required>
 
                         <ul class="collapsible">
-                            <li   id="ei_general"  >
+                            <li   id="ei_general"  class="active">
                                 <div class="section card-image  card-panel collapsible-header" style=" border-top: #00c853 5px  solid;">
                                     <h3 class="card-title "> CARACTERÍSTICAS GENERALES </h3> 
                                 </div>
@@ -1515,7 +1525,7 @@
                                         <p style="margin-bottom: 0px; margin-top: 10px">
                                             <span for="" style="color: #9e9e9e;" class="EC_PREGUNTA" >Observaciones:</span>
                                         </p> 
-                                            <textarea  name="" id="eis_pObs1" style ="height: 2.5rem ;margin: 0 0 18px 0;" value="" type=""  class=" materialize-textarea  EC_RES" required>
+                                            <textarea  name="" id="E3SP_OBS1" style ="height: 2.5rem ;margin: 0 0 18px 0;" value="" type=""  class=" materialize-textarea  EC_RES" required>
                                             </textarea>
                                     </div> 
                                     <div  class="input-field col m12 card-panel  s12 ">
@@ -1637,7 +1647,7 @@
                                         <p style="margin-bottom: 0px; margin-top: 10px">
                                             <span for="" style="color: #9e9e9e;" class="EC_PREGUNTA" >Observaciones:</span>
                                         </p> 
-                                            <textarea  name="" id="eis_pOb2" style ="height: 2.5rem ;margin: 0 0 18px 0;" value="" type=""  class=" materialize-textarea  EC_RES" required>
+                                            <textarea  name="" id="E3SP_OBS2" style ="height: 2.5rem ;margin: 0 0 18px 0;" value="" type=""  class=" materialize-textarea  EC_RES" required>
                                             </textarea>
                                     </div>                           
                                 </div>
@@ -1752,7 +1762,7 @@
                                                     </p>
                                                     <p>
                                                         <label>
-                                                            <input class="with-gap EC_RES" value="No sabe, no informa " name="eie_p2_1" type="radio"  />
+                                                            <input class="with-gap EC_RES" value="No sabe" name="eie_p2_1" type="radio"  />
                                                             <span>No sabe, no informa </span>
                                                         </label>
                                                     </p>
@@ -1946,7 +1956,7 @@
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" value="No sabe, no informa " name="eie_p4" type="radio"  />
+                                                <input class="with-gap EC_RES" value="No sabe" name="eie_p4" type="radio"  />
                                                 <span>No sabe, no informa </span>
                                             </label>
                                         </p>
@@ -2035,7 +2045,7 @@
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" value="No sabe, no informa " name="eie_p5" type="radio"  />
+                                                <input class="with-gap EC_RES" value="No sabe" name="eie_p5" type="radio"  />
                                                 <span>No sabe, no informa </span>
                                             </label>
                                         </p>
@@ -2498,7 +2508,7 @@
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap EC_RES" value="No sabe, No informa" name="eit_p13" type="radio"  />
+                                                <input class="with-gap EC_RES" value="No sabe" name="eit_p13" type="radio"  />
                                                 <span>No sabe, No informa</span>
                                             </label>
                                         </p>
@@ -2761,15 +2771,9 @@
                                             <textarea  name="" id="EIT_PObs" style ="height: 2.5rem ;margin: 0 0 18px 0;" value="" type=""  class=" materialize-textarea  EC_RES" required>
                                             </textarea>
                                     </div>     
-                                     
-                                      <!-- BTN QUE ENVIA EL FORMULARIO -->
-                                    <div class="center section">
-                                      <button  class=" btn  waves-effect waves-light color-background" type="submit" id="ei_guardar">GUARDAR </button>  
-                                    </div> 
-
                                 </div>
                             </li>
-                            <li id="ei_migrante" class="active">
+                            <li id="ei_migrante" >
                                 <div class="section card-image  card-panel collapsible-header" style=" border-top: #00c853 5px  solid;">
                                     <h3 class="card-title ">INTEGRACIÓN DE MIGRANTES  </h3> 
                                 </div>
@@ -3435,12 +3439,15 @@
                                         </label>
                                     </p>                               
                                 </div>         
-                                <!-- BTN QUE ENVIA EL FORMULARIO -->
-                               <!--  <div class="center section">
-                                    <button  class=" btn  waves-effect waves-light color-background" type="submit" id="ec_guardar">GUARDAR </button>  
-                                </div>   -->
+                                
                             </li>
                         </ul>
+                         <!-- BTN QUE ENVIA EL FORMULARIO -->
+                        <div class="center section">
+                            <button  class=" btn  waves-effect waves-light color-background" type="" id="ei_guardar">GUARDAR </button>  
+                        </div> 
+
+
                     </form>
 
                           
@@ -3452,7 +3459,7 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../PUBLIC/materialize/js/materialize.min.js"></script>
 	<script>document.addEventListener('DOMContentLoaded', function() { M.AutoInit();});</script>
     <script src="../JS/plugin/virtual-select.min.js"></script>
     <script type="text/javascript" >

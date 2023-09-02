@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Login</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="PUBLIC/materialize/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="CSS/index.css" rel="stylesheet"> 
 	<!-- <link rel="icon" type="image/png" href="img/logo.png" /> -->
@@ -62,7 +62,7 @@
 	</div>
 	<!--JavaScript at end of body for optimized loading-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="PUBLIC/materialize/js/materialize.min.js"></script>
     <script>document.addEventListener('DOMContentLoaded', function() { M.AutoInit();});</script>
     <script src="JS/login/index.js"></script>
   <script>
