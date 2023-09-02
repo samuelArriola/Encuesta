@@ -81,7 +81,7 @@
 						</div>
 						<div  class="input-field col m12  s12 ">
 							<p>
-								<label for="" class="EC_PREGUNTA " style="">Tipo de Usuario *</label> 
+								<label for="" class="EC_PREGUNTA " >Tipo de Usuario *</label> 
 							</p>    <br>
 							<div class="row">
 								<div class="col m6 s12">

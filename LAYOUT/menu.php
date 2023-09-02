@@ -29,7 +29,7 @@
 
 <nav class="hide-on-med-and-down">  
 <div class="nav-wrapper color-background" style="background-color: white; ">
-<ul class="left hide-on-med-and-down" style="">
+<ul class="left hide-on-med-and-down" >
 
 <li><a class="black-text" id="mnuProy" style="font-size: 0.8em; text-align: center; height: 64px;" href="index.php" >
   <i class="material-icons teal-text " style="height: 16px; line-height: 48px;">home</i>Inicio
@@ -103,7 +103,7 @@
 
 <nav class="hide-on-med-and-down">  
 <div class="nav-wrapper color-background" style="background-color: white; ">
-<ul class="left hide-on-med-and-down" style="">
+<ul class="left hide-on-med-and-down" >
 
 <li><a class="black-text" id="mnuProy" style="font-size: 0.8em; text-align: center; height: 64px;" href="index.php" >
   <i class="material-icons teal-text " style="height: 16px; line-height: 48px;">home</i>Inicio
