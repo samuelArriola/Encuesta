@@ -19,7 +19,7 @@ $rs_login = mysqli_query($con,$sql_mail);
 			$_SESSION["MAIL"]=$fila["mail"];
 			$_SESSION["Tipo_u"]=$fila["Tipo_u"];
 
-			$resul = array("error" => false,"nomb" => $_SESSION["NOMB"]);
+			$resul = array("error" => false,"nomb" => $_SESSION["NOMB"] , "tipo_u" => $fila["Tipo_u"] );
 			}
 		else{
 			$resul = array("error" => true, "msg" => "Contraseña incorrectas ");

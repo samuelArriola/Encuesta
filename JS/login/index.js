@@ -16,26 +16,29 @@ $(document).ready(function() {
             $('#msgErrorpss').html('Complete todos los campos');
         } else {
 
-       console.log(     $.ajax({
+            $.ajax({
                 url: 'CONFIG/crear_sessiones.php',
                 dataType: "json",
                 type: 'POST',
                 data: {
                     mail: usuPass,
                     password: pass
-                }, //Aqui se especifica el parametro a enviar
+                }, 
                 success: function(response) {
-                    console.log(response);
-                    // Aqui muestra los resultados
                     if (response.error === true) {
                         $('#msgErrorpss').html(response.msg);
                         $('#loarU').hide()
                     } else {
                         $('#loarU').hide()
-                        location.href = 'VISTAS/index.php';
+                        if( response.tipo_u === 'Admin'){
+                            location.href = 'ADMIN/index.php';
+                        }else{
+                            location.href = 'PROMOTOR/index.php';
+                            
+                        }
                     }
                 }
-            }) );
+            }) 
                 
            
         }
